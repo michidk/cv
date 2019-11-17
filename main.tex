@@ -123,27 +123,27 @@
 
 % draw a horizontal line with specific thickness
 \newcommand*{\customsection}[1]{
-  \noindent
-  \adjustbox{margin=0 .15cm 0 .25cm}{
+  \adjustbox{margin=0 .1cm 0 .1cm}{
     \sectionstyle{
       \begin{tikzpicture}[]
-        \fill[MaterialLightBlue300, anchor=north west] (0, -1.6ex) rectangle (\linewidth, -1.6ex + -0.28cm);
+        \fill[MaterialLightBlue200, anchor=north west] (0, -1.6ex) rectangle (\linewidth, -1.6ex + -0.28cm);
         \node[anchor=north west] (txt) at (0, 0) {#1};
       \end{tikzpicture}
     }
     \phantomsection
-    \newline
   }
+  \\
 }
 
 % macro for list entry
 \newcommand*{\entry}[5]{
-  \vspace{0.55ex}
-  \noindent\begin{minipage}{\linewidth}
+  \vspace{0.05ex}
+  \begin{minipage}{\linewidth}
     \textbf{#1}\hfill#2
-    \newline
+    \\[-0.5ex]
     \entrytitlestyle{\MakeUppercase{#3}}\hfill\entrylocationstyle{#4}\par
     \ifx&#5&% is #5 empty?
+    \vspace{1.25ex}
     \else
     #5
     \fi
@@ -315,7 +315,7 @@
 
   \customsection{Volunteer Experience}
   \entry{Akademischer Gesangverein München e.V.}{Mar 2017 --- Aug 2018}{Board Member, Treasurer}{Munich}{%
-    \begin{itemize}[noitemsep, nosep]
+    \begin{itemize}[noitemsep, nosep, topsep=0pt, after=\vspace{\medskipamount}]
       \item Administrated the finances of the club itself and six music groups
       \item Managed about 30.000 euros of financial assets
       \item Leaded the club together with seven other team members
