@@ -1,0 +1,489 @@
+%%
+%% This is file `xcolor-material.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% xcolor-material.dtx  (with options: `package')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright (C) 2016 by Jerick Órdenes Sepúlveda <os.jerick+xcolormaterial at gmail.com>
+%% 
+%% This file may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License, either version 1.3 of this license
+%% or (at your option) any later version.  The latest version of this
+%% license is in:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% and version 1.3 or later is part of all distributions of LaTeX version
+%% 2005/12/01 or later.
+%% 
+\NeedsTeXFormat{LaTeX2e}[2005/12/01]
+\ProvidesPackage{xcolor-material}
+[2016/10/11 v0.1 A package for accessing Google Material colors using the xcolor package]
+\RequirePackage{xcolor}[2007/01/21]
+\RequirePackage{kvoptions}[2011/06/30]
+\SetupKeyvalOptions{
+  family=XCM,
+  prefix=XCM@
+}
+\DeclareStringOption[Material]{prefix}[Material]
+\DeclareDefaultOption{
+  \OptionNotUsed
+  \PackageError{xcolor-material}{Unknown `\CurrentOption' option.}
+}
+\ProcessKeyvalOptions*
+\newcommand{\XCM@definecolor}[2]
+  {\expandafter\definecolor\expandafter{\XCM@prefix #1}{HTML}{#2}}
+\XCM@definecolor{Red50}  {FFEBEE}
+\XCM@definecolor{Red100} {FFCDD2}
+\XCM@definecolor{Red200} {EF9A9A}
+\XCM@definecolor{Red300} {E57373}
+\XCM@definecolor{Red400} {EF5350}
+\XCM@definecolor{Red500} {F44336}
+\XCM@definecolor{Red600} {E53935}
+\XCM@definecolor{Red700} {D32F2F}
+\XCM@definecolor{Red800} {C62828}
+\XCM@definecolor{Red900} {B71C1C}
+\XCM@definecolor{RedA100}{FF8A80}
+\XCM@definecolor{RedA200}{FF5252}
+\XCM@definecolor{RedA400}{FF1744}
+\XCM@definecolor{RedA700}{D50000}
+\definecolor{\XCM@prefix Red}{named}{\XCM@prefix Red500}
+\XCM@definecolor{Pink50}  {FCE4EC}
+\XCM@definecolor{Pink100} {F8BBD0}
+\XCM@definecolor{Pink200} {F48FB1}
+\XCM@definecolor{Pink300} {F06292}
+\XCM@definecolor{Pink400} {EC407A}
+\XCM@definecolor{Pink500} {E91E63}
+\XCM@definecolor{Pink600} {D81B60}
+\XCM@definecolor{Pink700} {C2185B}
+\XCM@definecolor{Pink800} {AD1457}
+\XCM@definecolor{Pink900} {880E4F}
+\XCM@definecolor{PinkA100}{FF80AB}
+\XCM@definecolor{PinkA200}{FF4081}
+\XCM@definecolor{PinkA400}{F50057}
+\XCM@definecolor{PinkA700}{C51162}
+\definecolor{\XCM@prefix Pink}{named}{\XCM@prefix Pink500}
+\XCM@definecolor{Purple50}  {F3E5F5}
+\XCM@definecolor{Purple100} {E1BEE7}
+\XCM@definecolor{Purple200} {CE93D8}
+\XCM@definecolor{Purple300} {BA68C8}
+\XCM@definecolor{Purple400} {AB47BC}
+\XCM@definecolor{Purple500} {9C27B0}
+\XCM@definecolor{Purple600} {8E24AA}
+\XCM@definecolor{Purple700} {7B1FA2}
+\XCM@definecolor{Purple800} {6A1B9A}
+\XCM@definecolor{Purple900} {4A148C}
+\XCM@definecolor{PurpleA100}{EA80FC}
+\XCM@definecolor{PurpleA200}{E040FB}
+\XCM@definecolor{PurpleA400}{D500F9}
+\XCM@definecolor{PurpleA700}{AA00FF}
+\definecolor{\XCM@prefix Purple}{named}{\XCM@prefix Purple500}
+\XCM@definecolor{DeepPurple50}  {EDE7F6}
+\XCM@definecolor{DeepPurple100} {D1C4E9}
+\XCM@definecolor{DeepPurple200} {B39DDB}
+\XCM@definecolor{DeepPurple300} {9575CD}
+\XCM@definecolor{DeepPurple400} {7E57C2}
+\XCM@definecolor{DeepPurple500} {673AB7}
+\XCM@definecolor{DeepPurple600} {5E35B1}
+\XCM@definecolor{DeepPurple700} {512DA8}
+\XCM@definecolor{DeepPurple800} {4527A0}
+\XCM@definecolor{DeepPurple900} {311B92}
+\XCM@definecolor{DeepPurpleA100}{B388FF}
+\XCM@definecolor{DeepPurpleA200}{7C4DFF}
+\XCM@definecolor{DeepPurpleA400}{651FFF}
+\XCM@definecolor{DeepPurpleA700}{6200EA}
+\definecolor{\XCM@prefix DeepPurple}{named}{\XCM@prefix DeepPurple500}
+\XCM@definecolor{Indigo50}  {E8EAF6}
+\XCM@definecolor{Indigo100} {C5CAE9}
+\XCM@definecolor{Indigo200} {9FA8DA}
+\XCM@definecolor{Indigo300} {7986CB}
+\XCM@definecolor{Indigo400} {5C6BC0}
+\XCM@definecolor{Indigo500} {3F51B5}
+\XCM@definecolor{Indigo600} {3949AB}
+\XCM@definecolor{Indigo700} {303F9F}
+\XCM@definecolor{Indigo800} {283593}
+\XCM@definecolor{Indigo900} {1A237E}
+\XCM@definecolor{IndigoA100}{8C9EFF}
+\XCM@definecolor{IndigoA200}{536DFE}
+\XCM@definecolor{IndigoA400}{3D5AFE}
+\XCM@definecolor{IndigoA700}{304FFE}
+\definecolor{\XCM@prefix Indigo}{named}{\XCM@prefix Indigo500}
+\XCM@definecolor{Blue50}  {E3F2FD}
+\XCM@definecolor{Blue100} {BBDEFB}
+\XCM@definecolor{Blue200} {90CAF9}
+\XCM@definecolor{Blue300} {64B5F6}
+\XCM@definecolor{Blue400} {42A5F5}
+\XCM@definecolor{Blue500} {2196F3}
+\XCM@definecolor{Blue600} {1E88E5}
+\XCM@definecolor{Blue700} {1976D2}
+\XCM@definecolor{Blue800} {1565C0}
+\XCM@definecolor{Blue900} {0D47A1}
+\XCM@definecolor{BlueA100}{82B1FF}
+\XCM@definecolor{BlueA200}{448AFF}
+\XCM@definecolor{BlueA400}{2979FF}
+\XCM@definecolor{BlueA700}{2962FF}
+\definecolor{\XCM@prefix Blue}{named}{\XCM@prefix Blue500}
+\XCM@definecolor{LightBlue50}  {E1F5FE}
+\XCM@definecolor{LightBlue100} {B3E5FC}
+\XCM@definecolor{LightBlue200} {81D4FA}
+\XCM@definecolor{LightBlue300} {4FC3F7}
+\XCM@definecolor{LightBlue400} {29B6F6}
+\XCM@definecolor{LightBlue500} {03A9F4}
+\XCM@definecolor{LightBlue600} {039BE5}
+\XCM@definecolor{LightBlue700} {0288D1}
+\XCM@definecolor{LightBlue800} {0277BD}
+\XCM@definecolor{LightBlue900} {01579B}
+\XCM@definecolor{LightBlueA100}{80D8FF}
+\XCM@definecolor{LightBlueA200}{40C4FF}
+\XCM@definecolor{LightBlueA400}{00B0FF}
+\XCM@definecolor{LightBlueA700}{0091EA}
+\definecolor{\XCM@prefix LightBlue}{named}{\XCM@prefix LightBlue500}
+\XCM@definecolor{Cyan50}  {E0F7FA}
+\XCM@definecolor{Cyan100} {B2EBF2}
+\XCM@definecolor{Cyan200} {80DEEA}
+\XCM@definecolor{Cyan300} {4DD0E1}
+\XCM@definecolor{Cyan400} {26C6DA}
+\XCM@definecolor{Cyan500} {00BCD4}
+\XCM@definecolor{Cyan600} {00ACC1}
+\XCM@definecolor{Cyan700} {0097A7}
+\XCM@definecolor{Cyan800} {00838F}
+\XCM@definecolor{Cyan900} {006064}
+\XCM@definecolor{CyanA100}{84FFFF}
+\XCM@definecolor{CyanA200}{18FFFF}
+\XCM@definecolor{CyanA400}{00E5FF}
+\XCM@definecolor{CyanA700}{00B8D4}
+\definecolor{\XCM@prefix Cyan}{named}{\XCM@prefix Cyan500}
+\XCM@definecolor{Teal50}  {E0F2F1}
+\XCM@definecolor{Teal100} {B2DFDB}
+\XCM@definecolor{Teal200} {80CBC4}
+\XCM@definecolor{Teal300} {4DB6AC}
+\XCM@definecolor{Teal400} {26A69A}
+\XCM@definecolor{Teal500} {009688}
+\XCM@definecolor{Teal600} {00897B}
+\XCM@definecolor{Teal700} {00796B}
+\XCM@definecolor{Teal800} {00695C}
+\XCM@definecolor{Teal900} {004D40}
+\XCM@definecolor{TealA100}{A7FFEB}
+\XCM@definecolor{TealA200}{64FFDA}
+\XCM@definecolor{TealA400}{1DE9B6}
+\XCM@definecolor{TealA700}{00BFA5}
+\definecolor{\XCM@prefix Teal}{named}{\XCM@prefix Teal500}
+\XCM@definecolor{Green50}  {E8F5E9}
+\XCM@definecolor{Green100} {C8E6C9}
+\XCM@definecolor{Green200} {A5D6A7}
+\XCM@definecolor{Green300} {81C784}
+\XCM@definecolor{Green400} {66BB6A}
+\XCM@definecolor{Green500} {4CAF50}
+\XCM@definecolor{Green600} {43A047}
+\XCM@definecolor{Green700} {388E3C}
+\XCM@definecolor{Green800} {2E7D32}
+\XCM@definecolor{Green900} {1B5E20}
+\XCM@definecolor{GreenA100}{B9F6CA}
+\XCM@definecolor{GreenA200}{69F0AE}
+\XCM@definecolor{GreenA400}{00E676}
+\XCM@definecolor{GreenA700}{00C853}
+\definecolor{\XCM@prefix Green}{named}{\XCM@prefix Green500}
+\XCM@definecolor{LightGreen50}  {F1F8E9}
+\XCM@definecolor{LightGreen100} {DCEDC8}
+\XCM@definecolor{LightGreen200} {C5E1A5}
+\XCM@definecolor{LightGreen300} {AED581}
+\XCM@definecolor{LightGreen400} {9CCC65}
+\XCM@definecolor{LightGreen500} {8BC34A}
+\XCM@definecolor{LightGreen600} {7CB342}
+\XCM@definecolor{LightGreen700} {689F38}
+\XCM@definecolor{LightGreen800} {558B2F}
+\XCM@definecolor{LightGreen900} {33691E}
+\XCM@definecolor{LightGreenA100}{CCFF90}
+\XCM@definecolor{LightGreenA200}{B2FF59}
+\XCM@definecolor{LightGreenA400}{76FF03}
+\XCM@definecolor{LightGreenA700}{64DD17}
+\definecolor{\XCM@prefix LightGreen}{named}{\XCM@prefix LightGreen500}
+\XCM@definecolor{Lime50}  {F9FBE7}
+\XCM@definecolor{Lime100} {F0F4C3}
+\XCM@definecolor{Lime200} {E6EE9C}
+\XCM@definecolor{Lime300} {DCE775}
+\XCM@definecolor{Lime400} {D4E157}
+\XCM@definecolor{Lime500} {CDDC39}
+\XCM@definecolor{Lime600} {C0CA33}
+\XCM@definecolor{Lime700} {AFB42B}
+\XCM@definecolor{Lime800} {9E9D24}
+\XCM@definecolor{Lime900} {827717}
+\XCM@definecolor{LimeA100}{F4FF81}
+\XCM@definecolor{LimeA200}{EEFF41}
+\XCM@definecolor{LimeA400}{C6FF00}
+\XCM@definecolor{LimeA700}{AEEA00}
+\definecolor{\XCM@prefix Lime}{named}{\XCM@prefix Lime500}
+\XCM@definecolor{Yellow50}  {FFFDE7}
+\XCM@definecolor{Yellow100} {FFF9C4}
+\XCM@definecolor{Yellow200} {FFF59D}
+\XCM@definecolor{Yellow300} {FFF176}
+\XCM@definecolor{Yellow400} {FFEE58}
+\XCM@definecolor{Yellow500} {FFEB3B}
+\XCM@definecolor{Yellow600} {FDD835}
+\XCM@definecolor{Yellow700} {FBC02D}
+\XCM@definecolor{Yellow800} {F9A825}
+\XCM@definecolor{Yellow900} {F57F17}
+\XCM@definecolor{YellowA100}{FFFF8D}
+\XCM@definecolor{YellowA200}{FFFF00}
+\XCM@definecolor{YellowA400}{FFEA00}
+\XCM@definecolor{YellowA700}{FFD600}
+\definecolor{\XCM@prefix Yellow}{named}{\XCM@prefix Yellow500}
+\XCM@definecolor{Amber50}  {FFF8E1}
+\XCM@definecolor{Amber100} {FFECB3}
+\XCM@definecolor{Amber200} {FFE082}
+\XCM@definecolor{Amber300} {FFD54F}
+\XCM@definecolor{Amber400} {FFCA28}
+\XCM@definecolor{Amber500} {FFC107}
+\XCM@definecolor{Amber600} {FFB300}
+\XCM@definecolor{Amber700} {FFA000}
+\XCM@definecolor{Amber800} {FF8F00}
+\XCM@definecolor{Amber900} {FF6F00}
+\XCM@definecolor{AmberA100}{FFE57F}
+\XCM@definecolor{AmberA200}{FFD740}
+\XCM@definecolor{AmberA400}{FFC400}
+\XCM@definecolor{AmberA700}{FFAB00}
+\definecolor{\XCM@prefix Amber}{named}{\XCM@prefix Amber500}
+\XCM@definecolor{Orange50}  {FFF3E0}
+\XCM@definecolor{Orange100} {FFE0B2}
+\XCM@definecolor{Orange200} {FFCC80}
+\XCM@definecolor{Orange300} {FFB74D}
+\XCM@definecolor{Orange400} {FFA726}
+\XCM@definecolor{Orange500} {FF9800}
+\XCM@definecolor{Orange600} {FB8C00}
+\XCM@definecolor{Orange700} {F57C00}
+\XCM@definecolor{Orange800} {EF6C00}
+\XCM@definecolor{Orange900} {E65100}
+\XCM@definecolor{OrangeA100}{FFD180}
+\XCM@definecolor{OrangeA200}{FFAB40}
+\XCM@definecolor{OrangeA400}{FF9100}
+\XCM@definecolor{OrangeA700}{FF6D00}
+\definecolor{\XCM@prefix Orange}{named}{\XCM@prefix Orange500}
+\XCM@definecolor{DeepOrange50}  {FBE9E7}
+\XCM@definecolor{DeepOrange100} {FFCCBC}
+\XCM@definecolor{DeepOrange200} {FFAB91}
+\XCM@definecolor{DeepOrange300} {FF8A65}
+\XCM@definecolor{DeepOrange400} {FF7043}
+\XCM@definecolor{DeepOrange500} {FF5722}
+\XCM@definecolor{DeepOrange600} {F4511E}
+\XCM@definecolor{DeepOrange700} {E64A19}
+\XCM@definecolor{DeepOrange800} {D84315}
+\XCM@definecolor{DeepOrange900} {BF360C}
+\XCM@definecolor{DeepOrangeA100}{FF9E80}
+\XCM@definecolor{DeepOrangeA200}{FF6E40}
+\XCM@definecolor{DeepOrangeA400}{FF3D00}
+\XCM@definecolor{DeepOrangeA700}{DD2C00}
+\definecolor{\XCM@prefix DeepOrange}{named}{\XCM@prefix DeepOrange500}
+\XCM@definecolor{Brown50} {EFEBE9}
+\XCM@definecolor{Brown100}{D7CCC8}
+\XCM@definecolor{Brown200}{BCAAA4}
+\XCM@definecolor{Brown300}{A1887F}
+\XCM@definecolor{Brown400}{8D6E63}
+\XCM@definecolor{Brown500}{795548}
+\XCM@definecolor{Brown600}{6D4C41}
+\XCM@definecolor{Brown700}{5D4037}
+\XCM@definecolor{Brown800}{4E342E}
+\XCM@definecolor{Brown900}{3E2723}
+\definecolor{\XCM@prefix Brown}{named}{\XCM@prefix Brown500}
+\XCM@definecolor{Grey50} {FAFAFA}
+\XCM@definecolor{Grey100}{F5F5F5}
+\XCM@definecolor{Grey200}{EEEEEE}
+\XCM@definecolor{Grey300}{E0E0E0}
+\XCM@definecolor{Grey400}{BDBDBD}
+\XCM@definecolor{Grey500}{9E9E9E}
+\XCM@definecolor{Grey600}{757575}
+\XCM@definecolor{Grey700}{616161}
+\XCM@definecolor{Grey800}{424242}
+\XCM@definecolor{Grey900}{212121}
+\definecolor{\XCM@prefix Grey}{named}{\XCM@prefix Grey500}
+\XCM@definecolor{BlueGrey50} {ECEFF1}
+\XCM@definecolor{BlueGrey100}{CFD8DC}
+\XCM@definecolor{BlueGrey200}{B0BEC5}
+\XCM@definecolor{BlueGrey300}{90A4AE}
+\XCM@definecolor{BlueGrey400}{78909C}
+\XCM@definecolor{BlueGrey500}{607D8B}
+\XCM@definecolor{BlueGrey600}{546E7A}
+\XCM@definecolor{BlueGrey700}{455A64}
+\XCM@definecolor{BlueGrey800}{37474F}
+\XCM@definecolor{BlueGrey900}{263238}
+\definecolor{\XCM@prefix BlueGrey}{named}{\XCM@prefix BlueGrey500}
+\XCM@definecolor{Black}{000000}
+\XCM@definecolor{White}{FFFFFF}
+\definecolor{GoogleBlue}  {HTML}{4285F4}
+\definecolor{GoogleGreen} {HTML}{34A853}
+\definecolor{GoogleYellow}{HTML}{FBBC05}
+\definecolor{GoogleRed}   {HTML}{EA4335}
+\newcommand{\XCM@extractcolor}[2]{%
+  \extractcolorspecs{#1}{\model}{\colorval}%
+  \convertcolorspec{\model}{\colorval}{#2}\extractedcolor
+  \extractedcolor
+}
+\newcommand*{\printcolorvalue}[2][HTML]{%
+  \edef\XCM@requiredModel{#1}%
+  \def\XCM@HTMLModel{HTML}%
+  \def\XCM@RGBModel{RGB}%
+  \def\XCM@CMYKModel{cmyk}%
+  \ifx\XCM@requiredModel\XCM@HTMLModel
+    \#\XCM@extractcolor{#2}{#1}%
+  \else\ifx\XCM@requiredModel\XCM@RGBModel
+    rgb(\XCM@extractcolor{#2}{#1})%
+  \else\ifx\XCM@requiredModel\XCM@CMYKModel
+    cmyk(\XCM@extractcolor{#2}{#1})%
+  \else\fi\fi\fi
+}
+\def\colorsample{%
+  \@ifnextchar[%
+    {\XCM@colorsample@i}
+    {\XCM@colorsample@i[HTML]}%
+}
+\def\XCM@colorsample@i[#1]{%
+  \@ifnextchar[%
+    {\XCM@colorsample@ii{#1}}
+    {\XCM@colorsample@ii{#1}[6.5em]}%
+}
+\def\XCM@colorsample@ii#1[#2]{%
+  \@ifnextchar[%
+    {\XCM@colorsample@iii{#1}{#2}}
+    {\XCM@colorsample@iii{#1}{#2}[white]}%
+}
+\def\XCM@colorsample@iii#1#2[#3]#4{%
+  \@ifnextchar[%
+    {\XCM@colorsample@iv{#1}{#2}{#3}{#4}}
+    {\XCM@colorsample@iv{#1}{#2}{#3}{#4}[#4]}%
+}
+\def\XCM@colorsample@iv#1#2#3#4[#5]{%
+  \def\XCM@temp{#2}\ifx\XCM@temp\empty
+    \def\XCM@boxwidth{6.5em}%
+  \else
+    \def\XCM@boxwidth{#2}%
+  \fi
+  \selectcolormodel{#1}
+  \colorbox{#4}{%
+    \hspace*{.3em}
+    \parbox[b][9\baselineskip]{\XCM@boxwidth}{%
+      \footnotesize\bfseries\sffamily\color{#3}
+      \vspace*{.7em}
+      \raggedright#5%
+      \vfill
+      \raggedright\texttt{\printcolorvalue[#1]{#4}}
+      \vspace*{.7em}
+    }
+    \hspace*{.3em}
+  }
+}
+\AtBeginDocument{
+\@ifpackageloaded{tikz}{%
+\pgfkeys{/palette/.is family, /palette,
+  width/.estore in = \XCM@pltWidth,
+  height/.estore in = \XCM@pltHeight,
+  shape/.estore in = \XCM@pltShape,
+  title/.estore in = \XCM@pltTitle,
+  title text color/.estore in = \XCM@pltTTextColor,
+  init text color/.estore in = \XCM@pltITextColor,
+  altern text color/.estore in = \XCM@pltATextColor,
+  variation font/.store in = \XCM@pltVFont,
+  value font/.store in = \XCM@pltNFont,
+  title font/.store in = \XCM@pltTFont,
+  colorbox sep/.estore in = \XCM@pltColorboxSep,
+  first colorbox sep/.estore in = \XCM@pltFirstCSep,
+  title colorbox height/.estore in = \XCM@pltTitleHeight,
+  primary palette/.estore in = \XCM@pltPrimary,
+  secondary palette/.estore in = \XCM@pltSecondary,
+  percent char/.estore in = \XCM@pltPercentSep,
+  primary variation/.estore in = \XCM@pltPrimaryBase,
+  primary toggle at/.estore in = \XCM@pltPToggle,
+  secondary toggle at/.estore in = \XCM@pltSToggle,
+  color model/.estore in = \XCM@ColorModel,
+  both/.style = {width = .45\textwidth,
+    height = 2\baselineskip,
+    shape = rectangle,
+    title text color = white,
+    init text color = black,
+    altern text color = white,
+    colorbox sep = 0pt,
+    first colorbox sep = .2\baselineskip,
+    title colorbox height = 6\baselineskip,
+    variation font = \sffamily,
+    value font = \ttfamily,
+    title font = \sffamily\bfseries,
+    primary palette = {50,100,200,...,900},
+    secondary palette = {A100,A200,A400,A700},
+    percent char = {},
+    primary variation = 500,
+    primary toggle at = 1000,
+    secondary toggle at = 1000,
+    color model = HTML},
+  primary/.style = {primary palette = {50,100,200,...,900},
+    secondary palette={},
+    primary variation = 500,
+    percent char={}},
+  basic/.style = {primary palette = {10,20,...,100},
+    secondary palette={},
+    primary variation = 100,
+    percent char=!}
+}
+\usetikzlibrary{positioning}
+\newcommand*{\colorpalette}[2][]{%
+  \def\XCM@pltTitle{#2}%
+  \def\XCM@colorname{#2}%
+  \pgfkeys{/palette, both, #1}%
+  \begin{tikzpicture}
+    \selectcolormodel{\XCM@ColorModel}
+    \tikzset{colorbox/.style={\XCM@pltShape, minimum width=\XCM@pltWidth,
+      minimum height=\XCM@pltHeight, node distance=\XCM@pltColorboxSep,
+      outer sep=0pt}}
+    \tikzset{title/.style = {font=\XCM@pltTFont, color=\XCM@pltTTextColor,
+      inner sep=1em}}
+    \tikzset{variant/.style = {font=\XCM@pltVFont, inner sep=1em}}
+    \tikzset{value/.style = {font=\XCM@pltNFont, inner sep=1em}}
+    \node[colorbox, fill=\XCM@colorname\XCM@pltPercentSep\XCM@pltPrimaryBase,
+      minimum height=\XCM@pltTitleHeight, alias=last] {};
+    \node[title, anchor=north west, align=left] at (last.north west)
+      {\XCM@pltTitle};
+    \node[title, anchor=south west] at (last.south west) {\XCM@pltPrimaryBase};
+    \node[title, anchor=south east, align=right] at (last.south east)
+      {\texttt{\printcolorvalue[\XCM@ColorModel]{\XCM@colorname%
+      \XCM@pltPercentSep\XCM@pltPrimaryBase}}};
+    \def\auxcolor{\XCM@pltITextColor}%
+    \def\first{1}%
+    \foreach \variant [count=\i] in \XCM@pltPrimary {
+      \ifx\i\first
+        \node[node distance=\XCM@pltFirstCSep, inner sep=0pt, below=of last,
+          alias=last] {};
+      \else\fi
+      \ifx\variant\XCM@pltPToggle
+        \gdef\auxcolor{\XCM@pltATextColor}%
+      \else\fi
+      \node[colorbox, fill=\XCM@colorname\XCM@pltPercentSep\variant,
+        below=of last, alias=last] {};
+      \node[variant, anchor=west, color=\auxcolor] at (last.west) {\variant};
+      \node[value, anchor=east, color=\auxcolor, align=right] at (last.east)
+        {\printcolorvalue[\XCM@ColorModel]{\XCM@colorname%
+        \XCM@pltPercentSep\variant}};
+    }%
+    \def\auxcolor{\XCM@pltITextColor}%
+    \foreach \variant [count=\i] in \XCM@pltSecondary {
+      \ifx\i\first
+      \node[node distance=\XCM@pltFirstCSep, inner sep=0pt, below=of last,
+        alias=last] {};
+      \else\fi
+      \ifx\variant\XCM@pltSToggle
+        \gdef\auxcolor{\XCM@pltATextColor}%
+      \else\fi
+      \node[colorbox, fill=\XCM@colorname\XCM@pltPercentSep\variant,
+        below=of last, alias=last] {};
+      \node[variant, anchor=west, color=\auxcolor] at (last.west) {\variant};
+      \node[value, anchor=east, color=\auxcolor, align=right] at (last.east)
+        {\printcolorvalue[\XCM@ColorModel]{\XCM@colorname%
+        \XCM@pltPercentSep\variant}};
+    }%
+  \end{tikzpicture}%
+}
+}{}
+}
+\endinput
+%%
+%% End of file `xcolor-material.sty'.

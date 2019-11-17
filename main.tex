@@ -1,0 +1,328 @@
+% chktex-file 1
+% chktex-file 21
+
+% My LaTeX resume. All rights reserved.
+
+
+%
+% Load LaTeX packages
+%
+
+% based on the article class (https://texblog.org/2013/02/13/latex-documentclass-options-illustrated/#draft)
+\documentclass[a4paper, 11pt, final, oneside, notitlepage]{article}
+
+% define languages
+\usepackage[english, ngerman]{babel}
+
+% font packages
+\usepackage[quiet]{fontspec} % OpenType fonts
+\usepackage{lib/fontawesome} % load icon font: FontAwesome v4.7 using latex-fontawesome (https://github.com/posquit0/latex-fontawesome/)
+\usepackage[default, opentype]{sourcesanspro} % load OpenType version of source sans font
+\usepackage{microtype}
+
+% colors and palettes
+\usepackage{xcolor} % color calculations and formats
+\usepackage{lib/xcolor-material} % color material palette
+
+% layouting
+\usepackage{geometry} % change page borders
+\usepackage{adjustbox} % margins for minipages
+\usepackage{wrapfig} % wrap text around boxes
+\usepackage{fancyhdr} % control the header styles
+\usepackage{ragged2e} % better ragged commands for text alignment
+\usepackage{parskip} % separates paragraph by vertical space instead of indent
+
+% content
+\usepackage{tikz} % draw in latex
+\usepackage{enumitem} % enumeration environment
+\usepackage{csquotes} % quotes
+\usepackage{multicol} % allows multiple columns itemize
+
+
+%
+% Define reusable data
+%
+
+\newcommand*{\resume}{R\'{e}sum\'{e}}
+\newcommand*{\name}{Michael Lohr}
+\newcommand*{\doctitle}{\resume: Michael Lohr}
+
+\newcommand*{\street}{Zweigstra{\ss}e 31}
+\newcommand*{\zip}{82223}
+\newcommand*{\city}{Eichenau}
+\newcommand*{\country}{Germany}
+
+\newcommand*{\phone}{\href{tel:+49 176 85706626}{(+49) 176 85706626}}
+\newcommand*{\email}{\href{mailto:michael@lohr-ffb.de}{michael@lohr-ffb.de}}
+
+\newcommand*{\linkedin}{\href{https://www.linkedin.com/in/michael-lohr/}{michael-lohr}}
+\newcommand*{\github}{\href{https://github.com/michidk}{michidk}}
+
+
+%
+% Configure packages
+%
+
+% load and configure fonts (font setup inspired by https://github.com/posquit0/)
+\def\@fontdir{fonts/} % define '/fonts' directory
+\newfontfamily\FA[Path=\@fontdir]{FontAwesome} % use ttf fontawesome font
+\newfontfamily\headerfont[ % use Roboto font for header
+  Path=\@fontdir,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+]{Roboto}
+\newfontfamily\headerfontlight[
+  Path=\@fontdir,
+  UprightFont=*-Thin,
+  ItalicFont=*-ThinItalic,
+  BoldFont=*-Medium,
+  BoldItalicFont=*-MediumItalic,
+]{Roboto}
+\newcommand*{\footerfont}{\sourcesanspro} % define font commands
+\newcommand*{\bodyfont}{\sourcesanspro}
+\newcommand*{\bodyfontlight}{\sourcesansprolight}
+
+% setup hyperlinks
+\RequirePackage[hidelinks, unicode]{hyperref}
+\hypersetup{%
+  pdftitle={{\name}'s \resume},
+  pdfauthor={\name},
+  pdfsubject={{\name}'s \resume},
+  pdfkeywords={\resume, Resume, \name},
+  pdfcreator=XeLaTeX
+}
+
+% change page borders
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% configure header and footer
+\fancyhfoffset{0em}
+\renewcommand{\headrulewidth}{0pt} % no head rule
+\fancyhf{} % empty fields
+\pagestyle{fancy}
+
+
+%
+% Define styles
+%
+
+\newcommand*{\headerstyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{MaterialGrey800} #1}}
+\newcommand*{\secondaryheaderstyle}[1]{{\normalsize\headerfont\color{black} #1}}
+\newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{MaterialGrey400} #1}}
+
+\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{MaterialBlueGrey900} #1}}
+\newcommand*{\entrytitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{MaterialBlueGrey800} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfont #1}}
+
+
+%
+% Utils
+%
+
+% draw a horizontal line with specific thickness
+\newcommand*{\customsection}[1]{
+  \noindent
+  \adjustbox{margin=0 .15cm 0 .25cm}{
+    \sectionstyle{
+      \begin{tikzpicture}[]
+        \fill[MaterialLightBlue300, anchor=north west] (0, -1.6ex) rectangle (\linewidth, -1.6ex + -0.28cm);
+        \node[anchor=north west] (txt) at (0, 0) {#1};
+      \end{tikzpicture}
+    }
+    \phantomsection
+    \newline
+  }
+}
+
+% macro for list entry
+\newcommand*{\entry}[5]{
+  \noindent\begin{minipage}{\linewidth}
+    \textbf{#1}\hfill#2
+    \newline
+    \entrytitlestyle{\MakeUppercase{#3}}\hfill\entrylocationstyle{#4}\par
+    \ifx&#5&% is #5 empty?
+    \else
+    #5
+    \fi
+    \vspace{1.25ex}
+  \end{minipage}
+}
+
+
+%
+% Start document
+%
+
+\begin{document}
+
+  % header
+  % name box
+  \begin{minipage}[t][][t]{0.35\textwidth}
+    {\RaggedRight
+      \headerstyle{\name}
+      \\[.4mm]
+      \hspace{2mm}\secondaryheaderstyle{\resume}
+    }
+  \end{minipage}
+  \hfill
+  \vspace{-2cm}
+  % contact box
+  \begin{wrapfigure}[7]{r}{0.25\textwidth}
+    \begin{minipage}[t][][t]{0.25\textwidth}
+      \RaggedLeft
+      \vspace{1cm}
+
+      {\bf Address}\\
+      \begin{tabular}{@{}r@{}}
+        \street\\
+        \zip\ \city\\
+        \country\\
+      \end{tabular}\\
+
+      \vspace{.5cm}
+
+      {\bf Contact}\\
+      \begin{tabular}{@{}r@{\hskip 0.5em}r@{}}
+        \phone & \faPhone\\ 
+        \email & \faEnvelope\\
+      \end{tabular}\\
+
+      \vspace{.5cm}
+
+      {\bf Networks}\\
+      \begin{tabular}{@{}r@{\hskip 0.5em}r@{}}
+        \linkedin & \faLinkedin\\ 
+        \github & \faGithub
+      \end{tabular}\\
+    \end{minipage}
+  \end{wrapfigure}
+  \vspace{2cm}
+
+  % footer
+  \fancyfoot{}
+  %\fancyfoot[L]{\footerstyle{\thepage}}
+  \fancyfoot[C]{\footerstyle{{\name~~~·~~~\resume}}}
+  %\fancyfoot[R]{\footerstyle{\thepage}}
+
+  % content
+  % quote
+  \vspace{\baselineskip}
+  \begin{center}
+    \textit{\glqq{}Because a great idea is never enough.\grqq{}}
+  \end{center}
+
+  % summary
+  \customsection{Summary}
+  Passionate about software development and design, web technologies, distributed systems, containers, DevOps and game development. Shifted my focus to research and project management. Strong academic background with above-­average results. 
+
+  % skills
+  \customsection{Skills}
+  \textbf{Key Skills}
+  \begin{multicols}{3}
+  \begin{itemize}[noitemsep, nosep]
+    \item Application Development
+    \item Game Development
+    \item Teamwork
+    \item Software Design
+    \item System Architecture
+    \item Object-oriented design
+  	\item Research
+    \item Project Management
+    \item Business administration
+  \end{itemize}
+  \end{multicols}
+
+  \textbf{Technical Skills}
+  \begin{itemize}[noitemsep, nosep]
+    \item Programming Languages: C\#, Java, JavaScript, Python, LaTeX, PHP, C
+    \item Web Frameworks: ASP.NET Core, Play Framework, Vue.js, WPF, Flask, Liferay
+    \item Web Technologies: HTML, (S)CSS, Apache2, Nginx
+    \item Databases: MySQL, MSSQL, MongoDB, Redis, PostgreSQL, InfluxDB
+    \item Cloud technologies: Docker, Kubernetes, Kustomize
+    \item Game Development: Unity3D, OpenTK, Three.js, Phaser.io, Pixi.js
+    \item Operating Systems: Microsoft Windows, Debian, CoreOS, Arch Linux
+  \end{itemize}
+
+
+  % work experience
+  \customsection{Work Experience}
+  \entry{TÜV SÜD Sec-IT GmbH}{Dec 2018 --- Present}{Software Developer, Working Student}{Munich}{%
+    The cybersecurity department of TÜV SÜD creates pragmatic solutions to ensure security on various systems. 
+    \begin{itemize}[noitemsep, nosep]
+      \item Developed Java based Liferay portlets
+      \item Developing containerized software and systems to help detect security flaws
+      \item Leading the development of a Microsoft ASP.NET Core 2.2/3.0 based back end
+    \end{itemize}
+  }
+
+  \entry{Lohr, Jöstingmeier \& Partner}{Jun 2018 --- Present}{Data Protection Officer}{Puchheim}{%
+    Lohr, Jöstingmeier \& Partner are legal attorneys specialized on intellectual property matters.
+    I am responsible for overseeing personal data protection strategy and implementation to ensure compliance with data protection laws (GDPR/DSGVO, BDSG and BayDSG).
+  }
+
+  \entry{Broken Vector UG}{Jan 2017 --- Present}{Founder \& Managing Director}{Eichenau}{%
+    Broken Vector sells and develops (VR-) software and 3D models on various online stores.
+    \begin{itemize}[noitemsep, nosep]
+      \item Managed a team of three software developers and four 3D artists and various products
+      \item Developed new product ideas and prototypes
+      \item Managed business and customer relations
+    \end{itemize}
+  }
+
+  \entry{Lohr IT}{Dec 2015 --- Present}{Owner}{Eichenau}{%
+    We are a small software company with two employees, creating customized software and personalized web experiences.
+    \begin{itemize}[noitemsep, nosep]
+      \item Managing agile software projects
+      \item Creating web presences
+      \item Developing front end and back end software with various technologies and frameworks
+      \item Developing web and container-based applications
+      \item Maintaining Linux-based servers
+      \item Handling paperwork, finances, accounting, and customer acquisition
+    \end{itemize}
+  }
+
+  \entry{Technical University Munich}{Oct 2016 --- Apr 2017}{Student Tutor}{Garching}{%
+    As a tutor for the course \enquote{Fundamentals of programming}, I taught students object-orientated programming in Java.
+    \begin{itemize}[noitemsep, nosep]
+      \item Prepared and gave lectures about programming to 25 students
+      \item Corrected exercises and exams
+    \end{itemize}
+  }
+
+  % education
+  %\pagebreak
+  \customsection{Education}
+  \entry{Technical University Munich}{2019 --- Present}{Master of Science (M.Sc.), Informatics}{Garching}{%
+  }
+
+  \entry{Technical University Munich}{2015 --- 2019}{Bachelor of Science (B.Sc.), Informatics: Games Engineering}{Garching}{%
+    I wrote my thesis with the title \glqq{}Smartphone Assisted Virtual Reality\grqq{} about using smartphones to interact with Virtual Reality (graded 1.0).
+  }
+
+  % certifications
+  \customsection{Certifications}
+  \entry{Advanced Topics in Procedural Content Generation}{Aug 2019}{IT University of Copenhagen}{}{}
+  \entry{Machine Learning}{July, 2017}{Stanford University}{}{}
+  \entry{DAAD English Language Certificate Level B2}{Feb 2017}{Technical University Munich}{}{}
+  \entry{Fundamentals of Digital Marketing}{Oct 2016}{Google}{}{}
+  \entry{Unity Certified Developer}{Aug 2016}{Unity Technologies}{}{}
+  \entry{Apprenticeship as Multimedia Assistant}{July 2013}{Verband Bayrischer Privatschulen}{}{}
+  \entry{LCCI English Language Certificate Level 2 for Business and Commerce}{July 2013}{London Chamber of Commerce and Industry}{}{}
+
+  \customsection{Volunteer Experience}
+  \entry{Akademischer Gesangverein München e.V.}{Mar 2017 --- Aug 2018}{Board Member, Treasurer}{Munich}{%
+    \begin{itemize}[noitemsep, nosep]
+      \item Administrated the finances of the club itself and six music groups
+      \item Managed about 30.000 euros of financial assets
+      \item Leaded the club together with seven other team members
+    \end{itemize}
+  }
+  \entry{Akademischer Gesangverein München e.V.}{2016 --- Present}{IT and Network Administrator}{Munich}{%
+    \begin{itemize}[noitemsep, nosep, topsep=0pt, after=\vspace{\medskipamount}]
+      \item Developed a local network infrastructure for more than 200 concurrent users
+    \end{itemize}
+  }    
+
+\end{document}
