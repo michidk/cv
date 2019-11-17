@@ -3,7 +3,6 @@ My personal resume.
 
 ## Prerequisites
 Dependencies are Texlive-Full and make.
-I am using [this Docker-image](https://github.com/michidk/texlive-docker) to build the pdf.
 
 ## Building
 To build the .pdf-file, execute:
