@@ -10,3 +10,9 @@ jobs:
         uses: xu-cheng/latex-action@master
         with:
           root_file: main.tex
+          args: -xelatex -file-line-error -interaction=nonstopmode -outdir=out
+      - name: Upload .PDF Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: resume
+          path: out/main.pdf

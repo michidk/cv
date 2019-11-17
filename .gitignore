@@ -6,6 +6,7 @@
 *.lof
 *.lot
 *.out
+*.xdv
 main.pdf
 *.run.xml
 *.synctex.gz
