@@ -1,4 +1,5 @@
 # Resume
+![Build LaTeX](https://github.com/michidk/resume/workflows/Build%20LaTeX%20document/badge.svg)
 My personal resume.
 
 ## Prerequisites
