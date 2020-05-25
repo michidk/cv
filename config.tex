@@ -1,0 +1,32 @@
+% load and configure fonts (font setup inspired by https://github.com/posquit0/)
+\def\@fontdir{fonts/} % define '/fonts' directory
+\newfontfamily\FA[Path=\@fontdir]{FontAwesome} % use ttf fontawesome font
+\newfontfamily\headerfont[ % use Roboto font for header
+  Path=\@fontdir,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+]{Roboto}
+\newfontfamily\headerfontlight[
+  Path=\@fontdir,
+  UprightFont=*-Thin,
+  ItalicFont=*-ThinItalic,
+  BoldFont=*-Medium,
+  BoldItalicFont=*-MediumItalic,
+]{Roboto}
+\newcommand*{\footerfont}{\sourcesanspro} % define font commands
+\newcommand*{\bodyfont}{\sourcesanspro}
+\newcommand*{\bodyfontlight}{\sourcesansprolight}
+
+% setup hyperlinks
+\RequirePackage[hidelinks, unicode]{hyperref}
+
+% change page borders
+\geometry{left=1.4cm, top=1.5cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% configure header and footer
+\fancyhfoffset{0em}
+\renewcommand{\headrulewidth}{0pt} % no head rule
+\fancyhf{} % empty fields
+\pagestyle{fancy}
