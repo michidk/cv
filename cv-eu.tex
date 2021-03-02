@@ -1,7 +1,7 @@
 % chktex-file 1
 % chktex-file 21
 
-% My LaTeX CV - All rights reserved.
+% My LaTeX CV (EU version) - All rights reserved.
 
 %
 % Load LaTeX packages
@@ -40,6 +40,7 @@
 \usepackage{arrayjobx} % provides array data structures
 \usepackage{multido} % loop through arrays
 \def\true{t} % boolean true value used with arrays
+\usepackage{graphicx} % allows to insert images
 
 
 %
@@ -105,7 +106,8 @@
   \begin{wrapfigure}[7]{r}{0.25\textwidth}
     \begin{minipage}[t][][t]{0.25\textwidth}
       \RaggedLeft
-      \vspace{1cm}
+
+      \includegraphics[width=0.75\linewidth]{data/picture.png}
 
       {\bf Address}\\
       \begin{tabular}{@{}r@{}}
