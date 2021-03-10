@@ -1,7 +1,7 @@
 % chktex-file 1
 % chktex-file 21
 
-% My LaTeX CV - All rights reserved.
+% My LaTeX resume - All rights reserved.
 
 %
 % Load LaTeX packages
@@ -43,13 +43,13 @@
 
 
 %
-% Set type to CV
+% Set type to RESUME
 %
 
 \newif\ifCV
 \newif\ifRESUME
 \newif\ifSHORT
-\CVtrue
+\SHORTtrue
 
 
 %
@@ -72,8 +72,8 @@
 \hypersetup{%
   pdftitle={{\name}'s \resume},
   pdfauthor={\name},
-  pdfsubject={{\name}'s \cv},
-  pdfkeywords={\cv, CV, \name},
+  pdfsubject={{\name}'s \resume},
+  pdfkeywords={\resume, Resume, \name},
   pdfcreator=XeLaTeX
 }
 
@@ -82,8 +82,7 @@
 % Define styles
 %
 
-\input{styles.tex}
-
+\input{styles-onepage.tex}
 
 %
 % Start document
@@ -96,15 +95,15 @@
   \begin{minipage}[t][][t]{0.35\textwidth}
     {\RaggedRight
       \headerstyle{\name}
-      \\[.4mm]
-      \secondaryheaderstyle{\cv}
     }
+    \vspace{\baselineskip}
   \end{minipage}
   \hfill
   \vspace{-2cm}
   % contact box
-  \begin{wrapfigure}[7]{r}{0.25\textwidth}
+  \begin{wrapfigure}[10]{r}{0.25\textwidth}
     \begin{minipage}[t][][t]{0.25\textwidth}
+      \footnotesize
       \RaggedLeft
       \vspace{1cm}
 
@@ -130,6 +129,7 @@
         \linkedin & \faLinkedin\\
         \github & \faGithub
       \end{tabular}\\
+
     \end{minipage}
   \end{wrapfigure}
   \vspace{2cm}
@@ -137,59 +137,78 @@
   % footer
   \fancyfoot{}
   %\fancyfoot[L]{\footerstyle{\thepage}}
-  \fancyfoot[C]{\footerstyle{{\name~~~·~~~\cv}}}
+  \fancyfoot[C]{\footerstyle{{\name~~~·~~~\resume}}}
   %\fancyfoot[R]{\footerstyle{\thepage}}
-
 
   % skills
   \customsection{Skills}
-  \textbf{Key Skills}\vspace{-\baselineskip}
+  \vspace{-\baselineskip}
+  \vspace{-\parskip}
+  \footnotesize
   \begin{multicols}{3}
     \keyskills
   \end{multicols}
-
   \vspace{-\baselineskip}
-
-  \textbf{Technical Skills}\vspace{-\parskip}
   \technicalskills
+  \vspace{\parskip}
 
   % work experience
   \customsection{Work Experience}
   \multido{\i=20+-1}{20}{%
-    \checkWork(\i)
-    \ifemptydata
+    \footnotesize
+    \checkWorkHideOnResume(\i)
+    \ifx\cachedata\true
     \else
-      \cachedata
+      \checkWork(\i)
+      \ifemptydata
+      \else
+        \cachedata
+      \fi
     \fi
   }
 
   % education
   \customsection{Education}
   \multido{\i=20+-1}{20}{%
-    \checkEducation(\i)
-    \ifemptydata
+    \footnotesize
+    \checkEducationHideOnResume(\i)
+    \ifx\cachedata\true
     \else
-      \cachedata
+      \checkEducation(\i)
+      \ifemptydata
+      \else
+        \cachedata
+      \fi
     \fi
   }
 
   % certifications
   \customsection{Certifications}
   \multido{\i=20+-1}{20}{%
-    \checkCertifications(\i)
-    \ifemptydata
+    \footnotesize
+    \checkCertificationsHideOnResume(\i)
+    \ifx\cachedata\true
     \else
-      \cachedata
+      \checkCertifications(\i)
+      \ifemptydata
+      \else
+        \cachedata
+      \fi
     \fi
   }
 
   % volunteer experience
   \customsection{Volunteer Experience}
   \multido{\i=20+-1}{20}{%
-    \checkVolunteer(\i)
-    \ifemptydata
+    \footnotesize
+    \checkVolunteerHideOnResume(\i)
+    \ifx\cachedata\true
     \else
-      \cachedata
+      \checkVolunteer(\i)
+      \ifemptydata
+      \else
+        \cachedata
+      \fi
     \fi
   }
 

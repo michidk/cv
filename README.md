@@ -17,8 +17,9 @@ To build the .pdf-file, execute:
 
 The following resume types are available:
 
-| Type | Filename | Explanation |
-| ---- | -------- | ----------- |
-| Résumé | `resume.tex` | A two page summary of my CV |
-| Curriculum Vitae | `cv.tex` | My whole career path |
-| CV (EU Version) | `cv-eu.tex` | My CV including a mugshot |
+| Type              | Filename             | Explanation                 |
+| ----------------- | -------------------- | --------------------------- |
+| Curriculum Vitae  | `cv.tex`             | My whole career path        |
+| CV (EU Version)   | `cv-eu.tex`          | My CV including a mugshot   |
+| Résumé            | `resume.tex`         | A two page summary of my CV |
+| Résumé (One Page) | `resume-onepage.tex` | A one page summary of my CV |
