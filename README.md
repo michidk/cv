@@ -1,6 +1,6 @@
-![Build LaTeX](https://github.com/michidk/resume/workflows/Build%20LaTeX%20document/badge.svg)
+# Curriculum Vitae
 
-# Résumé
+![Build LaTeX](https://github.com/michidk/resume/workflows/Build%20LaTeX%20document/badge.svg)
 
 My personal résumé and curriculum vitae
 
