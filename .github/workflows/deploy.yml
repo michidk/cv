@@ -38,11 +38,11 @@ jobs:
         with:
           root_file: cv-eu.tex
           args: -xelatex -file-line-error -interaction=nonstopmode -outdir=out
-      - name: Collect atrifacts
+      - name: Collect artifacts
         run: |
           mkdir dist
           cp out/*.pdf dist/
-      - name: Push atrifacts
+      - name: Push artifacts
         run: |
           git clone --depth 1 --single-branch -b deploy git@github.com:michidk/cv.git deploy
           mv deploy/.git deploy-.git
