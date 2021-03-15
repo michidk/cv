@@ -1,0 +1,51 @@
+name: Deploy LaTeX document
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build_resume:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Compile LaTeX document (Resume)
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: resume.tex
+          args: -xelatex -file-line-error -interaction=nonstopmode -outdir=out
+      - name: Compile LaTeX document (Resume One Page)
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: resume-onepage.tex
+          args: -xelatex -file-line-error -interaction=nonstopmode -outdir=out
+      - name: Compile LaTeX document (CV)
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: cv.tex
+          args: -xelatex -file-line-error -interaction=nonstopmode -outdir=out
+      - name: Compile LaTeX document (CV EU)
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: cv-eu.tex
+          args: -xelatex -file-line-error -interaction=nonstopmode -outdir=out
+      - name: Collect atrifacts
+        run: |
+          mkdir dist
+          cp out/*.pdf dist/
+      - name: Setup Git
+        run: |
+          git config --global user.email "github-actions@lohr.dev"
+          git config --global user.name "GitHub Actions"
+      - name: Push atrifacts
+        run: |
+          git clone --depth 1 --single-branch -b deploy git@github.com:michidk/cv.git deploy
+          mv deploy/.git deploy-.git
+          rm -rf deploy
+          mkdir deploy
+          mv deploy-.git deploy/.git
+          cd deploy
+          cp -R ../dist/* ../dist/*
+          git add .
+          git diff --staged --quiet || git commit -m "Update Artifacts"
+          git push

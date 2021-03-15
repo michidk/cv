@@ -1,5 +1,11 @@
-name: Build LaTeX document
-on: [push]
+name: Build LaTeX document and publish artifact
+on:
+  push:
+    branches:
+      - '*'         # matches every branch that doesn't contain a '/'
+      - '*/*'       # matches every branch containing a single '/'
+      - '**'        # matches every branch
+      - '!deploy'   # excludes deploy branch
 jobs:
   build_resume:
     runs-on: ubuntu-latest
