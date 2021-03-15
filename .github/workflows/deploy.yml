@@ -7,6 +7,15 @@ jobs:
   build_resume:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Setup Git Client
+        run: |
+          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+          git config --global user.email "github-actions@lohr.dev"
+          git config --global user.name "GitHub Actions"
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Compile LaTeX document (Resume)
@@ -33,10 +42,6 @@ jobs:
         run: |
           mkdir dist
           cp out/*.pdf dist/
-      - name: Setup Git
-        run: |
-          git config --global user.email "github-actions@lohr.dev"
-          git config --global user.name "GitHub Actions"
       - name: Push atrifacts
         run: |
           git clone --depth 1 --single-branch -b deploy git@github.com:michidk/cv.git deploy
