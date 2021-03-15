@@ -50,7 +50,7 @@ jobs:
           mkdir deploy
           mv deploy-.git deploy/.git
           cd deploy
-          cp -R ../dist/* ../dist/*
+          cp -R ../dist/* .
           git add .
           git diff --staged --quiet || git commit -m "Update Artifacts"
           git push
