@@ -1,0 +1,23 @@
+{
+  "name": "cv",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "vscode",
+  "runServices": [
+    "vscode"
+  ],
+  "shutdownAction": "stopCompose",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "./install-deps.sh",
+  "extensions": [
+    "james-yu.latex-workshop", // latex runner
+    "eamodio.gitlens", // inline git hints
+    "shardulm94.trailing-spaces",
+    "stkb.rewrap", // rewrap comments after n characters on one line
+    "usernamehw.errorlens", // display errors inline
+    "gruntfuggly.todo-tree", // display todo's
+    "znck.grammarly", // grammarly integaration
+    "skellock.just" // justfile integration
+  ],
+}
