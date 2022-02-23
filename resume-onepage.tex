@@ -61,7 +61,7 @@
 \input{data/work.tex}
 \input{data/education.tex}
 \input{data/certifications.tex}
-\input{data/volunteer.tex}
+% \input{data/volunteer.tex}
 
 
 %
@@ -190,21 +190,6 @@
     \ifx\cachedata\true
     \else
       \checkCertifications(\i)
-      \ifemptydata
-      \else
-        \cachedata
-      \fi
-    \fi
-  }
-
-  % volunteer experience
-  \customsection{Volunteer Experience}
-  \multido{\i=20+-1}{20}{%
-    \footnotesize
-    \checkVolunteerHideOnResume(\i)
-    \ifx\cachedata\true
-    \else
-      \checkVolunteer(\i)
       \ifemptydata
       \else
         \cachedata
