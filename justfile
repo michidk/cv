@@ -12,7 +12,7 @@ all: cv cv-eu resume resume-onepage
 
 clean:
   rm -rf out
-  git clean -Xdf
+  # git clean -Xdf
 
 search name:
   tlmgr info --data name | grep '{{name}}'
