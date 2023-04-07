@@ -1,0 +1,12 @@
+# Documentation: <https://github.com/crate-ci/typos/blob/master/docs/reference.md>
+
+[default]
+locale = "en-us"
+
+[files]
+# Also search `.github` and other hidden files
+ignore-hidden = false
+extend-exclude = [
+  # Ignore .git folder
+  ".git/**",
+]

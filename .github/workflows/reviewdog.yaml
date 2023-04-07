@@ -1,0 +1,28 @@
+name: Reviewdog
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    types:
+      - "opened"
+      - "synchronize"
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  typos:
+    name: typos (Spellchecker)
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run typos
+        uses: Shemnei/reviewdog-action-typos@v0
+        with:
+          reporter: 'github-check'
+          fail_on_error: true

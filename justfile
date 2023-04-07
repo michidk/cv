@@ -1,18 +1,10 @@
-default: all
+root_dir := "./"
+font_dir := "fonts/"
+out_dir := "out/"
+src_dir := "src/"
 
-build file outdir="out":
-  latexmk -interaction=nonstopmode -file-line-error -outdir={{outdir}} -xelatex {{file}}.tex
+build file="cv":
+  mkdir -p out/; typst compile --font-path {{font_dir}} --root {{root_dir}} {{src_dir}}{{file}}.typ {{out_dir}}{{file}}.pdf
 
-cv: (build "cv")
-cv-eu: (build "cv-eu")
-resume: (build "resume")
-resume-onepage: (build "resume-onepage")
-
-all: cv cv-eu resume resume-onepage
-
-clean:
-  rm -rf out
-  # git clean -Xdf
-
-search name:
-  tlmgr info --data name | grep '{{name}}'
+watch file="cv":
+  mkdir -p out/; typst watch --font-path {{font_dir}} --root {{root_dir}} {{src_dir}}{{file}}.typ {{out_dir}}{{file}}.pdf

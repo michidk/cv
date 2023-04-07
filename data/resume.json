@@ -1,0 +1,455 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  },
+  "basics": {
+    "name": "Michael Lohr",
+    "label": "Because a Great Idea Is Never Enough",
+    "image": "picture.png",
+    "email": "michael@lohr-ffb.de",
+    "phone": "(+49) 176 8570 6626",
+    "url": "https://lohr.dev/",
+    "summary": "Passionate about software development and design, web technologies, distributed systems & IoT, all things containers, DevOps, and game development.",
+    "location": {
+      "countryCode": "DE",
+      "region": "Bavaria",
+      "postalCode": "80336",
+      "city": "Munich",
+      "address": "Lessingstr. 5"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "michael-lohr",
+        "url": "https://www.linkedin.com/in/michael-lohr/",
+        "icon": "linkedin"
+      },
+      {
+        "network": "GitHub",
+        "username": "michidk",
+        "url": "https://www.github.com/michidk",
+        "icon": "github"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "STABL Energy",
+      "position": "Solutions/Cloud Architect",
+      "startDate": "2022-10-31",
+      "highlights": [
+        "Building and leading the cloud team from the ground up",
+        "Designing and implementing a cloud‑based system to ingest and analyze large amounts of near‑realtime data",
+        "Architecting an IoT platform to manage battery storage systems remotely and enable easy deployments in the field",
+        "Leading the system administration department, architecting enterprise software and network solutions",
+        "Lead the development of embedded IoT devices written in Rust"
+      ],
+      "summary": "STABL Energy develops smart, safe, reliable, and cost‑effective battery storage systems.",
+      "url": "https://stabl.com/",
+      "location": "Munich, Germany",
+      "importance": 5
+    },
+    {
+      "name": "STABL Energy",
+      "position": "Cloud Developer, Working Student",
+      "startDate": "2022-01-31",
+      "endDate": "2022-09-30",
+      "highlights": [
+        "Planned and implemented a fault‑tolerant and scalable monitoring/logging architecture inside the AWS Cloud",
+        "Developed software to securely connect microcontrollers to the Cloud"
+      ],
+      "url": "https://stabl.com/",
+      "location": "Munich, Germany",
+      "importance": 5
+    },
+    {
+      "name": "Lohr IT",
+      "position": "Owner",
+      "startDate": "2015-12-31",
+      "highlights": [
+        "Building teams and managing software projects",
+        "Developing web applications, API services and desktop software"
+      ],
+      "summary": "Lohr IT is developing desktop software and web experiences.",
+      "url": "https://www.lohr-it.de/",
+      "location": "Eichenau, Germany",
+      "importance": 5
+    },
+    {
+      "name": "Lohr, Jöstingmeier & Partner",
+      "position": "Data Protection Officer",
+      "startDate": "2018-06-30",
+      "summary": "Lohr, Jöstingmeier & Partner is a German law firm specializing in German and European intellectual property matters. I oversee the personal data protection strategy and ensure compliance with data protection laws.",
+      "url": "https://lohrpatent.de/",
+      "location": "Pucheim, Germany"
+    },
+    {
+      "name": "Filics",
+      "position": "Project Study: Fault-Tolerant Cloud-based Monitoring Architectures for Robotics",
+      "startDate": "2021-08-31",
+      "endDate": "2021-12-31",
+      "highlights": [
+        "Developed a fault‑tolerant and scalable monitoring/logging architecture inside the AWS Cloud",
+        "Researched different Cloud Computing solutions for robot/IoT appliances",
+        "Developed integrations for the Robot Operating System (ROS)",
+        "Defined requirements, selected hardware, and installed wireless communication hardware"
+      ],
+      "summary": "Filics is a robotic high-tech start-up that builds automated guided vehicles to handle the intralogistical material flow in warehouses.",
+      "url": "https://filics.eu/",
+      "location": "Garching, Germany",
+      "importance": 4
+    },
+    {
+      "name": "Amazon Web Services (AWS)",
+      "position": "Solutions Architect Intern",
+      "startDate": "2020-10-31",
+      "endDate": "2021-02-28",
+      "highlights": [
+        "Worked on different workshops covering topics like Machine Learning and Big Data in the SaaS context",
+        "Directly consulted Independent Software Vendors (ISVs) about AWS's cloud offerings and proposed architectures",
+        "Built proof of concepts of Cloud architectures using the AWS offering for customers"
+      ],
+      "summary": "Amazon Web Services offers reliable and scalable cloud computing services.",
+      "url": "https://aws.amazon.com/",
+      "location": "Munich, Germany",
+      "importance": 5
+    },
+    {
+      "name": "Broken Vector UG",
+      "position": "Founder & Managing Director",
+      "startDate": "2017-01-31",
+      "endDate": "2020-07-31",
+      "highlights": [
+        "Managed a team of three software developers and four 3D artists",
+        "Developed a voxel-based VR design software that was published on the Steam and Oculus store",
+        "Developed new product ideas, prototypes, and final software products",
+        "Managed business and customer relations"
+      ],
+      "summary": "Broken Vector developed and sold (Virtual Reality (VR)) software as well as 3D models in various online stores.",
+      "url": "https://www.brokenvector.com/",
+      "location": "Eichenau, Germany",
+      "importance": 5
+    },
+    {
+      "name": "TÜV SÜD Sec-IT",
+      "position": "Software Developer, Working Student",
+      "startDate": "2018-12-31",
+      "endDate": "2020-02-28",
+      "highlights": [
+        "Developed software modules to detect security flaws in IT systems",
+        "Planned and designed the architecture of a distributed system for the automated detection of security vulnerabilities",
+        "Deployed software on a Docker/Kubernetes-based platform in the Microsoft Azure Cloud",
+        "Lead the development of a Microsoft ASP.NET Core-based backend",
+        "Developed microservices to handle large-scale email traffic"
+      ],
+      "summary": "The Cyber Security department of TÜV SÜD creates pragmatic solutions to ensure security on various systems.",
+      "url": "https://www.tuvsud.com/de-de/themen/cybersecurity",
+      "location": "Munich, Germany",
+      "importance": 4
+    },
+    {
+      "name": "Technical University of Munich",
+      "position": "Student Tutor",
+      "startDate": "2016-10-31",
+      "endDate": "2017-04-30",
+      "highlights": [
+        "Prepared and held lectures about programming to ~25 students",
+        "Corrected exercises and exams"
+      ],
+      "summary": "As a tutor for the course \"Fundamentals of Programming\", I taught students object-orientated programming in Java.",
+      "url": "https://www.tum.de/",
+      "location": "Garching, Germany"
+    },
+    {
+      "name": "Klinikum rechts der Isar der TU München",
+      "position": "Internship",
+      "startDate": "2013-07-31",
+      "endDate": "2013-07-31",
+      "summary": "During the internship at the cancer research of 'Klinik und Poliklinik für Innere Medizin II', I mixed chemical compounds and prepared extracted organs for microscopic inspection.",
+      "url": "https://www.mri.tum.de/",
+      "location": "Munich, Germany"
+    },
+    {
+      "name": "Mammendorfer Institut für Physik und Medizin",
+      "position": "Internship",
+      "startDate": "2012-07-31",
+      "endDate": "2012-07-31",
+      "summary": "MIPM develops medical monitoring systems that are magnetic resonance imaging (MRI) compatible. I worked in the assembly and soldered circuit boards, produced electronic plugs, and prepared casings.",
+      "url": "https://www.mipm.com/",
+      "location": "Mammendorf, Germany"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Akademischer Gesangverein München e.V.",
+      "position": "Board Member, Treasurer",
+      "startDate": "2017-03-31",
+      "endDate": "2018-08-31",
+      "highlights": [
+        "Managed all financial assets of the club itself and six musical ensembles",
+        "Administrated the club together with seven other board members"
+      ],
+      "url": "https://www.agv-muenchen.de/",
+      "location": "Munich, Germany",
+      "importance": 4
+    },
+    {
+      "organization": "Akademischer Gesangverein München e.V.",
+      "position": "IT and Network Administrator",
+      "startDate": "2016-12-31",
+      "highlights": [
+        "Developed a local network infrastructure for more than 200 concurrent users",
+        "Architectured and developed a Kubernetes-based cluster for web-based infrastructure and applications"
+      ],
+      "url": "https://www.agv-muenchen.de/",
+      "location": "Munich, Germany",
+      "importance": 5
+    }
+  ],
+  "education": [
+    {
+      "institution": "Technical University of Munich",
+      "area": "Informatics",
+      "studyType": "Master of Science (M.Sc.)",
+      "startDate": "2019-12-31",
+      "endDate": "2022-12-31",
+      "score": "1.6",
+      "url": "https://www.tum.de/",
+      "summary": "The Department of Informatics at TUM is one of the largest and most renowned computer science departments in Germany, and the professors and teaching staff are experts in their respective fields. Students of the master's programs receive a top-level education and can tailor their program to focus in-depth on the topics that interest them most.",
+      "highlights": [
+        "Focused on Internet of Things and Cloud Computing",
+        "In my master's thesis, I presented a novel IaC approach to formulate platform-independent cloud architectures and a transpiler system to deploy to different cloud platforms without platform-specific knowledge (graded 1.0/A+)"
+      ],
+      "location": "Garching, Germany",
+      "importance": 5
+    },
+    {
+      "institution": "Technical University of Munich",
+      "area": "Informatics: Games Engineering",
+      "studyType": "Bachelor of Science (B.Sc.)",
+      "startDate": "2015-12-31",
+      "endDate": "2019-12-31",
+      "score": "2.4",
+      "url": "https://www.tum.de/",
+      "summary": "The 'Informatics: Games Engineering' bachelor's degree at TUM is a technically-oriented program for students interested in game development. Games production is a booming industry that is set to grow rapidly in the near future. This new technology is utilized in many industries, including engineering, construction, medicine, and education.",
+      "highlights": [
+        "Focused on Virtual Reality and Machine Learning in the field of human-computer interaction",
+        "Wrote my bachelor's thesis about using smartphones to interact with Virtual Reality (graded 1.0/A+)"
+      ],
+      "location": "Garching, Germany",
+      "importance": 4
+    },
+    {
+      "institution": "Obermenzinger Gymnasium",
+      "area": "Economic Branch",
+      "studyType": "Allgemeine Hochschulreife (Higher Education Entrance Qualification)",
+      "startDate": "2007-12-31",
+      "endDate": "2015-12-31",
+      "score": "2.1",
+      "url": "https://www.obermenzinger.de/",
+      "summary": "The Obermenzinger Gymnasium München is a state-approved economic and social science grammar school.",
+      "highlights": [
+        "Completed various additional computer science-related courses and activities",
+        "Organized and gave a weekly programming course for other students"
+      ],
+      "location": "Munich, Germany"
+    },
+    {
+      "institution": "Josef-Dering-Grundschule",
+      "endDate": "2007-12-31",
+      "location": "Eichenau, Germany"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "DAAD English Language Certificate Level GER C1, UNIcert III, ALTE Level 4",
+      "issuer": "Technical University Munich",
+      "startDate": "2020-05-31",
+      "importance": 5
+    },
+    {
+      "name": "Machine Learning",
+      "issuer": "Stanford University",
+      "startDate": "2017-07-31",
+      "url": "https://www.coursera.org/account/accomplishments/verify/DGR4AZGLSPEU"
+    },
+    {
+      "name": "Apprenticeship as Multimedia Assistant (VBP)",
+      "issuer": "Verband Bayrischer Privatschulen",
+      "startDate": "2013-07-31",
+      "importance": 3
+    },
+    {
+      "name": "LCCI English Language Certificate Level 2 for Business and Commerce",
+      "issuer": "London Chamber of Commerce and Industry",
+      "startDate": "2013-07-31",
+      "importance": 3
+    },
+    {
+      "name": "AWS Certified Solutions Architect – Associate",
+      "issuer": "Amazon Web Services (AWS)",
+      "endDate": "2027-01-26",
+      "startDate": "2020-05-20",
+      "url": "https://www.credly.com/badges/8a92a10c-f4d8-48d1-a12e-4c8c97f95a89"
+    },
+    {
+      "name": "AWS Certified Solutions Architect – Professional",
+      "issuer": "Amazon Web Services (AWS)",
+      "endDate": "2027-01-26",
+      "startDate": "2021-02-18",
+      "url": "https://www.credly.com/badges/a03f9180-ebdf-49b0-afe9-1c2f8f5b8ecd",
+      "importance": 4
+    },
+    {
+      "name": "AWS Certified SysOps Administrator – Associate",
+      "issuer": "Amazon Web Services (AWS)",
+      "endDate": "2023-12-04",
+      "startDate": "2020-12-04",
+      "url": "https://www.credly.com/badges/4b72d090-6bda-4efc-8fbe-4eebe327aa92",
+      "importance": 4
+    },
+    {
+      "name": "AWS Certified Developer – Associate",
+      "issuer": "Amazon Web Services (AWS)",
+      "endDate": "2023-11-03",
+      "startDate": "2020-11-03",
+      "url": "https://www.credly.com/badges/0ab25d68-24db-470d-8185-da3a2bcb4c98",
+      "importance": 4
+    },
+    {
+      "name": "Unity Certified Developer",
+      "issuer": "Unity Technologies",
+      "endDate": "2018-08-31",
+      "startDate": "2016-08-31",
+      "url": "https://www.credly.com/badges/18b7c70d-77c3-429d-b5d7-1799c728d13c"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Software Development",
+      "key": true
+    },
+    {
+      "name": "Project Management",
+      "key": true
+    },
+    {
+      "name": "IoT Engineering",
+      "key": true
+    },
+    {
+      "name": "Problem-solving",
+      "key": true
+    },
+    {
+      "name": "Cloud Architecture",
+      "key": true
+    },
+    {
+      "name": "Collaboration",
+      "key": true
+    },
+    {
+      "name": "Programming",
+      "title": "Programming Languages",
+      "subskills": [
+        "C#",
+        "Java",
+        "JavaScript",
+        "Typescript",
+        "Python",
+        "Rust"
+      ]
+    },
+    {
+      "name": "Fullstack Web Development",
+      "title": "Web Technologies",
+      "subskills": [
+        "ASP.Net Core",
+        "Vue.js",
+        "React",
+        "HTML/SCSS",
+        "Nginx"
+      ]
+    },
+    {
+      "name": "Data Modeling",
+      "title": "Databases",
+      "subskills": [
+        "SQL",
+        "MongoDB",
+        "Redis",
+        "InfluxDB",
+        "Microsoft Dataverse"
+      ]
+    },
+    {
+      "name": "Cloud Development",
+      "title": "Cloud Technologies",
+      "subskills": [
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "Amazon Web Services"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "fluency": "Full Professional",
+      "language": "English"
+    },
+    {
+      "fluency": "Elementary",
+      "language": "French"
+    },
+    {
+      "fluency": "Native Speaker",
+      "language": "German"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Programming",
+      "category": "digital"
+    },
+    {
+      "name": "Cloud technologies",
+      "category": "digital"
+    },
+    {
+      "name": "Game development",
+      "category": "digital"
+    },
+    {
+      "name": "Electronics",
+      "category": "digital"
+    },
+    {
+      "name": "Drones",
+      "category": "digital"
+    },
+    {
+      "name": "Diving",
+      "category": "sports"
+    },
+    {
+      "name": "Skiing",
+      "category": "sports"
+    },
+    {
+      "name": "Climbing",
+      "category": "sports"
+    },
+    {
+      "name": "Table tennis",
+      "category": "sports"
+    },
+    {
+      "name": "Board games",
+      "category": "sports"
+    }
+  ]
+}
