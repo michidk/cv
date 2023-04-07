@@ -1,18 +1,20 @@
-default: all
+font_dir := "fonts/"
 
-build file outdir="out":
-  latexmk -interaction=nonstopmode -file-line-error -outdir={{outdir}} -xelatex {{file}}.tex
+watch file="cv":
+  typst --font-path {{font_dir}} compile {{file}}.typ
 
-cv: (build "cv")
-cv-eu: (build "cv-eu")
-resume: (build "resume")
-resume-onepage: (build "resume-onepage")
+# default: all
 
-all: cv cv-eu resume resume-onepage
+# build file outdir="out":
+#   latexmk -interaction=nonstopmode -file-line-error -outdir={{outdir}} -xelatex {{file}}.tex
 
-clean:
-  rm -rf out
-  # git clean -Xdf
+# cv: (build "cv")
+# cv-eu: (build "cv-eu")
+# resume: (build "resume")
+# resume-onepage: (build "resume-onepage")
 
-search name:
-  tlmgr info --data name | grep '{{name}}'
+# all: cv cv-eu resume resume-onepage
+
+# clean:
+#   rm -rf out
+#   # git clean -Xdf
