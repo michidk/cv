@@ -10,10 +10,13 @@
       size: 40pt,
       "Michael Lohr"
     ),
-    text(
-      size: 15pt,
+    {
+      h(0.5cm)
+      text(
+      size: 12pt,
       "Curriculum Vitae"
-    )
+      )
+    }
   )
 }
 
