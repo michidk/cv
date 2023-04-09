@@ -8,7 +8,9 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "nvarner.typst-lsp"
+        "nvarner.typst-lsp",
+        "tomoki1207.pdf",
+        "zengfanfan.zeng-color-picker"
       ]
     }
   }
