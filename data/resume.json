@@ -1,0 +1,450 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"
+  },
+  "basics": {
+    "name": "Michael Lohr",
+    "label": "Because a Great Idea Is Never Enough",
+    "image": "picture.png",
+    "email": "michael@lohr-ffb.de",
+    "phone": "004917685706626",
+    "url": "https://lohr.dev/",
+    "summary": "Passionate about software development and design, web technologies, distributed systems, containers, DevOps, and game development. Currently designing cloud solutions for battery storage systems at STABL Energy GmbH. Also developing various software solutions (focused on web and cloud technologies) for startups and mid-sized businesses with my company Lohr IT.",
+    "location": {
+      "countryCode": "DE",
+      "region": "Bavaria",
+      "postalCode": "80336",
+      "city": "Munich",
+      "address": "Lessingstr. 5"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "michael-lohr",
+        "url": "https://www.linkedin.com/in/michael-lohr/"
+      },
+      {
+        "network": "GitHub",
+        "username": "michidk",
+        "url": "https://www.github.com/michidk"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "STABL Energy",
+      "position": "Cloud Architect",
+      "startDate": "2022-10-31",
+      "highlights": [
+        "Building up and managing the cloud team at STABL",
+        "Designing and implementing a cloud‑based system to ingest and analyze large amounts of near‑realtime data",
+        "Architecting a platform to control battery storage systems remotely",
+        "Leading the development of FreeRTOS-based IoT devices written in Rust",
+        "Managing enterprise software and network solutions for the different departments"
+      ],
+      "summary": "STABL Energy develops smart, safe, reliable, and cost‑effective battery storage systems.",
+      "url": "https://www.linkedin.com/company/stablenergy/",
+      "location": "Munich, Germany"
+    },
+    {
+      "name": "STABL Energy",
+      "position": "Cloud Developer, Working Student",
+      "startDate": "2022-01-31",
+      "endDate": "2022-09-30",
+      "highlights": [
+        "Planned and implemented a fault‑tolerant and scalable monitoring/logging architecture inside the AWS Cloud",
+        "Developed software to securely connect microcontrollers to the Cloud"
+      ],
+      "url": "https://www.linkedin.com/company/stablenergy/",
+      "location": "Munich, Germany"
+    },
+    {
+      "name": "Lohr IT",
+      "position": "Owner",
+      "startDate": "2015-12-31",
+      "highlights": [
+        "Building teams and managing software projects",
+        "Developing web applications and container-based backend software"
+      ],
+      "summary": "Lohr IT is developing software and web experiences.",
+      "url": "https://www.linkedin.com/company/lohr-it/",
+      "location": "Eichenau, Germany"
+    },
+    {
+      "name": "Lohr, Jöstingmeier & Partner",
+      "position": "Data Protection Officer",
+      "startDate": "2018-06-30",
+      "summary": "Lohr, Jöstingmeier & Partner is a German law firm specializing in German and European intellectual property matters. I oversee the personal data protection strategy and ensure compliance with data protection laws.",
+      "url": "https://www.linkedin.com/company/lohr-j%C3%B6stingmeier-&-partner/",
+      "location": "Pucheim, Germany"
+    },
+    {
+      "name": "Filics",
+      "position": "Project Study: Fault-Tolerant Cloud-based Monitoring Architectures for Robotics",
+      "startDate": "2021-08-31",
+      "endDate": "2021-12-31",
+      "highlights": [
+        "Developed a fault‑tolerant and scalable monitoring/logging architecture inside the AWS Cloud",
+        "Researched different Cloud Computing solutions for robot/IoT appliances",
+        "Developed integrations for the Robot Operating System (ROS)",
+        "Defined requirements, selected hardware, and installed wireless communication hardware"
+
+      ],
+      "summary": "Filics is a robotic high-tech start-up that builds automated guided vehicles to handle the intralogistical material flow in warehouses.",
+      "url": "https://www.linkedin.com/company/filics/",
+      "location": "Garching, Germany"
+    },
+    {
+      "name": "Amazon Web Services (AWS)",
+      "position": "Solutions Architect Intern",
+      "startDate": "2020-10-31",
+      "endDate": "2021-02-28",
+      "highlights": [
+        "Worked on different workshops covering topics like Machine Learning and Big Data in the SaaS context",
+        "Directly consulted Independent Software Vendors (ISVs) about AWS's cloud offerings and proposed architectures",
+        "Built proof of concepts of Cloud architectures using the AWS offering for customers"
+      ],
+      "summary": "Amazon Web Services offers reliable and scalable cloud computing services.",
+      "url": "https://www.linkedin.com/company/amazon-web-services/",
+      "location": "Munich, Germany"
+    },
+    {
+      "name": "Broken Vector UG",
+      "position": "Founder & Managing Director",
+      "startDate": "2017-01-31",
+      "endDate": "2020-07-31",
+      "highlights": [
+        "Managed a team of three software developers and four 3D artists",
+        "Developed a voxel-based VR design software that was published on the Steam and Oculus store",
+        "Developed new product ideas, prototypes, and final software products",
+        "Managed business and customer relations"
+      ],
+      "summary": "Broken Vector developed and sold (Virtual Reality (VR)) software as well as 3D models in various online stores.",
+      "url": "https://www.linkedin.com/company/broken-vector-ug/",
+      "location": "Eichenau, Germany"
+    },
+    {
+      "name": "TÜV SÜD Sec-IT GmbH",
+      "position": "Software Developer, Working Student",
+      "startDate": "2018-12-31",
+      "endDate": "2020-02-28",
+      "highlights": [
+        "Developed software modules to detect security flaws in IT systems",
+        "Planned and designed the architecture of a distributed system for the automated detection of security vulnerabilities",
+        "Deployed software on a Docker/Kubernetes-based platform in the Microsoft Azure Cloud",
+        "Lead the development of a Microsoft ASP.NET Core-based backend",
+        "Developed microservices to handle large-scale email traffic"
+      ],
+      "summary": "The Cyber Security department of TÜV SÜD creates pragmatic solutions to ensure security on various systems.",
+      "url": "https://www.linkedin.com/company/tuvsud/",
+      "location": "Munich, Germany"
+    },
+    {
+      "name": "Technical University of Munich",
+      "position": "Student Tutor",
+      "startDate": "2016-10-31",
+      "endDate": "2017-04-30",
+      "highlights": [
+        "Prepared and held lectures about programming to ~25 students",
+        "Corrected exercises and exams"
+      ],
+      "summary": "As a tutor for the course \"Fundamentals of Programming\", I taught students object-orientated programming in Java.",
+      "url": "https://www.linkedin.com/school/technische-universitat-munchen/",
+      "location": "Garching, Germany"
+    },
+    {
+      "name": "Klinikum rechts der Isar der TU München",
+      "position": "Internship",
+      "startDate": "2013-07-31",
+      "endDate": "2013-07-31",
+      "summary": "During the internship at the cancer research of 'Klinik und Poliklinik für Innere Medizin II', I mixed chemical compounds and prepared extracted organs for microscopic inspection.",
+      "url": "https://www.linkedin.com/company/klinikum-rechts-der-isar/",
+      "location": "Munich, Germany"
+    },
+    {
+      "name": "MIPM Mammendorfer Institut für Physik und Medizin GmbH",
+      "position": "Internship",
+      "startDate": "2012-07-31",
+      "endDate": "2012-07-31",
+      "summary": "MIPM develops medical monitoring systems that are magnetic resonance imaging (MRI) compatible. I worked in the assembly and soldered circuit boards, produced electronic plugs, and prepared casings.",
+      "url": "https://www.linkedin.com/company/mipm-mammendorfer-institut-f%C3%BCr-physik-und-medizin-gmbh/",
+      "location": "Mammendorf, Germany"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "AGV Akademischer Gesangverein München e.V.",
+      "position": "Board Member, Treasurer",
+      "startDate": "2017-03-31",
+      "endDate": "2018-08-31",
+      "summary": "• Managed all financial assets of the club itself and six musical ensembles\n• Administrated the club together with seven other board members",
+      "url": "https://www.linkedin.com/company/agv-akademischer-gesangverein-m%C3%BCnchen/"
+    },
+    {
+      "organization": "AGV Akademischer Gesangverein München e.V.",
+      "position": "IT and Network Administrator",
+      "startDate": "2016-12-31",
+      "summary": "• Developed a local network infrastructure for more than 200 concurrent users\n• Architectured and developed a Kubernetes-based cluster for web-based infrastructure and applications",
+      "url": "https://www.linkedin.com/company/agv-akademischer-gesangverein-m%C3%BCnchen/"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Technical University of Munich",
+      "area": "Informatics",
+      "studyType": "Master of Science (M.Sc.)",
+      "startDate": "2019-12-31",
+      "endDate": "2022-12-31",
+      "score": "1.6"
+    },
+    {
+      "institution": "Technical University of Munich",
+      "area": "Informatics: Games Engineering",
+      "studyType": "Bachelor of Science (B.Sc.)",
+      "startDate": "2015-12-31",
+      "endDate": "2019-12-31",
+      "score": "2.4"
+    },
+    {
+      "institution": "Obermenzinger Gymnasium",
+      "area": "Wirtschaftswissenschaftlicher Zweig (Economic Path)",
+      "studyType": "Allgemeine Hochschulreife (Higher Education Entrance Qualification)",
+      "startDate": "2007-12-31",
+      "endDate": "2015-12-31",
+      "score": "2.1"
+    },
+    {
+      "institution": "Josef-Dering-Grundschule",
+      "endDate": "2007-12-31"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "DAAD English Language Certificate Level GER C1, UNIcert III, ALTE Level 4",
+      "issuer": "Technical University Munich",
+      "startDate": "2020-05-31"
+    },
+    {
+      "name": "Machine Learning",
+      "issuer": "Stanford University",
+      "startDate": "2017-07-31",
+      "url": "https://www.coursera.org/account/accomplishments/verify/DGR4AZGLSPEU"
+    },
+    {
+      "name": "Apprenticeship as Multimedia Assistant (VBP)",
+      "issuer": "Verband Bayrischer Privatschulen",
+      "startDate": "2013-07-31"
+    },
+    {
+      "name": "LCCI English Language Certificate Level 2 for Business and Commerce",
+      "issuer": "London Chamber of Commerce and Industry",
+      "startDate": "2013-07-31"
+    },
+    {
+      "name": "AWS Certified Solutions Architect – Associate",
+      "issuer": "Amazon Web Services (AWS)",
+      "endDate": "2024-02-28",
+      "startDate": "2020-05-31",
+      "url": "https://www.youracclaim.com/badges/bd9717e0-964a-4826-b47d-cf57a1fc16ac/linked_in_profile"
+    },
+    {
+      "name": "AWS Certified Solutions Architect – Professional",
+      "issuer": "Amazon Web Services (AWS)",
+      "endDate": "2024-02-28",
+      "startDate": "2021-02-28",
+      "url": "https://www.youracclaim.com/badges/914db897-3fc7-4106-83c6-90ee00b2f594?source=linked_in_profile"
+    },
+    {
+      "name": "AWS Certified SysOps Administrator – Associate",
+      "issuer": "Amazon Web Services (AWS)",
+      "endDate": "2023-12-31",
+      "startDate": "2020-12-31",
+      "url": "https://www.youracclaim.com/badges/4b72d090-6bda-4efc-8fbe-4eebe327aa92?source=linked_in_profile"
+    },
+    {
+      "name": "AWS Certified Developer – Associate",
+      "issuer": "Amazon Web Services (AWS)",
+      "endDate": "2023-11-30",
+      "startDate": "2020-11-30",
+      "url": "https://www.youracclaim.com/badges/0ab25d68-24db-470d-8185-da3a2bcb4c98?source=linked_in_profile"
+    },
+    {
+      "name": "Unity Certified Developer",
+      "issuer": "Unity Technologies",
+      "endDate": "2018-08-31",
+      "startDate": "2016-08-31",
+      "url": "https://www.youracclaim.com/badges/18b7c70d-77c3-429d-b5d7-1799c728d13c/linked_in_profile"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Software Engineering"
+    },
+    {
+      "name": "Project Management"
+    },
+    {
+      "name": "Cloud Computing"
+    },
+    {
+      "name": "Game Development"
+    },
+    {
+      "name": "3D-Rendering"
+    },
+    {
+      "name": "Software Development"
+    },
+    {
+      "name": "Web Development"
+    },
+    {
+      "name": "Object-oriented design"
+    },
+    {
+      "name": "Front-end Development"
+    },
+    {
+      "name": "Software Project Management"
+    },
+    {
+      "name": "Software Architecture"
+    },
+    {
+      "name": "Data Science"
+    },
+    {
+      "name": "Machine Learning"
+    },
+    {
+      "name": "C#"
+    },
+    {
+      "name": "Java"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "CSS"
+    },
+    {
+      "name": "Node.js"
+    },
+    {
+      "name": "Teamwork"
+    },
+    {
+      "name": "Amazon Web Services (AWS)"
+    },
+    {
+      "name": "Google Cloud Platform (GCP)"
+    },
+    {
+      "name": "Vue.js"
+    },
+    {
+      "name": "OpenGL"
+    },
+    {
+      "name": ".NET Framework"
+    },
+    {
+      "name": ".NET Core"
+    },
+    {
+      "name": "Unity3D"
+    },
+    {
+      "name": "MongoDB"
+    },
+    {
+      "name": "Microservices"
+    },
+    {
+      "name": "Networking"
+    },
+    {
+      "name": "Rust"
+    },
+    {
+      "name": "Python"
+    },
+    {
+      "name": "Linux"
+    },
+    {
+      "name": "Docker"
+    },
+    {
+      "name": "ASP.NET"
+    },
+    {
+      "name": "Team Management"
+    },
+    {
+      "name": "Kubernetes"
+    },
+    {
+      "name": "ASP.NET Core"
+    },
+    {
+      "name": "LaTeX"
+    },
+    {
+      "name": "React.js"
+    }
+  ],
+  "languages": [
+    {
+      "language": "de",
+      "fluency": "Native Speaker"
+    },
+    {
+      "fluency": "Full Professional",
+      "language": "English"
+    },
+    {
+      "fluency": "Elementary",
+      "language": "French"
+    },
+    {
+      "fluency": "Native Speaker",
+      "language": "German"
+    }
+  ],
+  "interests": [],
+  "projects": [
+    {
+      "name": "Master's Thesis:  High-Level Cloud Architectures for Platform-Independent Serverless Applications",
+      "startDate": "2022-03-31",
+      "summary": "Cloud computing enables companies to quickly build scalable distributed systems without large initial capital expenses. Cloud service providers offer computing resources on-demand with a pay-as-you-go pricing strategy. Those resources can be used in a broad range of different fields, from factory automation and monitoring to complex shopping websites. Some of the cloud services are considered “serverless”, meaning the underlying infrastructure is hidden from the user and managed by the cloud platform. Those services are typically unique to their cloud platform and require platform-specific knowledge and configuration. However, limiting an application deployment to only one cloud platform has various disadvantages, such as vendor lock-in. There is no well-established universal standard for describing a cloud architecture that uses serverless services and can be deployed to multiple cloud platforms. The offerings of different cloud platforms often contain services that are similar in function but vastly different in usage and configuration, which is especially true with serverless products. This abstraction barrier is the reason why developing the same application for different platforms is expensive and time-consuming. We propose a solution to this problem by providing a way to describe high-level cloud architectures in a generic, platform-independent way. Furthermore, a software tool that translates this generic architecture into platform-specific architectures is presented. These contributions enable developers to build applications that target multiple cloud platforms more efficiently.",
+      "url": "https://mediatum.ub.tum.de/node?id=1686442",
+      "endDate": "2022-09-30"
+    },
+    {
+      "name": "Bachelor's Thesis: Smartphone Assisted Virtual Reality",
+      "startDate": "2019-07-31",
+      "summary": "Virtual Reality is an emerging medium that enables presence and interactivity in a three-dimensional space. Conventional input devices like a mouse or a keyboard are made for two-dimensional environments. They require complex movements to complete tasks in a three-dimensional environment.\n\nMost people own a smartphone that they use on a daily basis. Such phones have a variety of different sensors already built-in, feature wireless capabilities, and are able to run custom software. This makes them affordable general-purpose devices. A virtual representation of the phone can be displayed in a Virtual Environment using the orientational sensors. Therefore they are suitable to use as interaction devices for Virtual Reality.\n\nIn this thesis, three interaction examples are presented to verify that a smartphone can be used as an input device for Virtual Reality. A model viewing application, a pointing tool, and a virtual keyboard were implemented and evaluated.",
+      "url": "https://wiki.tum.de/display/infar/%5B19SS+-+BA%5D+Smartphone-Assisted+Virtual+Reality+Using+Ubi-Interact",
+      "endDate": "2019-10-31"
+    },
+    {
+      "name": "Patent Waiter",
+      "startDate": "2018-07-31",
+      "summary": "Patent Waiter is a smart software tool designed for patent law firms. It automates the process of downloading patents from OPS/EPO/Espacenet.",
+      "url": "https://www.lohr-it.de/products/patent-waiter/",
+      "endDate": "2019-01-31"
+    },
+    {
+      "name": "VoxVR",
+      "startDate": "2016-06-30",
+      "summary": "VoxVR is a 3D-modelling application, which allows creating 3D voxel models from within Virtual Reality. Supports the HTC Vive and the Oculus Rift & Touch.",
+      "url": "https://www.brokenvector.com/voxvr/",
+      "endDate": "2017-10-31"
+    }
+  ]
+}

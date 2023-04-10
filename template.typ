@@ -1,5 +1,6 @@
+#import "utils.typ": debugMode
 #import "icons.typ": *
-
+#import "date.typ": formatDate
 
 #let header() = {
   stack(
@@ -58,24 +59,25 @@
     link("https://linkedin.com/in/michael-lohr")[michael-lohr #linkedin],
     link("https://github.com/michidk")[michidk #github]
   )
-
 }
 
-#let cv(
-  test: none,
+#let template(
+  data: none,
+  debug: false,
   body
 ) = {
   set document(
     title: "Michael Lohr's CV",
     author: "Michael Lohr"
   )
+  let margins = (
+    top: 1cm,
+    bottom: 1cm,
+    left: 1cm,
+    right: 1cm
+  );
   set page(
-    margin: (
-      top: 1cm,
-      bottom: 1cm,
-      left: 1cm,
-      right: 1cm
-    ),
+    margin: margins,
     footer: {
       set align(center)
       set text(
@@ -100,7 +102,11 @@
     body-indent: 0.1cm,
   )
   show link: set text(fill: rgb("#0d3c88"))
+  show columns: set block(above: 0.25cm) // fix for: https://github.com/typst/typst/issues/686
+  // debug mode
+  show: debugMode.with(enabled: debug, margins: margins)
 
+  // stylized headings
   show heading.where(level: 1): content => {
     block(width: 100%, above: 0.5cm, below: 0.4cm)[
       #set text(16pt, weight: "bold")
@@ -132,7 +138,6 @@
 
         = Skills
         *Key Skills*
-        #v(-0.2cm) //fix for: https://github.com/typst/typst/issues/686
         #columns(3, gutter: 0.2cm)[
             - #lorem(2)
             - #lorem(3)
@@ -156,35 +161,48 @@
   )
 
   heading("Work Experience")
-  grid(
-    columns: 2,
-    rows: 2,
-    column-gutter: 1fr,
-    row-gutter: 0.2cm,
-    strong("STABL Energy GmbH"),
-    [Okt 2022 #sym.dash.en Present],
-    text(
-      size: 10pt,
-      weight: "medium",
-      fill: rgb("#545454"),
-      spacing: 150%,
-      tracking: 1.3pt,
-      upper("Software Engineer")),
-    text(
-      size: 9pt,
-      ligatures: false,
-      overhang: false,
-      kerning: false,
-      "Munich"
-    )
-  )
-  list(
-    lorem(10),
-    lorem(10),
-    lorem(10),
-    lorem(10),
-    lorem(10),
-  )
+  for work in data.work {
+    block(breakable: false,
+    {
+      grid(
+        columns: 2,
+        rows: 2,
+        column-gutter: 1fr,
+        row-gutter: 0.2cm,
+        strong(work.name),
+        {
+          set align(right)
+          if "endData" in work {
+            [#formatDate(work.startDate) #sym.dash.en #formatDate(work.endDate)]
+          } else {
+            [#formatDate(work.startDate) #sym.dash.en Present]
+          }
+        },
+        text(
+          size: 10pt,
+          weight: "medium",
+          fill: rgb("#545454"),
+          spacing: 150%,
+          tracking: 1.3pt,
+          upper(work.position)),
+          {
+            set align(right)
+            text(
+              size: 9pt,
+              ligatures: false,
+              overhang: false,
+              kerning: false,
+              work.location
+            )
+          }
+      )
+      if "highlights" in work {
+        for highlight in work.highlights {
+          [- #highlight]
+        }
+      }
+  })
+  }
 
   heading("Certifications")
     grid(

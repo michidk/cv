@@ -1,5 +1,6 @@
 #import "template.typ": *
 
-#show: cv.with(
-  test: "test"
+#show: template.with(
+  data: json("data/resume.json"),
+  debug: true
 )
