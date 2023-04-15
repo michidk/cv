@@ -6,8 +6,13 @@
     {
       "label": "watch",
       "type": "shell",
-      "args": [],
-      "command": "typst --font-path fonts/ watch ${file}",
+      "command": "typst",
+      "args": [
+        "--font-path",
+        "fonts/",
+        "watch",
+        "${file}"
+      ],
       "group": "build"
     }
   ]

@@ -11,7 +11,7 @@
     "email": "michael@lohr-ffb.de",
     "phone": "004917685706626",
     "url": "https://lohr.dev/",
-    "summary": "Passionate about software development and design, web technologies, distributed systems, containers, DevOps, and game development. Currently designing cloud solutions for battery storage systems at STABL Energy GmbH. Also developing various software solutions (focused on web and cloud technologies) for startups and mid-sized businesses with my company Lohr IT.",
+    "summary": "Passionate about software development, web technologies, distributed systems, containers, DevOps, and game development.",
     "location": {
       "countryCode": "DE",
       "region": "Bavaria",
@@ -23,12 +23,14 @@
       {
         "network": "LinkedIn",
         "username": "michael-lohr",
-        "url": "https://www.linkedin.com/in/michael-lohr/"
+        "url": "https://www.linkedin.com/in/michael-lohr/",
+        "icon": "linkedin"
       },
       {
         "network": "GitHub",
         "username": "michidk",
-        "url": "https://www.github.com/michidk"
+        "url": "https://www.github.com/michidk",
+        "icon": "github"
       }
     ]
   },
@@ -45,7 +47,7 @@
         "Managing enterprise software and network solutions for the different departments"
       ],
       "summary": "STABL Energy develops smart, safe, reliable, and cost‑effective battery storage systems.",
-      "url": "https://www.linkedin.com/company/stablenergy/",
+      "url": "https://stabl.com/",
       "location": "Munich, Germany"
     },
     {
@@ -57,7 +59,7 @@
         "Planned and implemented a fault‑tolerant and scalable monitoring/logging architecture inside the AWS Cloud",
         "Developed software to securely connect microcontrollers to the Cloud"
       ],
-      "url": "https://www.linkedin.com/company/stablenergy/",
+      "url": "https://stabl.com/",
       "location": "Munich, Germany"
     },
     {
@@ -69,7 +71,7 @@
         "Developing web applications and container-based backend software"
       ],
       "summary": "Lohr IT is developing software and web experiences.",
-      "url": "https://www.linkedin.com/company/lohr-it/",
+      "url": "https://www.lohr-it.de/",
       "location": "Eichenau, Germany"
     },
     {
@@ -77,7 +79,7 @@
       "position": "Data Protection Officer",
       "startDate": "2018-06-30",
       "summary": "Lohr, Jöstingmeier & Partner is a German law firm specializing in German and European intellectual property matters. I oversee the personal data protection strategy and ensure compliance with data protection laws.",
-      "url": "https://www.linkedin.com/company/lohr-j%C3%B6stingmeier-&-partner/",
+      "url": "https://lohrpatent.de/",
       "location": "Pucheim, Germany"
     },
     {
@@ -90,10 +92,9 @@
         "Researched different Cloud Computing solutions for robot/IoT appliances",
         "Developed integrations for the Robot Operating System (ROS)",
         "Defined requirements, selected hardware, and installed wireless communication hardware"
-
       ],
       "summary": "Filics is a robotic high-tech start-up that builds automated guided vehicles to handle the intralogistical material flow in warehouses.",
-      "url": "https://www.linkedin.com/company/filics/",
+      "url": "https://filics.eu/",
       "location": "Garching, Germany"
     },
     {
@@ -107,7 +108,7 @@
         "Built proof of concepts of Cloud architectures using the AWS offering for customers"
       ],
       "summary": "Amazon Web Services offers reliable and scalable cloud computing services.",
-      "url": "https://www.linkedin.com/company/amazon-web-services/",
+      "url": "https://aws.amazon.com/",
       "location": "Munich, Germany"
     },
     {
@@ -122,7 +123,7 @@
         "Managed business and customer relations"
       ],
       "summary": "Broken Vector developed and sold (Virtual Reality (VR)) software as well as 3D models in various online stores.",
-      "url": "https://www.linkedin.com/company/broken-vector-ug/",
+      "url": "https://www.brokenvector.com/",
       "location": "Eichenau, Germany"
     },
     {
@@ -138,7 +139,7 @@
         "Developed microservices to handle large-scale email traffic"
       ],
       "summary": "The Cyber Security department of TÜV SÜD creates pragmatic solutions to ensure security on various systems.",
-      "url": "https://www.linkedin.com/company/tuvsud/",
+      "url": "https://www.tuvsud.com/de-de/themen/cybersecurity",
       "location": "Munich, Germany"
     },
     {
@@ -151,7 +152,7 @@
         "Corrected exercises and exams"
       ],
       "summary": "As a tutor for the course \"Fundamentals of Programming\", I taught students object-orientated programming in Java.",
-      "url": "https://www.linkedin.com/school/technische-universitat-munchen/",
+      "url": "https://www.tum.de/",
       "location": "Garching, Germany"
     },
     {
@@ -160,7 +161,7 @@
       "startDate": "2013-07-31",
       "endDate": "2013-07-31",
       "summary": "During the internship at the cancer research of 'Klinik und Poliklinik für Innere Medizin II', I mixed chemical compounds and prepared extracted organs for microscopic inspection.",
-      "url": "https://www.linkedin.com/company/klinikum-rechts-der-isar/",
+      "url": "https://www.mri.tum.de/",
       "location": "Munich, Germany"
     },
     {
@@ -169,7 +170,7 @@
       "startDate": "2012-07-31",
       "endDate": "2012-07-31",
       "summary": "MIPM develops medical monitoring systems that are magnetic resonance imaging (MRI) compatible. I worked in the assembly and soldered circuit boards, produced electronic plugs, and prepared casings.",
-      "url": "https://www.linkedin.com/company/mipm-mammendorfer-institut-f%C3%BCr-physik-und-medizin-gmbh/",
+      "url": "https://www.mipm.com/",
       "location": "Mammendorf, Germany"
     }
   ],
@@ -180,14 +181,14 @@
       "startDate": "2017-03-31",
       "endDate": "2018-08-31",
       "summary": "• Managed all financial assets of the club itself and six musical ensembles\n• Administrated the club together with seven other board members",
-      "url": "https://www.linkedin.com/company/agv-akademischer-gesangverein-m%C3%BCnchen/"
+      "url": "https://www.agv-muenchen.de/"
     },
     {
       "organization": "AGV Akademischer Gesangverein München e.V.",
       "position": "IT and Network Administrator",
       "startDate": "2016-12-31",
       "summary": "• Developed a local network infrastructure for more than 200 concurrent users\n• Architectured and developed a Kubernetes-based cluster for web-based infrastructure and applications",
-      "url": "https://www.linkedin.com/company/agv-akademischer-gesangverein-m%C3%BCnchen/"
+      "url": "https://www.agv-muenchen.de/"
     }
   ],
   "education": [
@@ -281,121 +282,54 @@
   "publications": [],
   "skills": [
     {
-      "name": "Software Engineering"
+      "name": "Software Development",
+      "key": true
     },
     {
-      "name": "Project Management"
+      "name": "Project Management",
+      "key": true
     },
     {
-      "name": "Cloud Computing"
+      "name": "IoT Engineering",
+      "key": true
     },
     {
-      "name": "Game Development"
+      "name": "Problem-solving",
+      "key": true
     },
     {
-      "name": "3D-Rendering"
+      "name": "Cloud Architecture",
+      "key": true
     },
     {
-      "name": "Software Development"
+      "name": "Collaboration",
+      "key": true
     },
     {
-      "name": "Web Development"
+      "name": "Programming",
+      "title": "Programming Languages",
+      "subskills": ["C#", "Java", "JavaScript", "Typescript", "Python", "Rust"]
     },
     {
-      "name": "Object-oriented design"
+      "name": "Fullstack Web Development",
+      "title": "Web Technologies",
+      "subskills": ["ASP.Net Core", "Vue.js", "React", "HTML/SCSS", "Nginx"]
     },
     {
-      "name": "Front-end Development"
+      "name": "Data Modeling",
+      "title": "Databases",
+      "subskills": [
+        "SQL",
+        "MongoDB",
+        "Redis",
+        "InfluxDB",
+        "Microsoft Dataverse"
+      ]
     },
     {
-      "name": "Software Project Management"
-    },
-    {
-      "name": "Software Architecture"
-    },
-    {
-      "name": "Data Science"
-    },
-    {
-      "name": "Machine Learning"
-    },
-    {
-      "name": "C#"
-    },
-    {
-      "name": "Java"
-    },
-    {
-      "name": "JavaScript"
-    },
-    {
-      "name": "CSS"
-    },
-    {
-      "name": "Node.js"
-    },
-    {
-      "name": "Teamwork"
-    },
-    {
-      "name": "Amazon Web Services (AWS)"
-    },
-    {
-      "name": "Google Cloud Platform (GCP)"
-    },
-    {
-      "name": "Vue.js"
-    },
-    {
-      "name": "OpenGL"
-    },
-    {
-      "name": ".NET Framework"
-    },
-    {
-      "name": ".NET Core"
-    },
-    {
-      "name": "Unity3D"
-    },
-    {
-      "name": "MongoDB"
-    },
-    {
-      "name": "Microservices"
-    },
-    {
-      "name": "Networking"
-    },
-    {
-      "name": "Rust"
-    },
-    {
-      "name": "Python"
-    },
-    {
-      "name": "Linux"
-    },
-    {
-      "name": "Docker"
-    },
-    {
-      "name": "ASP.NET"
-    },
-    {
-      "name": "Team Management"
-    },
-    {
-      "name": "Kubernetes"
-    },
-    {
-      "name": "ASP.NET Core"
-    },
-    {
-      "name": "LaTeX"
-    },
-    {
-      "name": "React.js"
+      "name": "Cloud Development",
+      "title": "Cloud Technologies",
+      "subskills": ["Docker", "Kubernetes", "Terraform", "Amazon Web Services"]
     }
   ],
   "languages": [

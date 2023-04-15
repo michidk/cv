@@ -1,15 +1,17 @@
-#import "utils.typ": debugMode
+#import "utils.typ": debugMode, prettifyUrl, safeGet
 #import "icons.typ": *
-#import "date.typ": formatDate
+#import "date.typ": formatDate, isExpired
 
-#let header() = {
+#let TODAY = "2023-04-15" // until https://github.com/typst/typst/issues/204 done
+
+#let header(name) = {
   stack(
     dir: ttb,
     spacing: 10pt,
     text(
       weight: "thin",
       size: 40pt,
-      "Michael Lohr"
+      name
     ),
     {
       h(0.5cm)
@@ -29,7 +31,7 @@
   block(above: 0.9cm, below: 0.4cm, emph["#content"])
 }
 
-#let adress() = {
+#let adress(basics) = {
   set align(right)
 
   let head(body) = {
@@ -41,10 +43,18 @@
 
   let sep() = { v(0.5cm) }
 
+  let renderProfile(profile) = {
+    set text(
+      size: 10pt,
+    )
+    let label = safeGet(profile, "username", prettifyUrl(profile.url))
+    link(profile.url, icons.at(profile.icon) + " " + label)
+  }
+
   stack(
     dir: ttb,
     spacing: 5pt,
-    image("data/picture.png", height: 3.5cm),
+    image("data/" + basics.image, height: 3.5cm),
     v(0.3cm),
     head("Address"),
     text("Lessingstr. 5"),
@@ -52,23 +62,26 @@
     text("Germany"),
     sep(),
     head("Contact"),
-    link("tel:004917685706626")[0176 85706626 #phone],
-    link("mailto:michael@Lohr-ffb.de")[michael\@lohr-ffb.de #mail],
+    link("tel:" + basics.phone)[#icons.phone #basics.phone],
+    link("mailto:" + basics.email)[#icons.mail #basics.email],
     sep(),
-    head("Social"),
-    link("https://linkedin.com/in/michael-lohr")[michael-lohr #linkedin],
-    link("https://github.com/michidk")[michidk #github]
+    head("Web"),
+    renderProfile((url: basics.url, username: "www.lohr.dev", icon: "globe")),
+    ..basics.profiles.map(renderProfile)
   )
 }
 
 #let template(
   data: none,
+  markExpiredCertificates: true,
   debug: false,
   body
 ) = {
+  let name = data.basics.name
+
   set document(
-    title: "Michael Lohr's CV",
-    author: "Michael Lohr"
+    title: name + "'s CV",
+    author: name,
   )
   let margins = (
     top: 1cm,
@@ -86,7 +99,7 @@
         fill: rgb("#c0bdbd")
       )
 
-      smallcaps("Michael Lohr")
+      smallcaps(name)
       h(0.2cm)
       sym.dot.c
       h(0.2cm)
@@ -109,7 +122,7 @@
   // stylized headings
   show heading.where(level: 1): content => {
     block(width: 100%, above: 0.5cm, below: 0.4cm)[
-      #set text(16pt, weight: "bold")
+      #set text(16pt, weight: "bold", fill: rgb("#585858"))
 
       #place(
         dx: 0cm,
@@ -130,38 +143,45 @@
     columns: (16fr, 5fr),
     gutter: 1cm,
     {
-      header()
-      tagline[Because a Great Idea is Never Enough.]
+      header(name)
+      tagline(data.basics.label)
       [
         = Summary
-        #lorem(20)
+        #data.basics.summary
 
         = Skills
+        #let keySkills = data.skills.filter(skill => "key" in skill and skill.key)
+        #let skills = data.skills.filter(skill => not ("key" in skill and skill.key)).map(skill => (safeGet(skill, "title", skill.name), safeGet(skill, "subskills", ()).join(", ")))
         *Key Skills*
-        #columns(3, gutter: 0.2cm)[
-            - #lorem(2)
-            - #lorem(3)
-            #colbreak()
-            - #lorem(2)
-            - #lorem(3)
-            #colbreak()
-            - #lorem(2)
-            - #lorem(3)
-          ]
+        #box(height: 1cm,
+          columns(3, gutter: 0.2cm,
+            list(..keySkills.map(skill => skill.name))
+          )
+        )
 
         *Technical Skills*
-        - #lorem(2): #lorem(7)
-        - #lorem(2): #lorem(6)
-        - #lorem(2): #lorem(7)
-        - #lorem(2): #lorem(5)
-        - #lorem(2): #lorem(6)
+        #for skill in skills {
+          if skill.at(1) != none {
+            list(skill.at(0) + ": " + skill.at(1))
+          } else {
+            list(skill.at(0))
+          }
+        }
       ]
     },
-    adress()
+    adress(data.basics)
   )
 
   heading("Work Experience")
-  for work in data.work {
+  for work in data.work.sorted(key: work =>
+    // sort by end date, if not present, put it at the beginning and sort by start date
+    // rationale: we want all "present" position on top, with the most recent ones on top
+    if "endDate" in work {
+      work.endDate
+    } else {
+      ("AAA" + work.startDate)
+    }
+  ).rev() {
     block(breakable: false,
     {
       grid(
@@ -169,10 +189,10 @@
         rows: 2,
         column-gutter: 1fr,
         row-gutter: 0.2cm,
-        strong(work.name),
+        {if "url" in work {link(work.url, strong(work.name))} else {strong(work.name)}},
         {
           set align(right)
-          if "endData" in work {
+          if "endDate" in work {
             [#formatDate(work.startDate) #sym.dash.en #formatDate(work.endDate)]
           } else {
             [#formatDate(work.startDate) #sym.dash.en Present]
@@ -205,26 +225,49 @@
   }
 
   heading("Certifications")
-    grid(
-    columns: 2,
-    rows: 2,
-    column-gutter: 1fr,
-    row-gutter: 0.2cm,
-    strong("AWS Certified Solutions Architect - Associate"),
-    [Okt 2022],
-    text(
-      size: 10pt,
-      weight: "medium",
-      fill: rgb("#545454"),
-      upper("Amazon Web Services")),
-    text(
-      size: 9pt,
-      ligatures: false,
-      overhang: false,
-      kerning: false,
-      emph("expired")
-    )
-  )
+  for certificate in data.certificates.sorted(key: certificate => certificate.startDate).rev() {
+    block(breakable: false,
+    {
+      grid(
+        columns: 2,
+        rows: 2,
+        column-gutter: 1fr,
+        row-gutter: 0.2cm,
+        {if "url" in certificate {link(certificate.url, strong(certificate.name))} else {strong(certificate.name)}},
+        {
+          set align(right)
+          if not markExpiredCertificates {
+            if "endDate" in certificate {
+              [#formatDate(certificate.startDate) #sym.dash.en #formatDate(certificate.endDate)]
+            } else {
+              [#formatDate(certificate.startDate) #sym.dash.en Present]
+            }
+          } else {
+            [#formatDate(certificate.startDate)]
+          }
+        },
+        text(
+          size: 10pt,
+          weight: "medium",
+          fill: rgb("#545454"),
+          upper(certificate.issuer)
+        ),
+        {
+          set align(right)
 
-
+          if "endDate" in certificate and markExpiredCertificates {
+            if isExpired(certificate.endDate, TODAY) {
+              text(
+                size: 9pt,
+                ligatures: false,
+                overhang: false,
+                kerning: false,
+                emph("expired")
+              )
+            }
+          }
+        }
+      )
+  })
+  }
 }

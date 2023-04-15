@@ -2,5 +2,5 @@
 
 #show: template.with(
   data: json("data/resume.json"),
-  debug: true
+  debug: false
 )
