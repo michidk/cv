@@ -4,6 +4,18 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "build",
+      "type": "shell",
+      "command": "typst",
+      "args": [
+        "--font-path",
+        "fonts/",
+        "compile",
+        "${file}"
+      ],
+      "group": "build"
+    },
+    {
       "label": "watch",
       "type": "shell",
       "command": "typst",

@@ -1,6 +1,6 @@
 font_dir := "fonts/"
 
-watch file="cv":
+watch file="src/cv":
   typst --font-path {{font_dir}} watch {{file}}.typ {{file}}.pdf
 
 # default: all

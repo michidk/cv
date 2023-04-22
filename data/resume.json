@@ -37,7 +37,7 @@
   "work": [
     {
       "name": "STABL Energy",
-      "position": "Cloud Architect",
+      "position": "Solutions/Cloud Architect",
       "startDate": "2022-10-31",
       "highlights": [
         "Building up and managing the cloud team at STABL",
@@ -127,7 +127,7 @@
       "location": "Eichenau, Germany"
     },
     {
-      "name": "TÜV SÜD Sec-IT GmbH",
+      "name": "TÜV SÜD Sec-IT",
       "position": "Software Developer, Working Student",
       "startDate": "2018-12-31",
       "endDate": "2020-02-28",
@@ -165,7 +165,7 @@
       "location": "Munich, Germany"
     },
     {
-      "name": "MIPM Mammendorfer Institut für Physik und Medizin GmbH",
+      "name": "Mammendorfer Institut für Physik und Medizin",
       "position": "Internship",
       "startDate": "2012-07-31",
       "endDate": "2012-07-31",
@@ -176,19 +176,27 @@
   ],
   "volunteer": [
     {
-      "organization": "AGV Akademischer Gesangverein München e.V.",
+      "organization": "Akademischer Gesangverein München e.V.",
       "position": "Board Member, Treasurer",
       "startDate": "2017-03-31",
       "endDate": "2018-08-31",
-      "summary": "• Managed all financial assets of the club itself and six musical ensembles\n• Administrated the club together with seven other board members",
-      "url": "https://www.agv-muenchen.de/"
+      "highlights": [
+        "Managed all financial assets of the club itself and six musical ensembles",
+        "Administrated the club together with seven other board members"
+      ],
+      "url": "https://www.agv-muenchen.de/",
+      "location": "Munich, Germany"
     },
     {
-      "organization": "AGV Akademischer Gesangverein München e.V.",
+      "organization": "Akademischer Gesangverein München e.V.",
       "position": "IT and Network Administrator",
       "startDate": "2016-12-31",
-      "summary": "• Developed a local network infrastructure for more than 200 concurrent users\n• Architectured and developed a Kubernetes-based cluster for web-based infrastructure and applications",
-      "url": "https://www.agv-muenchen.de/"
+      "highlights": [
+        "Developed a local network infrastructure for more than 200 concurrent users",
+        "Architectured and developed a Kubernetes-based cluster for web-based infrastructure and applications"
+      ],
+      "url": "https://www.agv-muenchen.de/",
+      "location": "Munich, Germany"
     }
   ],
   "education": [
@@ -198,7 +206,8 @@
       "studyType": "Master of Science (M.Sc.)",
       "startDate": "2019-12-31",
       "endDate": "2022-12-31",
-      "score": "1.6"
+      "score": "1.6",
+      "url": "https://www.tum.de/"
     },
     {
       "institution": "Technical University of Munich",
@@ -206,7 +215,8 @@
       "studyType": "Bachelor of Science (B.Sc.)",
       "startDate": "2015-12-31",
       "endDate": "2019-12-31",
-      "score": "2.4"
+      "score": "2.4",
+      "url": "https://www.tum.de/"
     },
     {
       "institution": "Obermenzinger Gymnasium",
@@ -214,7 +224,8 @@
       "studyType": "Allgemeine Hochschulreife (Higher Education Entrance Qualification)",
       "startDate": "2007-12-31",
       "endDate": "2015-12-31",
-      "score": "2.1"
+      "score": "2.1",
+      "url": "https://www.obermenzinger.de/"
     },
     {
       "institution": "Josef-Dering-Grundschule",
