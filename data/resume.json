@@ -207,7 +207,13 @@
       "startDate": "2019-12-31",
       "endDate": "2022-12-31",
       "score": "1.6",
-      "url": "https://www.tum.de/"
+      "url": "https://www.tum.de/",
+      "summary": "The Department of Informatics at TUM is one of the largest and most renowned computer science departments in Germany, and the professors and teaching staff are experts in their respective fields. Students of the master's programs receive a top-level education and can tailor their program to focus in-depth on the topics that interest them most.",
+      "highlihts": [
+        "Focused on Internet of Things and Cloud Computing",
+        "In my master's thesis, I presented a novel IaC approach to formulate platform-independent cloud architectures and a transpiler system to deploy to different cloud platforms without platform-specific knowledge (graded 1.0/A+)"
+      ],
+      "location": "Garching, Germany"
     },
     {
       "institution": "Technical University of Munich",
@@ -216,20 +222,33 @@
       "startDate": "2015-12-31",
       "endDate": "2019-12-31",
       "score": "2.4",
-      "url": "https://www.tum.de/"
+      "url": "https://www.tum.de/",
+      "summary": "The 'Informatics: Games Engineering' bachelor's degree at TUM is a technically-oriented program for students interested in game development. Games production is a booming industry that is set to grow rapidly in the near future. This new technology is utilized in many industries, including engineering, construction, medicine, and education.",
+      "highlights": [
+        "Focused on Virtual Reality and Machine Learning in the field of human-computer interaction",
+        "Wrote my bachelor's thesis about using smartphones to interact with Virtual Reality (graded 1.0/A+)"
+      ],
+      "location": "Garching, Germany"
     },
     {
       "institution": "Obermenzinger Gymnasium",
-      "area": "Wirtschaftswissenschaftlicher Zweig (Economic Path)",
+      "area": "Economic Branch",
       "studyType": "Allgemeine Hochschulreife (Higher Education Entrance Qualification)",
       "startDate": "2007-12-31",
       "endDate": "2015-12-31",
       "score": "2.1",
-      "url": "https://www.obermenzinger.de/"
+      "url": "https://www.obermenzinger.de/",
+      "summary": "The Obermenzinger Gymnasium München is a state-approved economic and social science grammar school.",
+      "highlights": [
+        "Completed various additional computer science-related courses and activities",
+        "Organized and gave a weekly programming course for other students"
+      ],
+      "location": "Munich, Germany"
     },
     {
       "institution": "Josef-Dering-Grundschule",
-      "endDate": "2007-12-31"
+      "endDate": "2007-12-31",
+      "location": "Eichenau, Germany"
     }
   ],
   "certificates": [
@@ -290,7 +309,6 @@
       "url": "https://www.youracclaim.com/badges/18b7c70d-77c3-429d-b5d7-1799c728d13c/linked_in_profile"
     }
   ],
-  "publications": [],
   "skills": [
     {
       "name": "Software Development",
@@ -319,12 +337,25 @@
     {
       "name": "Programming",
       "title": "Programming Languages",
-      "subskills": ["C#", "Java", "JavaScript", "Typescript", "Python", "Rust"]
+      "subskills": [
+        "C#",
+        "Java",
+        "JavaScript",
+        "Typescript",
+        "Python",
+        "Rust"
+      ]
     },
     {
       "name": "Fullstack Web Development",
       "title": "Web Technologies",
-      "subskills": ["ASP.Net Core", "Vue.js", "React", "HTML/SCSS", "Nginx"]
+      "subskills": [
+        "ASP.Net Core",
+        "Vue.js",
+        "React",
+        "HTML/SCSS",
+        "Nginx"
+      ]
     },
     {
       "name": "Data Modeling",
@@ -340,14 +371,15 @@
     {
       "name": "Cloud Development",
       "title": "Cloud Technologies",
-      "subskills": ["Docker", "Kubernetes", "Terraform", "Amazon Web Services"]
+      "subskills": [
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "Amazon Web Services"
+      ]
     }
   ],
   "languages": [
-    {
-      "language": "de",
-      "fluency": "Native Speaker"
-    },
     {
       "fluency": "Full Professional",
       "language": "English"
@@ -361,35 +393,36 @@
       "language": "German"
     }
   ],
-  "interests": [],
-  "projects": [
+  "interests": [
     {
-      "name": "Master's Thesis:  High-Level Cloud Architectures for Platform-Independent Serverless Applications",
-      "startDate": "2022-03-31",
-      "summary": "Cloud computing enables companies to quickly build scalable distributed systems without large initial capital expenses. Cloud service providers offer computing resources on-demand with a pay-as-you-go pricing strategy. Those resources can be used in a broad range of different fields, from factory automation and monitoring to complex shopping websites. Some of the cloud services are considered “serverless”, meaning the underlying infrastructure is hidden from the user and managed by the cloud platform. Those services are typically unique to their cloud platform and require platform-specific knowledge and configuration. However, limiting an application deployment to only one cloud platform has various disadvantages, such as vendor lock-in. There is no well-established universal standard for describing a cloud architecture that uses serverless services and can be deployed to multiple cloud platforms. The offerings of different cloud platforms often contain services that are similar in function but vastly different in usage and configuration, which is especially true with serverless products. This abstraction barrier is the reason why developing the same application for different platforms is expensive and time-consuming. We propose a solution to this problem by providing a way to describe high-level cloud architectures in a generic, platform-independent way. Furthermore, a software tool that translates this generic architecture into platform-specific architectures is presented. These contributions enable developers to build applications that target multiple cloud platforms more efficiently.",
-      "url": "https://mediatum.ub.tum.de/node?id=1686442",
-      "endDate": "2022-09-30"
+      "name": "Programming"
     },
     {
-      "name": "Bachelor's Thesis: Smartphone Assisted Virtual Reality",
-      "startDate": "2019-07-31",
-      "summary": "Virtual Reality is an emerging medium that enables presence and interactivity in a three-dimensional space. Conventional input devices like a mouse or a keyboard are made for two-dimensional environments. They require complex movements to complete tasks in a three-dimensional environment.\n\nMost people own a smartphone that they use on a daily basis. Such phones have a variety of different sensors already built-in, feature wireless capabilities, and are able to run custom software. This makes them affordable general-purpose devices. A virtual representation of the phone can be displayed in a Virtual Environment using the orientational sensors. Therefore they are suitable to use as interaction devices for Virtual Reality.\n\nIn this thesis, three interaction examples are presented to verify that a smartphone can be used as an input device for Virtual Reality. A model viewing application, a pointing tool, and a virtual keyboard were implemented and evaluated.",
-      "url": "https://wiki.tum.de/display/infar/%5B19SS+-+BA%5D+Smartphone-Assisted+Virtual+Reality+Using+Ubi-Interact",
-      "endDate": "2019-10-31"
+      "name": "Cloud technologies"
     },
     {
-      "name": "Patent Waiter",
-      "startDate": "2018-07-31",
-      "summary": "Patent Waiter is a smart software tool designed for patent law firms. It automates the process of downloading patents from OPS/EPO/Espacenet.",
-      "url": "https://www.lohr-it.de/products/patent-waiter/",
-      "endDate": "2019-01-31"
+      "name": "Game development"
     },
     {
-      "name": "VoxVR",
-      "startDate": "2016-06-30",
-      "summary": "VoxVR is a 3D-modelling application, which allows creating 3D voxel models from within Virtual Reality. Supports the HTC Vive and the Oculus Rift & Touch.",
-      "url": "https://www.brokenvector.com/voxvr/",
-      "endDate": "2017-10-31"
+      "name": "Electronics"
+    },
+    {
+      "name": "Drones"
+    },
+    {
+      "name": "Diving"
+    },
+    {
+      "name": "Skiing"
+    },
+    {
+      "name": "Climbing"
+    },
+    {
+      "name": "Table tennis"
+    },
+    {
+      "name": "Board games"
     }
   ]
 }

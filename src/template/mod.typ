@@ -1,7 +1,7 @@
 #import "../lib/utils.typ": debugMode, prettifyUrl, get, sortDateRange
 #import "../lib/icons.typ": icons
 #import "../lib/date.typ": formatDate, isExpired
-#import "section.typ": setupSectionHeading, experience, education, certifications
+#import "section.typ": setupSectionHeading, experience, education, certifications, interests
 #import "color.typ": colors
 
 #let header(name) = {
@@ -25,7 +25,7 @@
 
 #let tagline(content) = {
   set align(center)
-  set text(lang: "de") // to get that more stylized quote look
+  set text(lang: "de", size: 11pt) // to get that more stylized quote look
   set smartquote(enabled: true, double: true)
 
   block(above: 0.9cm, below: 0.4cm, emph["#content"])
@@ -109,7 +109,7 @@
   )
   set text(
     font: "Roboto",
-    size: 11pt
+    size: 10pt
   )
   set list(
     indent: 0.15cm,
@@ -178,5 +178,7 @@
     data.volunteer.sorted(key: sortDateRange).rev(),
     "Volunteering"
   )
+
+  interests(data.interests)
 
 }

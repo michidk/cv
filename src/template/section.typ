@@ -4,8 +4,14 @@
 
 // sets up stylized section headings
 #let setupSectionHeading(content) = {
-  block(width: 100%, above: 0.5cm, below: 0.4cm)[
-    #set text(16pt, weight: "bold", fill: colors.heading)
+  block(width: 100%, above: 0.5cm, below: 0.5cm)[
+    #set text(
+      16pt,
+      weight: "bold",
+      fill: colors.heading,
+      spacing: 150%,
+      tracking: 1.2pt,
+    )
 
     #place(
       dx: 0cm,
@@ -27,6 +33,8 @@
   for entry in data {
     block(
       breakable: false,
+      above: 0.5em,
+      below: 0.5em, // https://github.com/typst/typst/issues/686
       grid(
         columns: 2,
         rows: 2,
@@ -39,8 +47,11 @@
       )
     )
     if fnContent != none {
+      v(0.1cm)
       fnContent(entry)
+      v(0.1cm) // additonal spacing between entries with content
     }
+    v(0.1cm)
   }
 }
 
@@ -70,7 +81,7 @@
   }
   set align(right)
   text(
-    size: 9pt,
+    size: 8pt,
     ligatures: false,
     overhang: false,
     kerning: false,
@@ -80,11 +91,9 @@
 
 #let entryName(content) = {
   text(
-    size: 10pt,
+    size: 9pt,
     weight: "medium",
     fill: colors.heading,
-    spacing: 150%,
-    tracking: 1.3pt,
     upper(content)
   )
 }
@@ -111,6 +120,7 @@
   }
 }
 
+
 #let experience(works, title) = {
   section(
     title,
@@ -129,7 +139,13 @@
     edu,
     entryTitle,
     entryDateRange,
-    entry => entryName(get(entry, "area", "")),
+    entry => entryName({
+      get(entry, "area", "")
+      if "score" in entry {
+        [ -- Score: ]
+        entry.score
+      }
+    }),
     entryLocation,
     entryContent
   )
@@ -173,4 +189,10 @@
     expired,
     none
   )
+}
+
+#let interests(interests) = {
+  heading("Personal Interests")
+
+  interests.map(entry => entry.name).join(", ")
 }

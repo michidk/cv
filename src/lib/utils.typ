@@ -32,6 +32,7 @@
 }
 
 // safely get a value from a list, or return a default value
+// needed until this is implemented: https://github.com/typst/typst/issues/946
 #let get(list, key, default) = {
   if key in list {
     list.at(key)
