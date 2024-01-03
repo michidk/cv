@@ -64,7 +64,7 @@ jobs:
           rm -rf deploy
 
           mkdir deploy
-          chmod -R 777 out/
+          sudo chmod -R 777 out/
           mv out/*.pdf deploy/
           mv deploy-git deploy/.git
           cd deploy
