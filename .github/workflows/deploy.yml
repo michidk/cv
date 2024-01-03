@@ -38,7 +38,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: '${{ env.BRANCH }}'
+          ref: 'deploy'
           path: 'deploy'
 
       - name: Commit and Push Changes
