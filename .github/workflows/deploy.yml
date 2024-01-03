@@ -59,12 +59,12 @@ jobs:
           path: 'deploy'
 
       - name: Commit and Push Changes
-        working-directory: ${{ github.workspace }}
         run: |
           mv deploy/.git deploy-git
           rm -rf deploy
 
           mkdir deploy
+          chmod -R 777 out/
           mv out/*.pdf deploy/
           mv deploy-git deploy/.git
           cd deploy
