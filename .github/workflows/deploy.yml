@@ -5,19 +5,15 @@ on:
       - master
 jobs:
   build_resume:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.5.1
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Setup Git Client
         run: |
-          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-          git config --global user.email "github-actions@lohr.dev"
           git config --global user.name "GitHub Actions"
-      - name: Set up Git repository
-        uses: actions/checkout@v1
+          git config --global user.email "actions@github.com"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
       - name: Compile LaTeX document (Resume)
         uses: xu-cheng/latex-action@master
         with:
@@ -38,19 +34,23 @@ jobs:
         with:
           root_file: cv-eu.tex
           args: -xelatex -file-line-error -interaction=nonstopmode -outdir=out
-      - name: Collect artifacts
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: '${{ env.BRANCH }}'
+          path: 'deploy'
+
+      - name: Commit and Push Changes
+        working-directory: ${{ github.workspace }}
         run: |
-          mkdir dist
-          cp out/*.pdf dist/
-      - name: Push artifacts
-        run: |
-          git clone --depth 1 --single-branch -b deploy git@github.com:michidk/cv.git deploy
-          mv deploy/.git deploy-.git
+          mv deploy/.git deploy-git
           rm -rf deploy
-          mkdir deploy
-          mv deploy-.git deploy/.git
+
+          mv out/*.pdf deploy/
+          mv deploy-git deploy/.git
           cd deploy
-          cp -R ../dist/* .
+
           git add .
-          git diff --staged --quiet || git commit -m "Update Artifacts"
-          git push
+          git commit -m "Update Artifacts"
+          git push --force origin ${{ env.BRANCH }}
