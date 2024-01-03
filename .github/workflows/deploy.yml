@@ -53,4 +53,4 @@ jobs:
 
           git add .
           git commit -m "Update Artifacts"
-          git push --force origin ${{ env.BRANCH }}
+          git push --force origin deploy
