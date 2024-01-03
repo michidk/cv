@@ -3,9 +3,26 @@ on:
   push:
     branches:
       - master
+
+# Allow one concurrent deployment
+concurrency:
+  group: "deploy"
+  cancel-in-progress: true
+
+env:
+  # Branch to push generated docs too
+  BRANCH: deploy
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build_resume:
     runs-on: ubuntu-22.04
+    # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+    permissions:
+      contents: write
     steps:
       - name: Setup Git Client
         run: |
@@ -38,7 +55,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          ref: 'deploy'
+          ref: '${{ env.BRANCH }}'
           path: 'deploy'
 
       - name: Commit and Push Changes
@@ -47,10 +64,11 @@ jobs:
           mv deploy/.git deploy-git
           rm -rf deploy
 
+          mkdir deploy
           mv out/*.pdf deploy/
           mv deploy-git deploy/.git
           cd deploy
 
           git add .
           git commit -m "Update Artifacts"
-          git push --force origin deploy
+          git push --force origin ${{ env.BRANCH }}
