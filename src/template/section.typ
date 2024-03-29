@@ -1,5 +1,5 @@
 #import "color.typ": *
-#import "../lib/date.typ": formatDate, isExpired
+#import "../lib/date.typ": formatDate, hasExpired
 #import "../lib/utils.typ": get
 
 // sets up stylized section headings
@@ -151,7 +151,7 @@
   )
 }
 
-#let certifications(certs, today, markExpired: true) = {
+#let certifications(certs, markExpired: true) = {
 
   let date = entry => {
     set align(right)
@@ -168,7 +168,7 @@
 
   let expired = entry => {
     if "endDate" in entry and markExpired {
-      if isExpired(entry.endDate, today) {
+      if hasExpired(entry.endDate) {
         text(
           size: 9pt,
           ligatures: false,

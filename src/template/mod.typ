@@ -1,6 +1,6 @@
 #import "../lib/utils.typ": debugMode, prettifyUrl, get, sortDateRange
 #import "../lib/icons.typ": icons
-#import "../lib/date.typ": formatDate, isExpired
+#import "../lib/date.typ": formatDate
 #import "section.typ": setupSectionHeading, experience, education, certifications, interests
 #import "color.typ": colors
 
@@ -75,7 +75,6 @@
   data: none,
   markExpiredCertificates: true,
   debug: false,
-  today: none,
   body
 ) = {
   let name = data.basics.name
@@ -170,7 +169,6 @@
     data.certificates.sorted(key: cert =>
       cert.startDate
     ).rev(),
-    today,
     markExpired: markExpiredCertificates
   )
 

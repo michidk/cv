@@ -8,9 +8,8 @@
       "type": "shell",
       "command": "typst",
       "args": [
-        "--font-path",
-        "fonts/",
-        "compile",
+        "just",
+        "build",
         "${file}"
       ],
       "group": "build"
@@ -20,8 +19,7 @@
       "type": "shell",
       "command": "typst",
       "args": [
-        "--font-path",
-        "fonts/",
+        "just",
         "watch",
         "${file}"
       ],
