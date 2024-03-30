@@ -23,5 +23,11 @@
   let date = parseDate(dateStr)
   let today = datetime.today()
 
-  date.year() <= today.year() and date.ordinal() < today.ordinal()
+  if date.year() < today.year() {
+    return true
+  } else if date.year() == today.year() {
+    return date.ordinal() < today.ordinal()
+  } else {
+    return false
+  }
 }
