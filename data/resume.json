@@ -9,9 +9,9 @@
     "label": "Because a Great Idea Is Never Enough",
     "image": "picture.png",
     "email": "michael@lohr-ffb.de",
-    "phone": "004917685706626",
+    "phone": "(+49) 176 8570 6626",
     "url": "https://lohr.dev/",
-    "summary": "Passionate about software development, web technologies, distributed systems, containers, DevOps, and game development.",
+    "summary": "Passionate about software development and design, web technologies, distributed systems & IoT, all things containers, DevOps, and game development.",
     "location": {
       "countryCode": "DE",
       "region": "Bavaria",
@@ -40,11 +40,11 @@
       "position": "Solutions/Cloud Architect",
       "startDate": "2022-10-31",
       "highlights": [
-        "Building up and managing the cloud team at STABL",
+        "Building up and leading the cloud team from the ground up",
         "Designing and implementing a cloud‑based system to ingest and analyze large amounts of near‑realtime data",
-        "Architecting a platform to control battery storage systems remotely",
-        "Leading the development of FreeRTOS-based IoT devices written in Rust",
-        "Managing enterprise software and network solutions for the different departments"
+        "Architecting an IoT platform to manage battery storage systems remotely and enable easy deployments in the field",
+        "Leading the system administration department, architecting enterprise software and network solutions",
+        "Lead the development of embedded IoT devices written in Rust"
       ],
       "summary": "STABL Energy develops smart, safe, reliable, and cost‑effective battery storage systems.",
       "url": "https://stabl.com/",
@@ -68,9 +68,9 @@
       "startDate": "2015-12-31",
       "highlights": [
         "Building teams and managing software projects",
-        "Developing web applications and container-based backend software"
+        "Developing web applications, API services and desktop software"
       ],
-      "summary": "Lohr IT is developing software and web experiences.",
+      "summary": "Lohr IT is developing desktop software and web experiences.",
       "url": "https://www.lohr-it.de/",
       "location": "Eichenau, Germany"
     },
