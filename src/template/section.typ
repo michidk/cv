@@ -194,5 +194,15 @@
 #let interests(interests) = {
   heading("Personal Interests")
 
-  interests.map(entry => entry.name).join(", ")
+  let categories = interests.map(entry => entry.category).dedup()
+  let content = for category in categories {
+    list(interests.filter(entry => entry.category == category).map(entry => entry.name).join(", "))
+  }
+
+  block(
+    breakable: false,
+    above: 0.5em,
+    below: 0.5em,
+    content
+  )
 }

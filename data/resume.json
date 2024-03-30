@@ -395,34 +395,44 @@
   ],
   "interests": [
     {
-      "name": "Programming"
+      "name": "Programming",
+      "category": "digital"
     },
     {
-      "name": "Cloud technologies"
+      "name": "Cloud technologies",
+      "category": "digital"
     },
     {
-      "name": "Game development"
+      "name": "Game development",
+      "category": "digital"
     },
     {
-      "name": "Electronics"
+      "name": "Electronics",
+      "category": "digital"
     },
     {
-      "name": "Drones"
+      "name": "Drones",
+      "category": "digital"
     },
     {
-      "name": "Diving"
+      "name": "Diving",
+      "category": "sports"
     },
     {
-      "name": "Skiing"
+      "name": "Skiing",
+      "category": "sports"
     },
     {
-      "name": "Climbing"
+      "name": "Climbing",
+      "category": "sports"
     },
     {
-      "name": "Table tennis"
+      "name": "Table tennis",
+      "category": "sports"
     },
     {
-      "name": "Board games"
+      "name": "Board games",
+      "category": "sports"
     }
   ]
 }
