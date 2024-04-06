@@ -7,9 +7,9 @@ env:
   DEPLOY_BRANCH: deploy
 
 # Allow one concurrent deployment
-# concurrency:
-#   group: "deploy"
-#   cancel-in-progress: true
+concurrency:
+  group: "deploy"
+  cancel-in-progress: true
 
 defaults:
   run:
@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     # TODO: change to deploy branch before merge
-    # if: ${{ needs.build.result == 'success' && github.ref == 'refs/heads/typst' }}
+    if: ${{ needs.build.result == 'success' && github.ref == 'refs/heads/typst' }}
 
     steps:
       - name: Setup Git Client
