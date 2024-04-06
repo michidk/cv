@@ -29,6 +29,9 @@ jobs:
           - name: CV
             file: "src/cv.typ"
             output: "cv.pdf"
+          - name: Resume
+            file: "src/resume.typ"
+            output: "resume.pdf"
 
     steps:
       - name: Checkout
