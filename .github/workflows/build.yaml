@@ -17,7 +17,8 @@ defaults:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    name: Build PDFs
+    runs-on: ubuntu-22.04
 
     permissions:
       contents: write
@@ -46,10 +47,13 @@ jobs:
           path: ${{ matrix.output }}
 
   deploy:
-    needs: build
-    runs-on: ubuntu-latest
+    name: Deploy to GitHub Branch
+    needs: [build]
+    runs-on: ubuntu-22.04
+
     # TODO: change to deploy branch before merge
     if: ${{ needs.build.result == 'success' && github.ref == 'refs/heads/typst' }}
+
     steps:
       - name: Setup Git Client
         run: |
@@ -59,6 +63,7 @@ jobs:
       - name: Download PDFs
         uses: actions/download-artifact@v3
         with:
+          name: "CV"
           path: out/
 
       - name: ls
@@ -69,6 +74,7 @@ jobs:
         with:
           ref: '${{ env.DEPLOY_BRANCH }}'
           path: 'deploy'
+          fetch-depth: 0
 
       - name: Commit and Push Changes
         run: |
