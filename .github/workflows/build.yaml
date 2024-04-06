@@ -1,0 +1,86 @@
+name: Build Typst document
+on: [push, workflow_dispatch]
+
+env:
+  ROOT_DIR: ./
+  FONT_DIR: fonts/
+  DEPLOY_BRANCH: deploy
+
+# Allow one concurrent deployment
+concurrency:
+  group: "deploy"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    strategy:
+      matrix:
+        include:
+          - name: CV
+            file: "src/cv.typ"
+            output: "cv.pdf"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v3
+
+      - name: Build PDF
+        run: typst compile --font-path ${{ env.FONT_DIR }} --root ${{ env.ROOT_DIR }} ${{ matrix.file }} ${{ matrix.output }}
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.name }}
+          path: ${{ matrix.output }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    # TODO: change to deploy branch before merge
+    if: ${{ needs.build.result == 'success' && github.ref == 'refs/heads/typst' }}
+    steps:
+      - name: Setup Git Client
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Download PDFs
+        uses: actions/download-artifact@v3
+        with:
+          path: out/
+
+      - name: ls
+        run: ls -lah out/
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: '${{ env.DEPLOY_BRANCH }}'
+          path: 'deploy'
+
+      - name: Commit and Push Changes
+        run: |
+          mv deploy/.git deploy-git
+          rm -rf deploy
+
+          mkdir deploy
+          sudo chmod -R 777 out/
+          mv out/*.pdf deploy/
+          mv deploy-git deploy/.git
+          cd deploy
+
+          git add .
+          git commit -m "Update Artifacts"
+          git push --force origin ${{ env.DEPLOY_BRANCH }}
