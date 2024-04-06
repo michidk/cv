@@ -54,17 +54,23 @@ jobs:
     # TODO: change to deploy branch before merge
     if: ${{ needs.build.result == 'success' && github.ref == 'refs/heads/typst' }}
 
+
+    permissions:
+      contents: write
+
     steps:
-      - name: Setup Git Client
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
 
       - name: Download PDFs
         uses: actions/download-artifact@v3
         with:
           name: "CV"
           path: out/
+
+
+      - name: Setup Git Client
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
 
       - name: ls
         run: ls -lah out/
