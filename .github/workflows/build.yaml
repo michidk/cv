@@ -45,6 +45,7 @@ jobs:
         with:
           name: ${{ matrix.name }}
           path: ${{ matrix.output }}
+          if-no-files-found: error
 
   deploy:
     name: Deploy to GitHub Branch
@@ -62,12 +63,11 @@ jobs:
 
       - name: Download PDFs
         uses: actions/download-artifact@v3
-        with:
-          name: "CV"
-          path: out/
+        # with:
+          # path: out/
 
       - name: ls
-        run: ls -lah out/
+        run: ls -lah
 
       - name: Checkout repository
         uses: actions/checkout@v4
