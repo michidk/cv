@@ -183,7 +183,7 @@
   ],
   "volunteer": [
     {
-      "organization": "Akademischer Gesangverein München e.V.",
+      "organization": "AGV Akademischer Gesangverein München e.V.",
       "position": "Board Member, Treasurer",
       "startDate": "2017-03-31",
       "endDate": "2018-08-31",
@@ -196,7 +196,7 @@
       "importance": 4
     },
     {
-      "organization": "Akademischer Gesangverein München e.V.",
+      "organization": "AGV Akademischer Gesangverein München e.V.",
       "position": "IT and Network Administrator",
       "startDate": "2016-12-31",
       "highlights": [
@@ -206,6 +206,18 @@
       "url": "https://www.agv-muenchen.de/",
       "location": "Munich, Germany",
       "importance": 5
+    },
+    {
+      "organization": "Philisterverband des AGV Akademischer Gesangverein München e.V.",
+      "position": "IT and Network Administrator",
+      "startDate": "2024-04-18",
+      "highlights": [
+        "Responsible for all IT systems, used by multiple employees, rental customers and event guests",
+        "Administer the club with more than 600 members, its properties and assets and its eight musical ensembles together with 14 other board members"
+      ],
+      "url": "https://www.agv-muenchen.de/",
+      "location": "Munich, Germany",
+      "importance": 6
     }
   ],
   "education": [
@@ -244,7 +256,7 @@
     {
       "institution": "Obermenzinger Gymnasium",
       "area": "Economic Branch",
-      "studyType": "Allgemeine Hochschulreife (Higher Education Entrance Qualification)",
+      "studyType": "Higher Education Entrance Qualification",
       "startDate": "2007-12-31",
       "endDate": "2015-12-31",
       "score": "2.1",
@@ -444,7 +456,7 @@
       "category": "sports"
     },
     {
-      "name": "Table tennis",
+      "name": "Tennis",
       "category": "sports"
     },
     {

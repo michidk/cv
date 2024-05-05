@@ -13,10 +13,15 @@
 }
 
 #let months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
-#let formatDate(dateStr) = {
+#let formatDate(dateStr, onlyYear: false) = {
   let date = parseDate(dateStr)
-  let month = months.at(int(date.month()) - 1)
-  [#month #date.year()]
+
+  if onlyYear {
+    [#date.year()]
+  } else {
+    let month = months.at(int(date.month()) - 1)
+    [#month #date.year()]
+  }
 }
 
 #let hasExpired(dateStr) = {

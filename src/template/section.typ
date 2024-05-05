@@ -100,14 +100,14 @@
   )
 }
 
-#let entryDateRange(entry) = {
+#let entryDateRange(entry, onlyYear: false) = {
   set align(right)
   if "startDate" in entry and "endDate" in entry {
-    [#formatDate(entry.startDate) #sym.dash.en #formatDate(entry.endDate)]
+    [#formatDate(entry.startDate, onlyYear: onlyYear) #sym.dash.en #formatDate(entry.endDate, onlyYear: onlyYear)]
   } else if "startDate" in entry {
-    [#formatDate(entry.startDate) #sym.dash.en Present]
+    [#formatDate(entry.startDate, onlyYear: onlyYear) #sym.dash.en Present]
   } else if "endDate" in entry {
-    formatDate(entry.endDate)
+    formatDate(entry.endDate, onlyYear: onlyYear)
   }
 }
 
@@ -141,12 +141,14 @@
     "Education",
     edu,
     entryTitle,
-    entryDateRange,
+    entry => entryDateRange(entry, onlyYear: true),
     entry => entryName({
-      get(entry, "area", "")
-      if "score" in entry {
-        [ -- Score: ]
-        entry.score
+      if "area" in entry {
+        [#get(entry, "studyType", ""), #get(entry, "area", "")]
+        if "score" in entry {
+          [ -- Score: ]
+          entry.score
+        }
       }
     }, fontSizeAdjustment),
     entry => entryLocation(entry, fontSizeAdjustment),
