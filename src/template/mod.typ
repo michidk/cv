@@ -88,6 +88,7 @@
 
 #let template(
   data: none,
+  title: text,
   displayTagline: false,
   displaySummary: false,
   displayMugshot: false,
@@ -117,12 +118,11 @@
         weight: "medium",
         fill: rgb("#c0bdbd")
       )
-
       smallcaps(name)
       h(0.2cm)
       sym.dot.c
       h(0.2cm)
-      smallcaps("Curriculum Vitae")
+      smallcaps(title)
     }
   )
   set text(
@@ -156,22 +156,23 @@
       }
       [
         = Skills
+        #set list(spacing: 0.6em)
         #let keySkills = data.skills.filter(skill => "key" in skill and skill.key)
         #let skills = data.skills.filter(skill => not ("key" in skill and skill.key)).map(skill => (get(skill, "title", skill.name), get(skill, "subskills", ()).join(", ")))
         *Key Skills*
         #box(height: 1cm,
           columns(3, gutter: 0.2cm,
-            list(..keySkills.map(skill => skill.name))
+            list(..keySkills.map(skill => skill.name)),
           )
         )
 
         *Technical Skills*
         #for skill in skills {
-          if skill.at(1) != none {
-            list(skill.at(0) + ": " + skill.at(1))
-          } else {
-            list(skill.at(0))
-          }
+          if skill.at(1) != none [
+            - #skill.at(0): #skill.at(1)
+           ] else [
+            - #skill.at(0))
+           ]
         }
       ]
     },

@@ -2,6 +2,7 @@
 
 #show: template.with(
   data: json("../data/resume.json"),
+  title: "Résumé",
   displayTagline: false,
   displaySummary: false,
   displayInterests: false,

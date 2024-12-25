@@ -6,7 +6,7 @@
 #let setupSectionHeading(content, fontSizeAdjustment) = {
   let padding = if fontSizeAdjustment == 0pt { 0.5cm } else { 0.1cm }
 
-  block(width: 100%, above: padding, below: 0.5cm)[
+  block(width: 100%, above: padding, below: 0.5cm, breakable: false)[
     #set text(
       16pt - fontSizeAdjustment,
       weight: "bold",
@@ -17,7 +17,7 @@
 
     #place(
       dx: 0cm,
-      dy: 0.395cm,
+      dy: 0.3cm,
       rect(
         width: 100%,
         height: 6pt,
@@ -31,6 +31,7 @@
 }
 
 #let section(title, data, fnHeadLeft, fnHeadRight, fnBodyLeft, fnBodyRight, fnContent, fontSizeAdjustment: 0pt) = {
+  v(0.15cm)
   heading(title)
   for entry in data {
     block(
@@ -49,11 +50,9 @@
       )
     )
     if fnContent != none {
-      v(0.1cm)
       fnContent(entry)
-      v(0.1cm) // additional spacing between entries with content
     }
-    v(0.1cm)
+    v(0.25cm)
   }
 }
 
@@ -112,13 +111,18 @@
 }
 
 #let entryContent(entry, hideDescriptions: false, maxHighlights: none) = {
+  let dist = 0.4em
+  set list(spacing: dist)
+  set par(leading: dist)
   if "summary" in entry and not hideDescriptions {
     entry.summary
   }
   if "highlights" in entry {
-    for highlight in entry.highlights.slice(0, maxHighlights) {
-      list(highlight)
-    }
+    block(width: 100%, breakable: true, above: 0.7em)[
+      #for highlight in entry.highlights.slice(0, maxHighlights) [
+        - #highlight
+      ]
+    ]
   }
 }
 
@@ -200,10 +204,11 @@
 #let interests(interests) = {
   heading("Personal Interests")
 
+  set list(spacing: 0.8em)
   let categories = interests.map(entry => entry.category).dedup()
-  let content = for category in categories {
-    list(interests.filter(entry => entry.category == category).map(entry => entry.name).join(", "))
-  }
+  let content = for category in categories [
+    - #interests.filter(entry => entry.category == category).map(entry => entry.name).join(", ")
+  ]
 
   block(
     breakable: false,

@@ -37,14 +37,16 @@
   "work": [
     {
       "name": "STABL Energy",
-      "position": "Solutions/Cloud Architect",
-      "startDate": "2022-10-31",
+      "position": "Senior Cloud Architect",
+      "startDate": "2023-08-01",
       "highlights": [
-        "Building and leading the cloud team from the ground up",
-        "Designing and implementing a cloud‑based system to ingest and analyze large amounts of near‑realtime data",
-        "Architecting an IoT platform to manage battery storage systems remotely and enable easy deployments in the field",
-        "Leading the system administration department, architecting enterprise software and network solutions",
-        "Lead the development of embedded IoT devices written in Rust"
+          "Building and leading the cloud engineering team from the ground up, driving strategy and execution",
+          "Designing scalable cloud systems for ingesting and analyzing near-real-time data",
+          "Architecting an IoT platform for remote battery storage management and streamlined deployments",
+          "Leading development of embedded IoT devices (bare-metal & Linux) using Rust for efficient edge computing",
+          "Product Owner & Product Manager, overseeing product strategy, roadmap, and delivery",
+          "Assisting the Engineering Director and C-level with financial management and strategic planning",
+          "Leading the IT department as a strategic and technological sparring partner"
       ],
       "summary": "STABL Energy develops smart, safe, reliable, and cost‑effective battery storage systems.",
       "url": "https://stabl.com/",
@@ -53,12 +55,21 @@
     },
     {
       "name": "STABL Energy",
-      "position": "Cloud Developer, Working Student",
+      "position": "Cloud Architect",
+      "startDate": "2022-10-31",
+      "endDate": "2023-07-31",
+      "url": "https://stabl.com/",
+      "location": "Munich, Germany",
+      "importance": 5
+    },
+    {
+      "name": "STABL Energy",
+      "position": "Cloud Engineer, Working Student",
       "startDate": "2022-01-31",
       "endDate": "2022-09-30",
       "highlights": [
-        "Planned and implemented a fault‑tolerant and scalable monitoring/logging architecture inside the AWS Cloud",
-        "Developed software to securely connect microcontrollers to the Cloud"
+        "Implemented a fault‑tolerant and scalable monitoring/logging architecture using the AWS Cloud",
+        "Developed embedded software to securely connect microcontrollers to the Cloud"
       ],
       "url": "https://stabl.com/",
       "location": "Munich, Germany",
@@ -183,7 +194,7 @@
   ],
   "volunteer": [
     {
-      "organization": "AGV Akademischer Gesangverein München e.V.",
+      "organization": "Akademischer Gesangverein München e.V.",
       "position": "Board Member, Treasurer",
       "startDate": "2017-03-31",
       "endDate": "2018-08-31",
@@ -196,7 +207,7 @@
       "importance": 4
     },
     {
-      "organization": "AGV Akademischer Gesangverein München e.V.",
+      "organization": "Akademischer Gesangverein München e.V.",
       "position": "IT and Network Administrator",
       "startDate": "2016-12-31",
       "highlights": [
@@ -208,8 +219,8 @@
       "importance": 5
     },
     {
-      "organization": "Philisterverband des AGV Akademischer Gesangverein München e.V.",
-      "position": "IT and Network Administrator",
+      "organization": "Akademischer Gesangverein München e.V.",
+      "position": "Head of IT",
       "startDate": "2024-04-18",
       "highlights": [
         "Responsible for all IT systems, used by multiple employees, rental customers and event guests",
@@ -344,7 +355,7 @@
       "key": true
     },
     {
-      "name": "Project Management",
+      "name": "Product Management",
       "key": true
     },
     {
@@ -352,11 +363,11 @@
       "key": true
     },
     {
-      "name": "Problem-solving",
+      "name": "Cloud Architecture",
       "key": true
     },
     {
-      "name": "Cloud Architecture",
+      "name": "Leadership",
       "key": true
     },
     {
@@ -367,12 +378,12 @@
       "name": "Programming",
       "title": "Programming Languages",
       "subskills": [
-        "C#",
-        "Java",
-        "JavaScript",
         "Typescript",
         "Python",
-        "Rust"
+        "Rust",
+        "C#",
+        "Java",
+        "C"
       ]
     },
     {
@@ -381,8 +392,8 @@
       "subskills": [
         "ASP.Net Core",
         "Vue.js",
-        "Next.js",
-        "HTML/SCSS",
+        "React/Next.js",
+        "Tailwind",
         "Nginx"
       ]
     },
@@ -390,8 +401,9 @@
       "name": "Data Modeling",
       "title": "Databases",
       "subskills": [
-        "SQL",
+        "DynamoDB",
         "MongoDB",
+        "PostgreSQL",
         "Redis",
         "InfluxDB",
         "Microsoft Dataverse"
@@ -404,6 +416,7 @@
         "Docker",
         "Kubernetes",
         "Terraform",
+        "CDKTF",
         "Amazon Web Services"
       ]
     }

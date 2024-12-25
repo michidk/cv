@@ -7,14 +7,14 @@
   if enabled {
     set block(stroke: red)
     let text = text(fill: red, size: 20pt, "DEBUG")
-    style(styles => {
+    context(
       for i in range(6) {
-        place(top, dx: (measure(text, styles).width + 1cm) * i, {
+        place(top, dx: (measure(text).width + 1cm) * i, {
           v(-margins.top)
           text
         })
       }
-    })
+    )
     it
   } else {
     it
