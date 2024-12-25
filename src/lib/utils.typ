@@ -48,6 +48,6 @@
   if "endDate" in entry {
     entry.endDate
   } else {
-    ("AAA" + entry.startDate)
+    entry.startDate
   }
 }
