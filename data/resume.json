@@ -8,7 +8,7 @@
     "name": "Michael Lohr",
     "label": "Because a Great Idea Is Never Enough",
     "image": "picture.png",
-    "email": "michael@lohr-ffb.de",
+    "email": "michael@lohr.dev",
     "phone": "(+49) 176 8570 6626",
     "url": "https://lohr.dev/",
     "summary": "Passionate about software development and design, web technologies, distributed systems & IoT, all things containers, DevOps, and game development.",
@@ -287,6 +287,28 @@
   ],
   "certificates": [
     {
+      "name": "AWS Certified AI Practitioner",
+      "issuer": "Amazon Web Services (AWS)",
+      "startDate": "2024-12-28",
+      "endDate": "2027-12-28",
+      "url": "https://www.credly.com/earner/earned/badge/a18a0e1b-d991-439a-a71d-30042b18ae1d",
+      "importance": 3
+    },
+    {
+      "name": "Microsoft Certified: Azure Fundamentals",
+      "issuer": "Microsoft",
+      "startDate": "2021-04-26",
+      "url": "https://www.credly.com/earner/earned/badge/8558a9a9-9e59-4f82-a767-57e79e8a63fe",
+      "importance": 2
+    },
+    {
+      "name": "Microsoft Certified: Azure AI Fundamentals",
+      "issuer": "Microsoft",
+      "startDate": "2021-05-16",
+      "url": "https://www.credly.com/earner/earned/badge/771f8782-7b57-404b-86eb-b59ba5c2acdf",
+      "importance": 2
+    },
+    {
       "name": "DAAD English Language Certificate Level GER C1, UNIcert III, ALTE Level 4",
       "issuer": "Technical University Munich",
       "startDate": "2020-05-31",
@@ -437,27 +459,39 @@
   ],
   "interests": [
     {
-      "name": "Programming",
+      "name": "Contributing to OSS Projects",
       "category": "digital"
     },
     {
-      "name": "Cloud technologies",
+      "name": "Writing Technical Blog Posts",
       "category": "digital"
     },
     {
-      "name": "Game development",
+      "name": "Cloud Technologies",
+      "category": "digital"
+    },
+    {
+      "name": "Game Development",
       "category": "digital"
     },
     {
       "name": "Electronics",
-      "category": "digital"
+      "category": "digital2"
     },
     {
-      "name": "Drones",
-      "category": "digital"
+      "name": "Building Drones",
+      "category": "digital2"
     },
     {
-      "name": "Diving",
+      "name": "Home Automation",
+      "category": "digital2"
+    },
+    {
+      "name": "3D Printing",
+      "category": "digital2"
+    },
+    {
+      "name": "Technical Diving",
       "category": "sports"
     },
     {
@@ -473,7 +507,7 @@
       "category": "sports"
     },
     {
-      "name": "Board games",
+      "name": "Board Games",
       "category": "sports"
     }
   ]

@@ -100,6 +100,7 @@
   markExpiredCertificates: true,
   margins: (top: 1cm, bottom: 1cm, left: 1cm, right: 1cm),
   fontSizeAdjustment: 0pt,
+  squeeze: false,
   debug: false,
   body
 ) = {
@@ -137,7 +138,7 @@
   show columns: set block(above: 0.25cm) // fix for: https://github.com/typst/typst/issues/686
 
   // stylized headings
-  show heading.where(level: 1): content => setupSectionHeading(content, fontSizeAdjustment)
+  show heading.where(level: 1): content => setupSectionHeading(content, fontSizeAdjustment, squeeze: squeeze)
 
   // debug mode
   show: debugMode.with(enabled: debug, margins: margins)
@@ -160,7 +161,7 @@
         #let keySkills = data.skills.filter(skill => "key" in skill and skill.key)
         #let skills = data.skills.filter(skill => not ("key" in skill and skill.key)).map(skill => (get(skill, "title", skill.name), get(skill, "subskills", ()).join(", ")))
         *Key Skills*
-        #box(height: 1cm,
+        #box(height: 0.8cm,
           columns(3, gutter: 0.2cm,
             list(..keySkills.map(skill => skill.name)),
           )
@@ -185,7 +186,8 @@
     "Work Experience",
     hideDescriptions,
     maxHighlights,
-    fontSizeAdjustment
+    fontSizeAdjustment,
+    squeeze: squeeze
   )
 
   let educationData = filterHighlights(data.education, importanceFilter)
@@ -193,7 +195,8 @@
     educationData.sorted(key: sortDateRange).rev(),
     hideDescriptions,
     maxHighlights,
-    fontSizeAdjustment
+    fontSizeAdjustment,
+    squeeze: squeeze
   )
 
   let certificationsData = filterHighlights(data.certificates, importanceFilter)
@@ -203,7 +206,8 @@
     ).rev(),
     hideDescriptions,
     fontSizeAdjustment,
-    markExpired: markExpiredCertificates
+    markExpired: markExpiredCertificates,
+    squeeze: squeeze
   )
 
   if displayVolunteering {
@@ -213,7 +217,8 @@
       "Volunteering",
       hideDescriptions,
       maxHighlights,
-      fontSizeAdjustment
+      fontSizeAdjustment,
+      squeeze: squeeze,
     )
   }
 

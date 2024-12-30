@@ -3,10 +3,11 @@
 #import "../lib/utils.typ": get
 
 // sets up stylized section headings
-#let setupSectionHeading(content, fontSizeAdjustment) = {
-  let padding = if fontSizeAdjustment == 0pt { 0.5cm } else { 0.1cm }
+#let setupSectionHeading(content, fontSizeAdjustment, squeeze: false) = {
+  let above = if not squeeze { 0.5cm } else { 0.2cm }
+  let below = if not squeeze { 0.5cm } else { 0.3cm }
 
-  block(width: 100%, above: padding, below: 0.5cm, breakable: false)[
+  block(width: 100%, above: above, below: below, breakable: false)[
     #set text(
       16pt - fontSizeAdjustment,
       weight: "bold",
@@ -24,19 +25,19 @@
         fill: colors.accent,
       )
     )
-    #if fontSizeAdjustment != 0pt { v(0.1cm) }
+    #if fontSizeAdjustment != 0pt { v(0.05cm) }
     #h(0.25cm)
     #text(content.body)
   ]
 }
 
-#let section(title, data, fnHeadLeft, fnHeadRight, fnBodyLeft, fnBodyRight, fnContent, fontSizeAdjustment: 0pt) = {
-  v(0.15cm)
+#let section(title, data, fnHeadLeft, fnHeadRight, fnBodyLeft, fnBodyRight, fnContent, fontSizeAdjustment: 0pt, squeeze: false) = {
+  if not squeeze { v(0.25cm) }
   heading(title)
   for entry in data {
     block(
       breakable: false,
-      above: 0.5em,
+      above: if squeeze { 0.35em } else { 0.5em },
       below: 0.5em, // https://github.com/typst/typst/issues/686
       grid(
         columns: 2,
@@ -52,7 +53,7 @@
     if fnContent != none {
       fnContent(entry)
     }
-    v(0.25cm)
+    if squeeze { v(0.15cm) } else { v(0.25cm) }
   }
 }
 
@@ -127,7 +128,7 @@
 }
 
 
-#let experience(works, title, hideDescriptions, maxHighlights, fontSizeAdjustment) = {
+#let experience(works, title, hideDescriptions, maxHighlights, fontSizeAdjustment, squeeze: false) = {
   section(
     title,
     works,
@@ -136,11 +137,12 @@
     entry => entryName(get(entry, "position", ""), fontSizeAdjustment),
     entry => entryLocation(entry, fontSizeAdjustment),
     entry => entryContent(entry, hideDescriptions: hideDescriptions, maxHighlights: maxHighlights),
-    fontSizeAdjustment: fontSizeAdjustment
+    fontSizeAdjustment: fontSizeAdjustment,
+    squeeze: squeeze
   )
 }
 
-#let education(edu, hideDescriptions, maxHighlights, fontSizeAdjustment) = {
+#let education(edu, hideDescriptions, maxHighlights, fontSizeAdjustment, squeeze: false) = {
   section(
     "Education",
     edu,
@@ -156,12 +158,13 @@
       }
     }, fontSizeAdjustment),
     entry => entryLocation(entry, fontSizeAdjustment),
-    entryContent,
-    fontSizeAdjustment: fontSizeAdjustment
+    entry => entryContent(entry, hideDescriptions: hideDescriptions, maxHighlights: maxHighlights),
+    fontSizeAdjustment: fontSizeAdjustment,
+    squeeze: squeeze
   )
 }
 
-#let certifications(certs, hideDescriptions, fontSizeAdjustment, markExpired: true) = {
+#let certifications(certs, hideDescriptions, fontSizeAdjustment, markExpired: true, squeeze: false) = {
 
   let date = entry => {
     set align(right)
@@ -198,6 +201,7 @@
     entry => entryName(entry.issuer, fontSizeAdjustment),
     expired,
     none,
+    squeeze: squeeze
   )
 }
 
