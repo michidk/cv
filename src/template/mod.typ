@@ -158,6 +158,7 @@
       [
         = Skills
         #set list(spacing: 0.6em)
+        #set par(spacing: if squeeze { -0.4em } else { 0.8em })
         #let keySkills = data.skills.filter(skill => "key" in skill and skill.key)
         #let skills = data.skills.filter(skill => not ("key" in skill and skill.key)).map(skill => (get(skill, "title", skill.name), get(skill, "subskills", ()).join(", ")))
         *Key Skills*
