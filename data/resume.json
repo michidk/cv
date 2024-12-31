@@ -40,13 +40,13 @@
       "position": "Senior Cloud Architect",
       "startDate": "2023-08-01",
       "highlights": [
-          "Building and leading the cloud engineering team from the ground up, driving strategy and execution",
-          "Designing scalable cloud systems for ingesting and analyzing near-real-time data",
-          "Architecting an IoT platform for remote battery storage management and streamlined deployments",
-          "Leading development of embedded IoT devices (bare-metal & Linux) using Rust for efficient edge computing",
-          "Product Owner & Product Manager, overseeing product strategy, roadmap, and delivery",
-          "Assisting the Engineering Director and C-level with financial management and strategic planning",
-          "Leading the IT department as a strategic and technological sparring partner"
+        "Building and leading the cloud engineering team, driving strategy and execution",
+        "Designing and implementing scalable cloud systems for ingesting and analyzing near-real-time data",
+        "Architecting and developing an IoT platform for remote battery storage management",
+        "Leading development of embedded IoT devices (bare-metal & Linux) using Rust for edge computing",
+        "Serving as Product Owner & Product Manager, overseeing product strategy and roadmap",
+        "Assisting the Engineering Director and C-level with financial management and planning",
+        "Leading the IT department as a strategic and technological sparring partner"
       ],
       "summary": "STABL Energy develops smart, safe, reliable, and cost‑effective battery storage systems.",
       "url": "https://stabl.com/",
@@ -103,8 +103,8 @@
       "endDate": "2021-12-31",
       "highlights": [
         "Developed a fault‑tolerant and scalable monitoring/logging architecture inside the AWS Cloud",
-        "Researched different Cloud Computing solutions for robot/IoT appliances",
-        "Developed integrations for the Robot Operating System (ROS)",
+        "Researched and evaluated Cloud Computing solutions for robot/IoT appliances",
+        "Implemented integrations for the Robot Operating System (ROS)",
         "Defined requirements, selected hardware, and installed wireless communication hardware"
       ],
       "summary": "Filics is a robotic high-tech start-up that builds automated guided vehicles to handle the intralogistical material flow in warehouses.",
@@ -118,9 +118,9 @@
       "startDate": "2020-10-31",
       "endDate": "2021-02-28",
       "highlights": [
-        "Worked on different workshops covering topics like Machine Learning and Big Data in the SaaS context",
-        "Directly consulted Independent Software Vendors (ISVs) about AWS's cloud offerings and proposed architectures",
-        "Built proof of concepts of Cloud architectures using the AWS offering for customers"
+        "Developed and delivered workshops on Machine Learning and Big Data in SaaS contexts",
+        "Consulted Independent Software Vendors (ISVs) on AWS cloud offerings and architecture solutions",
+        "Designed and implemented proof-of-concept cloud architectures for customers"
       ],
       "summary": "Amazon Web Services offers reliable and scalable cloud computing services.",
       "url": "https://aws.amazon.com/",
@@ -135,7 +135,7 @@
       "highlights": [
         "Managed a team of three software developers and four 3D artists",
         "Developed a voxel-based VR design software that was published on the Steam and Oculus store",
-        "Developed new product ideas, prototypes, and final software products",
+        "Led product ideation and development from concept to market-ready software products",
         "Managed business and customer relations"
       ],
       "summary": "Broken Vector developed and sold (Virtual Reality (VR)) software as well as 3D models in various online stores.",
@@ -149,11 +149,11 @@
       "startDate": "2018-12-31",
       "endDate": "2020-02-28",
       "highlights": [
-        "Developed software modules to detect security flaws in IT systems",
-        "Planned and designed the architecture of a distributed system for the automated detection of security vulnerabilities",
-        "Deployed software on a Docker/Kubernetes-based platform in the Microsoft Azure Cloud",
-        "Lead the development of a Microsoft ASP.NET Core-based backend",
-        "Developed microservices to handle large-scale email traffic"
+        "Developed software modules for detecting security vulnerabilities in IT systems",
+        "Designed and architected a distributed system for automated security vulnerability detection",
+        "Deployed software solutions on Docker/Kubernetes platform in Microsoft Azure Cloud",
+        "Led development of a Microsoft ASP.NET Core-based backend",
+        "Developed microservices for large-scale email processing"
       ],
       "summary": "The Cyber Security department of TÜV SÜD creates pragmatic solutions to ensure security on various systems.",
       "url": "https://www.tuvsud.com/de-de/themen/cybersecurity",
@@ -211,8 +211,8 @@
       "position": "IT and Network Administrator",
       "startDate": "2016-12-31",
       "highlights": [
-        "Developed a local network infrastructure for more than 200 concurrent users",
-        "Architectured and developed a Kubernetes-based cluster for web-based infrastructure and applications"
+        "Developed and implemented a local network infrastructure supporting 200+ concurrent users",
+        "Designed and deployed a Kubernetes-based cluster for web-based infrastructure and applications"
       ],
       "url": "https://www.agv-muenchen.de/",
       "location": "Munich, Germany",
@@ -223,8 +223,8 @@
       "position": "Head of IT",
       "startDate": "2024-04-18",
       "highlights": [
-        "Responsible for all IT systems, used by multiple employees, rental customers and event guests",
-        "Administer the club with more than 600 members, its properties and assets and its eight musical ensembles together with 14 other board members"
+        "Managing all IT systems used by employees, rental customers, and event guests",
+        "Administering the club's operations with 600+ members, its properties and assets, and eight musical ensembles in cooperation with 14 other board members"
       ],
       "url": "https://www.agv-muenchen.de/",
       "location": "Munich, Germany",
@@ -243,7 +243,7 @@
       "summary": "The Department of Informatics at TUM is one of the largest and most renowned computer science departments in Germany, and the professors and teaching staff are experts in their respective fields. Students of the master's programs receive a top-level education and can tailor their program to focus in-depth on the topics that interest them most.",
       "highlights": [
         "Focused on Internet of Things and Cloud Computing",
-        "In my master's thesis, I presented a novel IaC approach to formulate platform-independent cloud architectures and a transpiler system to deploy to different cloud platforms without platform-specific knowledge (graded 1.0/A+)"
+        "In my master's thesis, I presented a novel IaC approach for platform-independent cloud architectures and a transpiler system to deploy to different cloud platforms without platform-specific knowledge (graded 1.0/A+)"
       ],
       "location": "Garching, Germany",
       "importance": 5
@@ -259,7 +259,7 @@
       "summary": "The 'Informatics: Games Engineering' bachelor's degree at TUM is a technically-oriented program for students interested in game development. Games production is a booming industry that is set to grow rapidly in the near future. This new technology is utilized in many industries, including engineering, construction, medicine, and education.",
       "highlights": [
         "Focused on Virtual Reality and Machine Learning in the field of human-computer interaction",
-        "Wrote my bachelor's thesis about using smartphones to interact with Virtual Reality (graded 1.0/A+)"
+        "In my bachelor's thesis, I researched and developed new interaction methods between smartphones and Virtual Reality applications (graded 1.0/A+)"
       ],
       "location": "Garching, Germany",
       "importance": 4
@@ -400,7 +400,7 @@
       "name": "Programming",
       "title": "Programming Languages",
       "subskills": [
-        "Typescript",
+        "TypeScript",
         "Python",
         "Rust",
         "C#",
