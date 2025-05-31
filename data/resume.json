@@ -6,12 +6,12 @@
   },
   "basics": {
     "name": "Michael Lohr",
-    "label": "Because a Great Idea Is Never Enough",
+    "label": "Certified Cloud Architect | Software Engineer | Team Leader | Author | Consultant",
     "image": "picture.png",
     "email": "michael@lohr.dev",
     "phone": "(+49) 176 8570 6626",
     "url": "https://lohr.dev/",
-    "summary": "Passionate about software development and design, web technologies, distributed systems & IoT, all things containers, DevOps, and game development.",
+    "summary": "I lead the design and development of scalable systems, specializing in AWS cloud architecture, distributed systems, IoT, DevOps & software architecture.\nPassionate about driving innovation and building impactful technology.",
     "location": {
       "countryCode": "DE",
       "region": "Bavaria",
