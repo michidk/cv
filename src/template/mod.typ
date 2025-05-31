@@ -4,7 +4,7 @@
 #import "section.typ": setupSectionHeading, experience, education, certifications, interests
 #import "color.typ": colors
 
-#let header(name, fontSizeAdjustment: 0pt) = {
+#let header(name, subtitle, fontSizeAdjustment: 0pt) = {
   stack(
     dir: ttb,
     spacing: 10pt,
@@ -17,7 +17,7 @@
       h(0.5cm)
       text(
         size: 12pt - fontSizeAdjustment,
-        "Curriculum Vitae"
+        subtitle
       )
       v(0.2cm)
     },
@@ -147,7 +147,7 @@
     columns: (16fr, 5fr),
     gutter: 1cm,
     {
-      header(name, fontSizeAdjustment: fontSizeAdjustment)
+      header(name, title, fontSizeAdjustment: fontSizeAdjustment)
       if displayTagline { tagline(data.basics.label, fontSizeAdjustment) }
       if displaySummary {
         [
