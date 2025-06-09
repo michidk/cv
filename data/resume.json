@@ -6,7 +6,7 @@
   },
   "basics": {
     "name": "Michael Lohr",
-    "label": "Certified Cloud Architect | Software Engineer | Team Leader | Author | Consultant",
+    "label": "Because a Great Idea Is Never Enough",
     "image": "picture.png",
     "email": "michael@lohr.dev",
     "phone": "(+49) 176 8570 6626",
@@ -36,6 +36,18 @@
   },
   "work": [
     {
+      "name": "Golem Media GmbH",
+      "position": "Freelance Writer",
+      "startDate": "2025-03-01",
+      "highlights": [
+        "Writing technical blog posts and articles for the Golem.de website"
+      ],
+      "summary": "Golem.de is a German technology news website that covers the latest news and trends in the tech industry.",
+      "url": "https://golem.de/",
+      "location": "Munich, Germany",
+      "importance": 3
+    },
+    {
       "name": "STABL Energy",
       "position": "Head of Cloud & IT",
       "startDate": "2025-01-01",
@@ -60,7 +72,6 @@
         "Architecting and developing an IoT platform for remote battery storage management",
         "Leading development of embedded IoT devices (bare-metal & Linux) using Rust for edge computing"
       ],
-      "summary": "STABL Energy develops smart, safe, reliable, and cost‑effective battery storage systems.",
       "url": "https://stabl.com/",
       "location": "Munich, Germany",
       "importance": 6
@@ -85,7 +96,7 @@
       ],
       "url": "https://stabl.com/",
       "location": "Munich, Germany",
-      "importance": 6
+      "importance": 4
     },
     {
       "name": "Lohr IT",
@@ -93,7 +104,8 @@
       "startDate": "2015-12-31",
       "highlights": [
         "Building teams and managing software projects",
-        "Developing web applications, API services and desktop software"
+        "Developing web applications, API services and desktop software",
+        "Consulting on industry trends and software development tooling"
       ],
       "summary": "Lohr IT is developing desktop software and web experiences.",
       "url": "https://www.lohr-it.de/",
@@ -106,7 +118,8 @@
       "startDate": "2018-06-30",
       "summary": "Lohr, Jöstingmeier & Partner is a German law firm specializing in German and European intellectual property matters. I oversee the personal data protection strategy and ensure compliance with data protection laws.",
       "url": "https://lohrpatent.de/",
-      "location": "Pucheim, Germany"
+      "location": "Pucheim, Germany",
+      "importance": 1
     },
     {
       "name": "Filics",
@@ -122,7 +135,7 @@
       "summary": "Filics is a robotic high-tech start-up that builds automated guided vehicles to handle the intralogistical material flow in warehouses.",
       "url": "https://filics.eu/",
       "location": "Garching, Germany",
-      "importance": 4
+      "importance": 3
     },
     {
       "name": "Amazon Web Services (AWS)",
@@ -170,7 +183,7 @@
       "summary": "The Cyber Security department of TÜV SÜD creates pragmatic solutions to ensure security on various systems.",
       "url": "https://www.tuvsud.com/de-de/themen/cybersecurity",
       "location": "Munich, Germany",
-      "importance": 4
+      "importance": 3
     },
     {
       "name": "Technical University of Munich",
@@ -216,7 +229,7 @@
       ],
       "url": "https://www.agv-muenchen.de/",
       "location": "Munich, Germany",
-      "importance": 4
+      "importance": 2
     },
     {
       "organization": "Akademischer Gesangverein München e.V.",
@@ -228,7 +241,7 @@
       ],
       "url": "https://www.agv-muenchen.de/",
       "location": "Munich, Germany",
-      "importance": 5
+      "importance": 3
     },
     {
       "organization": "Akademischer Gesangverein München e.V.",
@@ -240,7 +253,7 @@
       ],
       "url": "https://www.agv-muenchen.de/",
       "location": "Munich, Germany",
-      "importance": 6
+      "importance": 4
     }
   ],
   "education": [
@@ -289,15 +302,29 @@
         "Completed various additional computer science-related courses and activities",
         "Organized and gave a weekly programming course for other students"
       ],
-      "location": "Munich, Germany"
+      "location": "Munich, Germany",
+      "importance": 2
     },
     {
       "institution": "Josef-Dering-Grundschule",
       "endDate": "2007-12-31",
-      "location": "Eichenau, Germany"
+      "location": "Eichenau, Germany",
+      "importance": 2
     }
   ],
   "certificates": [
+    {
+      "name": "Leading in Coaching Mode",
+      "issuer": "troodi",
+      "startDate": "2025-06-30",
+      "importance": 4
+    },
+    {
+      "name": "Leadership Development",
+      "issuer": "troodi",
+      "startDate": "2024-07-31",
+      "importance": 4
+    },
     {
       "name": "AWS Certified AI Practitioner",
       "issuer": "Amazon Web Services (AWS)",
@@ -324,7 +351,7 @@
       "name": "DAAD English Language Certificate Level GER C1, UNIcert III, ALTE Level 4",
       "issuer": "Technical University Munich",
       "startDate": "2020-05-31",
-      "importance": 5
+      "importance": 2
     },
     {
       "name": "Machine Learning",
@@ -336,20 +363,21 @@
       "name": "Apprenticeship as Multimedia Assistant (VBP)",
       "issuer": "Verband Bayrischer Privatschulen",
       "startDate": "2013-07-31",
-      "importance": 3
+      "importance": 2
     },
     {
       "name": "LCCI English Language Certificate Level 2 for Business and Commerce",
       "issuer": "London Chamber of Commerce and Industry",
       "startDate": "2013-07-31",
-      "importance": 3
+      "importance": 2
     },
     {
       "name": "AWS Certified Solutions Architect – Associate",
       "issuer": "Amazon Web Services (AWS)",
       "endDate": "2027-01-26",
       "startDate": "2020-05-20",
-      "url": "https://www.credly.com/badges/8a92a10c-f4d8-48d1-a12e-4c8c97f95a89"
+      "url": "https://www.credly.com/badges/8a92a10c-f4d8-48d1-a12e-4c8c97f95a89",
+      "importance": 4
     },
     {
       "name": "AWS Certified Solutions Architect – Professional",
@@ -380,7 +408,8 @@
       "issuer": "Unity Technologies",
       "endDate": "2018-08-31",
       "startDate": "2016-08-31",
-      "url": "https://www.credly.com/badges/18b7c70d-77c3-429d-b5d7-1799c728d13c"
+      "url": "https://www.credly.com/badges/18b7c70d-77c3-429d-b5d7-1799c728d13c",
+      "importance": 2
     }
   ],
   "skills": [
@@ -448,7 +477,6 @@
       "title": "Cloud Technologies",
       "subskills": [
         "Docker",
-        "Kubernetes",
         "Terraform",
         "CDKTF",
         "Amazon Web Services"

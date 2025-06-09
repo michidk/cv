@@ -5,6 +5,6 @@
   title: "Résumé",
   displayTagline: true,
   displaySummary: true,
-  importanceFilter: 2, // filter everything that is less important than 2
+  importanceFilter: 2, // filter out everything that is less important than 3
   debug: false
 )

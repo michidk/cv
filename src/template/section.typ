@@ -119,8 +119,13 @@
     entry.summary
   }
   if "highlights" in entry {
+    let capped_max = if maxHighlights != none {
+      calc.min(maxHighlights, entry.highlights.len())
+    } else {
+      none
+    }
     block(width: 100%, breakable: true, above: 0.7em)[
-      #for highlight in entry.highlights.slice(0, maxHighlights) [
+      #for highlight in entry.highlights.slice(0, capped_max) [
         - #highlight
       ]
     ]
