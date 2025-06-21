@@ -51,12 +51,6 @@
       "name": "STABL Energy",
       "position": "Head of Cloud & IT",
       "startDate": "2025-01-01",
-      "highlights": [
-        "Building, managing and leading the cloud engineering team, driving strategy and execution",
-        "Serving as Product Owner & Product Manager, overseeing product strategy and roadmap",
-        "Assisting the Engineering Director and C-level with financial management and planning",
-        "Managing and leading the IT department as a strategic and technological sparring partner"
-      ],
       "summary": "STABL Energy develops smart, safe, reliable, and cost‑effective battery storage systems.",
       "url": "https://stabl.com/",
       "location": "Munich, Germany",
@@ -64,13 +58,14 @@
     },
     {
       "name": "STABL Energy",
-      "position": "Senior Cloud Architect",
+      "position": "Senior Cloud Architect & Team Lead",
       "startDate": "2023-08-01",
       "endDate": "2024-12-31",
       "highlights": [
-        "Designing and implementing scalable cloud systems for ingesting and analyzing near-real-time data",
-        "Architecting and developing an IoT platform for remote battery storage management",
-        "Leading development of embedded IoT devices (bare-metal & Linux) using Rust for edge computing"
+        "Building, managing and leading the cloud engineering team, driving strategy and execution",
+        "Serving as Product Owner & Product Manager, overseeing product strategy and roadmap",
+        "Assisting the Engineering Director and C-level with financial management and planning",
+        "Managing and leading the IT department as a strategic and technological sparring partner"
       ],
       "url": "https://stabl.com/",
       "location": "Munich, Germany",
@@ -78,9 +73,14 @@
     },
     {
       "name": "STABL Energy",
-      "position": "Cloud Architect",
+      "position": "Cloud Architect & Team Lead",
       "startDate": "2022-10-31",
       "endDate": "2023-07-31",
+      "highlights": [
+        "Designing and implementing scalable cloud systems for ingesting and analyzing near-real-time data",
+        "Architecting and developing an IoT platform for remote battery storage management",
+        "Leading development of embedded IoT devices (bare-metal & Linux) using Rust for edge computing"
+      ],
       "url": "https://stabl.com/",
       "location": "Munich, Germany",
       "importance": 6
@@ -127,7 +127,7 @@
       "startDate": "2021-08-31",
       "endDate": "2021-12-31",
       "highlights": [
-        "Developed a fault‑tolerant and scalable monitoring/logging architecture inside the AWS Cloud",
+        "Developed a fault‑tolerant and scalable monitoring/logging architecture using the AWS Cloud",
         "Researched and evaluated Cloud Computing solutions for robot/IoT appliances",
         "Implemented integrations for the Robot Operating System (ROS)",
         "Defined requirements, selected hardware, and installed wireless communication hardware"
