@@ -51,7 +51,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Setup Typst
-        uses: typst-community/setup-typst@v3
+        uses: typst-community/setup-typst@v4
 
       - name: Build PDF
         run: typst compile --font-path ${{ env.FONT_DIR }} --root ${{ env.ROOT_DIR }} ${{ matrix.file }} ${{ matrix.output }}
