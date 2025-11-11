@@ -48,7 +48,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Typst
         uses: typst-community/setup-typst@v3
@@ -86,7 +86,7 @@ jobs:
         run: ls -lah out/
 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: '${{ env.DEPLOY_BRANCH }}'
           path: 'deploy'
