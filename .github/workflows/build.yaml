@@ -57,7 +57,7 @@ jobs:
         run: typst compile --font-path ${{ env.FONT_DIR }} --root ${{ env.ROOT_DIR }} ${{ matrix.file }} ${{ matrix.output }}
 
       - name: Upload PDFs
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ matrix.name }}
           path: ${{ matrix.output }}
@@ -77,7 +77,7 @@ jobs:
           git config --global user.email "actions@github.com"
 
       - name: Download PDFs
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           path: out/
           merge-multiple: true
