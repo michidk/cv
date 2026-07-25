@@ -36,6 +36,20 @@
   },
   "work": [
     {
+      "name": "Spanflug Technologies",
+      "position": "Application Development Lead",
+      "startDate": "2026-01-01",
+      "summary": "Leading the web applications and data team, driving development and scaling of Spanflug's digital manufacturing platform.",
+      "highlights": [
+        "Building and scaling the Spanflug BUY procurement marketplace",
+        "Developing the Spanflug MAKE quoting & work-preparation software for CNC machining companies"
+      ],
+      "url": "https://spanflug.de/",
+      "location": "Munich, Germany",
+      "importance": 7,
+      "logo": "logos/spanflug.jpg"
+    },
+    {
       "name": "Golem Media GmbH",
       "position": "Freelance Writer",
       "startDate": "2025-03-01",
@@ -45,7 +59,8 @@
       "summary": "Golem.de is a German technology news website that covers the latest news and trends in the tech industry.",
       "url": "https://golem.de/",
       "location": "Munich, Germany",
-      "importance": 3
+      "importance": 3,
+      "logo": "logos/golem.jpg"
     },
     {
       "name": "STABL Energy",
@@ -111,7 +126,8 @@
       "summary": "Lohr IT is developing desktop software and web experiences.",
       "url": "https://www.lohr-it.de/",
       "location": "Eichenau, Germany",
-      "importance": 5
+      "importance": 5,
+      "logo": "logos/lohr-it.jpg"
     },
     {
       "name": "Lohr, Jöstingmeier & Partner",
@@ -143,6 +159,7 @@
       "position": "Solutions Architect Intern",
       "startDate": "2020-10-31",
       "endDate": "2021-02-28",
+      "logo": "logos/aws.jpg",
       "highlights": [
         "Developed and delivered workshops on Machine Learning and Big Data in SaaS contexts",
         "Consulted Independent Software Vendors (ISVs) on AWS cloud offerings and architecture solutions",
@@ -191,6 +208,7 @@
       "position": "Student Tutor",
       "startDate": "2016-10-31",
       "endDate": "2017-04-30",
+      "logo": "logos/tum.jpg",
       "highlights": [
         "Prepared and held lectures about programming to ~25 students",
         "Corrected exercises and exams"
@@ -222,6 +240,7 @@
     {
       "organization": "Akademischer Gesangverein München e.V.",
       "position": "Board Member, Treasurer",
+      "logo": "logos/agv.jpg",
       "startDate": "2017-03-31",
       "endDate": "2018-08-31",
       "highlights": [
@@ -235,6 +254,7 @@
     {
       "organization": "Akademischer Gesangverein München e.V.",
       "position": "IT and Network Administrator",
+      "logo": "logos/agv.jpg",
       "startDate": "2016-12-31",
       "highlights": [
         "Developed and implemented a local network infrastructure supporting 200+ concurrent users",
@@ -247,6 +267,7 @@
     {
       "organization": "Akademischer Gesangverein München e.V.",
       "position": "Head of IT",
+      "logo": "logos/agv.jpg",
       "startDate": "2024-04-18",
       "highlights": [
         "Managing all IT systems used by employees, rental customers, and event guests",
@@ -264,6 +285,7 @@
       "studyType": "Master of Science (M.Sc.)",
       "startDate": "2019-12-31",
       "endDate": "2022-12-31",
+      "logo": "logos/tum.jpg",
       "score": "1.6",
       "url": "https://www.tum.de/",
       "summary": "The Department of Informatics at TUM is one of the largest and most renowned computer science departments in Germany, and the professors and teaching staff are experts in their respective fields. Students of the master's programs receive a top-level education and can tailor their program to focus in-depth on the topics that interest them most.",
@@ -280,6 +302,7 @@
       "studyType": "Bachelor of Science (B.Sc.)",
       "startDate": "2015-12-31",
       "endDate": "2019-12-31",
+      "logo": "logos/tum.jpg",
       "score": "2.4",
       "url": "https://www.tum.de/",
       "summary": "The 'Informatics: Games Engineering' bachelor's degree at TUM is a technically-oriented program for students interested in game development. Games production is a booming industry that is set to grow rapidly in the near future. This new technology is utilized in many industries, including engineering, construction, medicine, and education.",
