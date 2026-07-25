@@ -136,6 +136,7 @@
     {
       "name": "Lohr, Jöstingmeier & Partner",
       "position": "Data Protection Officer",
+      "logo": "logos/ljp.png",
       "startDate": "2018-06-30",
       "summary": "Lohr, Jöstingmeier & Partner is a German law firm specializing in German and European intellectual property matters. I oversee the personal data protection strategy and ensure compliance with data protection laws.",
       "url": "https://lohrpatent.de/",
@@ -145,6 +146,7 @@
     {
       "name": "Filics",
       "position": "Project Study: Fault-Tolerant Cloud-based Monitoring Architectures for Robotics",
+      "logo": "logos/filics.png",
       "startDate": "2021-08-31",
       "endDate": "2021-12-31",
       "highlights": [
