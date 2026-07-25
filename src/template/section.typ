@@ -1,6 +1,5 @@
-#import "color.typ": *
+#import "color.typ": colors
 #import "../lib/date.typ": (formatDate, hasExpired)
-#import "../lib/utils.typ": get
 
 // sets up stylized section headings
 #let setupSectionHeading(content, fontSizeAdjustment, squeeze: false) = {
@@ -139,7 +138,7 @@
     works,
     entryTitle,
     entryDateRange,
-    entry => entryName(get(entry, "position", ""), fontSizeAdjustment),
+    entry => entryName(entry.at("position", default: ""), fontSizeAdjustment),
     entry => entryLocation(entry, fontSizeAdjustment),
     entry => entryContent(entry, hideDescriptions: hideDescriptions, maxHighlights: maxHighlights),
     fontSizeAdjustment: fontSizeAdjustment,
@@ -155,7 +154,7 @@
     entry => entryDateRange(entry, onlyYear: true),
     entry => entryName({
       if "area" in entry {
-        [#get(entry, "studyType", ""), #get(entry, "area", "")]
+        [#entry.at("studyType", default: ""), #entry.at("area", default: "")]
         if "score" in entry {
           [ -- Score: ]
           entry.score
@@ -211,7 +210,7 @@
 }
 
 #let interests(interests) = {
-  heading("Personal Interests")
+  heading(level: 1)[Personal Interests]
 
   set list(spacing: 0.8em)
   let categories = interests.map(entry => entry.category).dedup()

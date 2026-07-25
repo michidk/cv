@@ -1,4 +1,4 @@
-#import "../lib/utils.typ": (debugMode, prettifyUrl, get, sortDateRange)
+#import "../lib/utils.typ": (debugMode, prettifyUrl, sortDateRange)
 #import "../lib/icons.typ": icons
 #import "../lib/date.typ": formatDate
 #import "section.typ": (setupSectionHeading, experience, education, certifications, interests)
@@ -48,7 +48,7 @@
     set text(
       size: 10pt - fontSizeAdjustment,
     )
-    let label = get(profile, "username", prettifyUrl(profile.url))
+    let label = profile.at("username", default: prettifyUrl(profile.url))
     link(profile.url, icons.at(profile.icon) + " " + label)
   }
 
@@ -88,7 +88,7 @@
 
 #let template(
   data: none,
-  title: text,
+  title: none,
   displayTagline: false,
   displaySummary: false,
   displayMugshot: false,
@@ -158,8 +158,15 @@
         = Skills
         #set list(spacing: 0.6em)
         #set par(spacing: if squeeze { -0.4em } else { 0.8em })
-        #let keySkills = data.skills.filter(skill => "key" in skill and skill.key)
-        #let skills = data.skills.filter(skill => not ("key" in skill and skill.key)).map(skill => (get(skill, "title", skill.name), get(skill, "subskills", ()).join(", ")))
+        #let isKeySkill(skill) = "key" in skill and skill.key
+        #let keySkills = data.skills.filter(isKeySkill)
+        #let skills = {
+          let filtered = data.skills.filter(skill => not isKeySkill(skill))
+          filtered.map(skill => (
+            name: skill.at("title", default: skill.name),
+            subskills: skill.at("subskills", default: ()).join(", "),
+          ))
+        }
         *Key Skills*
         #box(height: 0.8cm,
           columns(3, gutter: 0.2cm,
@@ -169,10 +176,10 @@
 
         *Technical Skills*
         #for skill in skills {
-          if skill.at(1) != none [
-            - #skill.at(0): #skill.at(1)
+          if skill.subskills != "" [
+            - #skill.name: #skill.subskills
            ] else [
-            - #skill.at(0))
+            - #skill.name
            ]
         }
       ]
