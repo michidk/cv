@@ -6,15 +6,15 @@
 ) = {
   if enabled {
     set block(stroke: red)
-    let text = text(fill: red, size: 20pt, "DEBUG")
-    context(
+    let debugText = text(fill: red, size: 20pt, "DEBUG")
+    context {
       for i in range(6) {
-        place(top, dx: (measure(text).width + 1cm) * i, {
+        place(top, dx: (measure(debugText).width + 1cm) * i, {
           v(-margins.top)
-          text
+          debugText
         })
       }
-    )
+    }
     it
   } else {
     it
@@ -23,22 +23,7 @@
 
 // prettify url by removing the protocol, www and trailing slash
 #let prettifyUrl(url) = {
-  let url = url.replace("https://", "").replace("http://", "").replace("www.", "")
-  if url.ends-with("/") {
-    url.slice(0, url.len() - 1)
-  } else {
-    url
-  }
-}
-
-// safely get a value from a list, or return a default value
-// needed until this is implemented: https://github.com/typst/typst/issues/946
-#let get(list, key, default) = {
-  if key in list {
-    list.at(key)
-  } else {
-    default
-  }
+  url.replace("https://", "").replace("http://", "").replace("www.", "").trim("/", at: end)
 }
 
 // sort a list of entries by start date, most recent first

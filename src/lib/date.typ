@@ -12,15 +12,13 @@
   )
 }
 
-#let months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 #let formatDate(dateStr, onlyYear: false) = {
   let date = parseDate(dateStr)
 
   if onlyYear {
     [#date.year()]
   } else {
-    let month = months.at(int(date.month()) - 1)
-    [#month #date.year()]
+    [#date.display("[month repr:short] [year]")]
   }
 }
 
