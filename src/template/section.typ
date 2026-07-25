@@ -1,6 +1,21 @@
 #import "color.typ": colors
 #import "../lib/date.typ": (formatDate, hasExpired)
 
+// renders a company/institution logo for an entry
+#let entryLogo(entry) = {
+  let size = 0.85cm
+  if "logo" in entry {
+    box(
+      width: size,
+      height: size,
+      stroke: 0.5pt + luma(220),
+      radius: 4pt,
+      clip: true,
+      image("/data/" + entry.logo, width: size, height: size, fit: "contain"),
+    )
+  }
+}
+
 // sets up stylized section headings
 #let setupSectionHeading(content, fontSizeAdjustment, squeeze: false) = {
   let above = if not squeeze { 0.5cm } else { 0.2cm }
@@ -30,27 +45,45 @@
   ]
 }
 
-#let section(title, data, fnHeadLeft, fnHeadRight, fnBodyLeft, fnBodyRight, fnContent, fontSizeAdjustment: 0pt, squeeze: false) = {
+#let section(title, data, fnHeadLeft, fnHeadRight, fnBodyLeft, fnBodyRight, fnContent, fnLogo: none, fontSizeAdjustment: 0pt, squeeze: false) = {
+  let logoSize = 0.85cm
+  let logoPad = 0.3cm
   if not squeeze { v(0.25cm) }
   heading(title)
   for entry in data {
+    let showLogo = fnLogo != none and "logo" in entry
     block(
       breakable: false,
       above: if squeeze { 0.35em } else { 0.5em },
-      below: 0.5em, // https://github.com/typst/typst/issues/686
-      grid(
-        columns: 2,
-        rows: 2,
-        column-gutter: 1fr,
-        row-gutter: 0.2cm,
-        fnHeadLeft(entry),
-        fnHeadRight(entry),
-        fnBodyLeft(entry),
-        fnBodyRight(entry),
-      )
+      below: 0.5em,
+      if showLogo {
+        grid(
+          columns: (logoSize, 1fr, auto),
+          column-gutter: logoPad,
+          rows: 2,
+          row-gutter: 0.2cm,
+          grid.cell(rowspan: 2, align: horizon, fnLogo(entry)),
+          fnHeadLeft(entry),
+          fnHeadRight(entry),
+          fnBodyLeft(entry),
+          fnBodyRight(entry),
+        )
+      } else {
+        grid(
+          columns: 2,
+          rows: 2,
+          column-gutter: 1fr,
+          row-gutter: 0.2cm,
+          fnHeadLeft(entry),
+          fnHeadRight(entry),
+          fnBodyLeft(entry),
+          fnBodyRight(entry),
+        )
+      }
     )
     if fnContent != none {
-      fnContent(entry)
+      let content = fnContent(entry)
+      if showLogo { pad(left: logoSize + logoPad, content) } else { content }
     }
     if squeeze { v(0.15cm) } else { v(0.25cm) }
   }
@@ -141,6 +174,7 @@
     entry => entryName(entry.at("position", default: ""), fontSizeAdjustment),
     entry => entryLocation(entry, fontSizeAdjustment),
     entry => entryContent(entry, hideDescriptions: hideDescriptions, maxHighlights: maxHighlights),
+    fnLogo: entryLogo,
     fontSizeAdjustment: fontSizeAdjustment,
     squeeze: squeeze
   )
@@ -163,6 +197,7 @@
     }, fontSizeAdjustment),
     entry => entryLocation(entry, fontSizeAdjustment),
     entry => entryContent(entry, hideDescriptions: hideDescriptions, maxHighlights: maxHighlights),
+    fnLogo: entryLogo,
     fontSizeAdjustment: fontSizeAdjustment,
     squeeze: squeeze
   )
