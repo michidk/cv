@@ -45,8 +45,8 @@
 }
 
 #let section(title, data, fnHeadLeft, fnHeadRight, fnBodyLeft, fnBodyRight, fnContent, fnLogo: none, fontSizeAdjustment: 0pt, squeeze: false) = {
-  let logoSize = 0.85cm
-  let logoPad = 0.3cm
+  let logoSize = if squeeze { 0.6cm } else { 0.85cm }
+  let logoPad = if squeeze { 0.2cm } else { 0.3cm }
   if not squeeze { v(0.25cm) }
   heading(title)
   for entry in data {
