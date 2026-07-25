@@ -8,7 +8,6 @@
     box(
       width: size,
       height: size,
-      stroke: 0.5pt + luma(220),
       radius: 4pt,
       clip: true,
       image("/data/" + entry.logo, width: size, height: size, fit: "contain"),

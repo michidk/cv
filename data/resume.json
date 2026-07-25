@@ -66,6 +66,7 @@
       "name": "STABL Energy",
       "position": "Head of Cloud & IT",
       "startDate": "2025-01-01",
+      "logo": "logos/stabl.png",
       "summary": "STABL Energy develops smart, safe, reliable, and cost‑effective battery storage systems.",
       "url": "https://stabl.com/",
       "location": "Munich, Germany",
@@ -75,6 +76,7 @@
       "name": "STABL Energy",
       "position": "Senior Cloud Architect & Team Lead",
       "startDate": "2023-08-01",
+      "logo": "logos/stabl.png",
       "endDate": "2024-12-31",
       "highlights": [
         "Building, managing and leading the cloud engineering team, driving strategy and execution",
@@ -90,6 +92,7 @@
       "name": "STABL Energy",
       "position": "Cloud Architect & Team Lead",
       "startDate": "2022-10-31",
+      "logo": "logos/stabl.png",
       "endDate": "2023-07-31",
       "highlights": [
         "Designing and implementing scalable cloud systems for ingesting and analyzing near-real-time data",
@@ -105,6 +108,7 @@
       "name": "STABL Energy",
       "position": "Cloud Engineer, Working Student",
       "startDate": "2022-01-31",
+      "logo": "logos/stabl.png",
       "endDate": "2022-09-30",
       "highlights": [
         "Implemented a fault‑tolerant and scalable monitoring/logging architecture using the AWS Cloud",
@@ -174,6 +178,7 @@
       "name": "Broken Vector UG",
       "position": "Founder & Managing Director",
       "startDate": "2017-01-31",
+      "logo": "logos/broken-vector.png",
       "endDate": "2020-07-31",
       "highlights": [
         "Managed a team of three software developers and four 3D artists",
@@ -190,6 +195,7 @@
       "name": "TÜV SÜD Sec-IT",
       "position": "Software Developer, Working Student",
       "startDate": "2018-12-31",
+      "logo": "logos/tuv-sud.jpg",
       "endDate": "2020-02-28",
       "highlights": [
         "Developed software modules for detecting security vulnerabilities in IT systems",
