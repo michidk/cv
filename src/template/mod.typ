@@ -1,7 +1,7 @@
-#import "../lib/utils.typ": debugMode, prettifyUrl, get, sortDateRange
+#import "../lib/utils.typ": (debugMode, prettifyUrl, get, sortDateRange)
 #import "../lib/icons.typ": icons
 #import "../lib/date.typ": formatDate
-#import "section.typ": setupSectionHeading, experience, education, certifications, interests
+#import "section.typ": (setupSectionHeading, experience, education, certifications, interests)
 #import "color.typ": colors
 
 #let header(name, subtitle, fontSizeAdjustment: 0pt) = {
@@ -135,7 +135,6 @@
     body-indent: 0.1cm,
   )
   show link: set text(fill: colors.link)
-  show columns: set block(above: 0.25cm) // fix for: https://github.com/typst/typst/issues/686
 
   // stylized headings
   show heading.where(level: 1): content => setupSectionHeading(content, fontSizeAdjustment, squeeze: squeeze)

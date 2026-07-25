@@ -1,5 +1,5 @@
 #import "color.typ": *
-#import "../lib/date.typ": formatDate, hasExpired
+#import "../lib/date.typ": (formatDate, hasExpired)
 #import "../lib/utils.typ": get
 
 // sets up stylized section headings
@@ -7,7 +7,7 @@
   let above = if not squeeze { 0.5cm } else { 0.2cm }
   let below = if not squeeze { 0.5cm } else { 0.3cm }
 
-  block(width: 100%, above: above, below: below, breakable: false)[
+  block(width: 100%, above: above, below: below, breakable: false, sticky: true)[
     #set text(
       16pt - fontSizeAdjustment,
       weight: "bold",
@@ -186,7 +186,7 @@
 
   let expired = entry => {
     if "endDate" in entry and markExpired {
-      if hasExpired(entry.endDate) {
+      context if hasExpired(entry.endDate) {
         text(
           size: 9pt - fontSizeAdjustment,
           ligatures: false,
