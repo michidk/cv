@@ -229,6 +229,7 @@
     {
       "name": "Klinikum rechts der Isar der TU München",
       "position": "Internship",
+      "logo": "logos/klinikum.jpg",
       "startDate": "2013-07-31",
       "endDate": "2013-07-31",
       "summary": "During the internship at the cancer research of 'Klinik und Poliklinik für Innere Medizin II', I mixed chemical compounds and prepared extracted organs for microscopic inspection.",
@@ -238,6 +239,7 @@
     {
       "name": "Mammendorfer Institut für Physik und Medizin",
       "position": "Internship",
+      "logo": "logos/mammendorfer.jpg",
       "startDate": "2012-07-31",
       "endDate": "2012-07-31",
       "summary": "MIPM develops medical monitoring systems that are magnetic resonance imaging (MRI) compatible. I worked in the assembly and soldered circuit boards, produced electronic plugs, and prepared casings.",
@@ -325,6 +327,7 @@
     {
       "institution": "Obermenzinger Gymnasium",
       "area": "Economic Branch",
+      "logo": "logos/obermenzinger.png",
       "studyType": "Higher Education Entrance Qualification",
       "startDate": "2007-12-31",
       "endDate": "2015-12-31",
