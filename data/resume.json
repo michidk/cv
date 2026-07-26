@@ -350,6 +350,12 @@
   ],
   "certificates": [
     {
+      "name": "Successfull Communication: Leadership Conversations, Giving & Receiving Feedback, Effective Communication",
+      "issuer": "troodi",
+      "startDate": "2025-10-31",
+      "importance": 4
+    },
+    {
       "name": "Leading in Coaching Mode",
       "issuer": "troodi",
       "startDate": "2025-06-30",
