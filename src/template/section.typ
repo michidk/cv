@@ -45,16 +45,16 @@
 }
 
 #let section(title, data, fnHeadLeft, fnHeadRight, fnBodyLeft, fnBodyRight, fnContent, fnLogo: none, fontSizeAdjustment: 0pt, squeeze: false) = {
-  let logoSize = if squeeze { 0.6cm } else { 0.85cm }
-  let logoPad = if squeeze { 0.2cm } else { 0.3cm }
+  let logoSize = 0.85cm
+  let logoPad = 0.3cm
   if not squeeze { v(0.25cm) }
   heading(title)
   for entry in data {
-    let showLogo = fnLogo != none and "logo" in entry
+    let showLogo = fnLogo != none and "logo" in entry and not squeeze
     block(
       breakable: false,
       above: if squeeze { 0.35em } else { 0.5em },
-      below: 0.5em,
+      below: if squeeze { 0.3em } else { 0.5em },
       if showLogo {
         grid(
           columns: (logoSize, 1fr, auto),
