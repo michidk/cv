@@ -26,13 +26,13 @@
   url.replace("https://", "").replace("http://", "").replace("www.", "").trim("/", at: end)
 }
 
-// sort a list of entries by start date, most recent first
+// sort a list of entries by date, most recent first
+// ongoing entries (no endDate) always appear above ended ones;
+// within each group, sort by the relevant date descending
 #let sortDateRange(entry) = {
-  // sort by end date, if not present, put it at the beginning and sort by start date
-  // rationale: we want all "present" position on top, with the most recent ones on top
   if "endDate" in entry {
-    entry.endDate
+    "0" + entry.endDate  // ended: sort by end date
   } else {
-    entry.startDate
+    "1" + entry.startDate  // ongoing: sort by start date, always above ended
   }
 }
