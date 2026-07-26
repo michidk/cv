@@ -239,6 +239,7 @@
     entry => entryName(entry.issuer, fontSizeAdjustment),
     expired,
     none,
+    fnLogo: entryLogo,
     squeeze: squeeze
   )
 }
